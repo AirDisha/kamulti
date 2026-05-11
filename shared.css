@@ -1001,3 +1001,13 @@ body{
     max-width: 100% !important;
   }
 }
+
+/* Desktop-only image (hidden on mobile) */
+@media (max-width: 767px) {
+  .desktop-only-img { display: none !important; }
+}
+@media (min-width: 768px) {
+  .desktop-only-img { display: block !important; }
+  /* Mobile-only hidden on desktop */
+  .mobile-only-img { display: none !important; }
+}
