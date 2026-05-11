@@ -966,31 +966,38 @@ body{
   .mobile-only-img { display: none !important; }
 }
 
+
 /* ═══════════════════════════════
-   HERO BANNER MOBILE — больше высота,
-   чтобы текст влезал
+   HERO BANNER TITLES — жирные везде
+═══════════════════════════════ */
+.hero-banner-overlay .t-display {
+  font-weight: 700 !important;
+  letter-spacing: .06em !important;
+  opacity: 1 !important;
+  text-shadow: 0 1px 8px rgba(0,0,0,.35);
+}
+
+/* ═══════════════════════════════
+   HERO BANNER MOBILE
 ═══════════════════════════════ */
 @media (max-width: 767px) {
   .hero-banner img {
-    aspect-ratio: 4 / 3 !important;
-    min-height: 320px !important;
-    max-height: 480px !important;
+    aspect-ratio: 3 / 2 !important;
+    min-height: 340px !important;
+    max-height: 520px !important;
   }
   .hero-banner-overlay {
-    padding: 1.25rem 1.5rem 1.5rem !important;
+    padding: 1.25rem 1.25rem 1.5rem !important;
   }
-  .hero-banner-overlay p {
-    font-size: clamp(1.25rem, 5vw, 1.5rem) !important;
-    line-height: 1.45 !important;
+  /* Заголовок на мобильном — крупный, жирный */
+  .hero-banner-overlay .t-display {
+    font-size: clamp(1.8rem, 8vw, 2.4rem) !important;
+    line-height: 1.2 !important;
   }
-  /* Заголовок баннера крупнее на мобильном */
-  .hero-banner-overlay p:first-child {
-    font-size: clamp(1.6rem, 7vw, 2rem) !important;
-    margin-bottom: .5rem !important;
-  }
-  /* Подзаголовок баннера тоже крупный */
-  .hero-banner-overlay p:last-child {
-    font-size: clamp(1.15rem, 4.5vw, 1.35rem) !important;
+  /* Подзаголовок на мобильном — заметно крупнее */
+  .hero-banner-overlay p:not(.t-display) {
+    font-size: clamp(1.2rem, 5vw, 1.5rem) !important;
+    line-height: 1.5 !important;
     max-width: 100% !important;
   }
 }
