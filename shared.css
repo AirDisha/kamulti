@@ -821,10 +821,10 @@ body{
     margin-right: auto;
   }
 
-  /* Element cards in carousel */
+  /* Element cards in carousel — square */
   .element-card img {
-    aspect-ratio: 16/9;
-    max-height: 300px;
+    aspect-ratio: 1 / 1;
+    max-height: none;
   }
 
   /* item-row images smaller on desktop */
