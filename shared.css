@@ -1011,3 +1011,22 @@ body{
   /* Mobile-only hidden on desktop */
   .mobile-only-img { display: none !important; }
 }
+
+/* ═══════════════════════════════
+   BANNER SUBTITLES — clean, no conflicts
+═══════════════════════════════ */
+
+/* Подзаголовки на ГЛАВНЫХ баннерах (sessions, individual hero, course, info) */
+/* Используют класс t-caps-sm или reveal d1 */
+.hero-banner-overlay .t-caps-sm {
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
+  line-height: 1.5;
+  color: rgba(255,255,255,.9);
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .hero-banner-overlay .t-caps-sm {
+    font-size: clamp(1.3rem, 5.5vw, 1.6rem);
+  }
+}
