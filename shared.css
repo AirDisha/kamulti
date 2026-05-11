@@ -966,13 +966,14 @@ body{
 
 /* Banner SUBTITLES (t-caps-sm inside overlay) — desktop */
 .hero-banner-overlay .t-caps-sm {
-  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
-  line-height: 1.5;
-  color: rgba(255,255,255,.9);
-  max-width: 100%;
+  font-family: var(--font-head);
+  font-size: clamp(.82rem, 2.5vw, 1rem);
   font-weight: 400;
-  text-transform: none;
-  letter-spacing: normal;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.78);
+  line-height: 1.6;
+  max-width: 100%;
 }
 
 /* Mobile / desktop image toggling */
@@ -1005,11 +1006,7 @@ body{
 
   /* Subtitle on mobile — 1.5x bigger than before */
   .hero-banner-overlay .t-caps-sm {
-    font-size: clamp(1.4rem, 6vw, 1.8rem) !important;
-    line-height: 1.5 !important;
-    max-width: 100% !important;
-    font-weight: 400 !important;
-    text-transform: none !important;
-    letter-spacing: normal !important;
+    font-size: clamp(.82rem, 3.5vw, 1rem) !important;
+    letter-spacing: .15em !important;
   }
 }
