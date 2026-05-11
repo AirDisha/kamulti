@@ -957,3 +957,11 @@ body{
 .hero-banner-overlay p[style*="italic"] {
   font-size: clamp(1rem, 3vw, 1.4rem) !important;
 }
+
+/* Mobile-only image blocks */
+@media (max-width: 767px) {
+  .mobile-only-img { display: block !important; }
+}
+@media (min-width: 768px) {
+  .mobile-only-img { display: none !important; }
+}
