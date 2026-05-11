@@ -965,16 +965,7 @@ body{
 }
 
 /* Banner SUBTITLES (t-caps-sm inside overlay) — desktop */
-.hero-banner-overlay .t-caps-sm {
-  font-family: var(--font-head);
-  font-size: clamp(.82rem, 2.5vw, 1rem);
-  font-weight: 400;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.78);
-  line-height: 1.6;
-  max-width: 100%;
-}
+/* hero subtitle now handled inline per-page */
 
 /* Mobile / desktop image toggling */
 @media (max-width: 767px) {
@@ -1005,8 +996,5 @@ body{
   }
 
   /* Subtitle on mobile — 1.5x bigger than before */
-  .hero-banner-overlay .t-caps-sm {
-    font-size: clamp(.82rem, 3.5vw, 1rem) !important;
-    letter-spacing: .15em !important;
-  }
+
 }
