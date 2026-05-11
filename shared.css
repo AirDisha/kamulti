@@ -946,30 +946,17 @@ body{
   margin-top: .5rem;
 }
 
+/* ═══════════════════════════════════════════════════
+   ADDITIONS — one clean block, no duplicates
+═══════════════════════════════════════════════════ */
+
 /* Carousel square images */
 .element-card img { aspect-ratio: 1 / 1 !important; object-fit: cover; }
 
-/* t-caps-sm larger everywhere */
-.t-caps-sm { font-size: 0.95rem !important; letter-spacing: .15em; }
+/* t-caps-sm base */
+.t-caps-sm { font-size: 0.95rem; letter-spacing: .15em; }
 
-/* Banner subtitle larger */
-.hero-banner-overlay .t-caps-sm,
-.hero-banner-overlay p[style*="italic"] {
-  font-size: clamp(1rem, 3vw, 1.4rem) !important;
-}
-
-/* Mobile-only image blocks */
-@media (max-width: 767px) {
-  .mobile-only-img { display: block !important; }
-}
-@media (min-width: 768px) {
-  .mobile-only-img { display: none !important; }
-}
-
-
-/* ═══════════════════════════════
-   HERO BANNER TITLES — жирные везде
-═══════════════════════════════ */
+/* Banner TITLES bold */
 .hero-banner-overlay .t-display {
   font-weight: 700 !important;
   letter-spacing: .06em !important;
@@ -977,10 +964,30 @@ body{
   text-shadow: 0 1px 8px rgba(0,0,0,.35);
 }
 
-/* ═══════════════════════════════
-   HERO BANNER MOBILE
-═══════════════════════════════ */
+/* Banner SUBTITLES (t-caps-sm inside overlay) — desktop */
+.hero-banner-overlay .t-caps-sm {
+  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+  line-height: 1.5;
+  color: rgba(255,255,255,.9);
+  max-width: 100%;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* Mobile / desktop image toggling */
 @media (max-width: 767px) {
+  .mobile-only-img { display: block !important; }
+  .desktop-only-img { display: none !important; }
+}
+@media (min-width: 768px) {
+  .mobile-only-img { display: none !important; }
+  .desktop-only-img { display: block !important; }
+}
+
+/* MOBILE — hero banner taller + bigger text */
+@media (max-width: 767px) {
+
   .hero-banner img {
     aspect-ratio: 3 / 2 !important;
     min-height: 340px !important;
@@ -989,44 +996,20 @@ body{
   .hero-banner-overlay {
     padding: 1.25rem 1.25rem 1.5rem !important;
   }
-  /* Заголовок на мобильном — крупный, жирный */
+
+  /* Main title on mobile */
   .hero-banner-overlay .t-display {
     font-size: clamp(1.8rem, 8vw, 2.4rem) !important;
     line-height: 1.2 !important;
   }
-  /* Подзаголовок главных баннеров крупнее — но НЕ для баннера ПРОГРАММА */
-  .hero-banner-overlay p.t-caps-sm {
-    font-size: clamp(1.5rem, 6vw, 1.9rem) !important;
+
+  /* Subtitle on mobile — 1.5x bigger than before */
+  .hero-banner-overlay .t-caps-sm {
+    font-size: clamp(1.4rem, 6vw, 1.8rem) !important;
     line-height: 1.5 !important;
     max-width: 100% !important;
-  }
-}
-
-/* Desktop-only image (hidden on mobile) */
-@media (max-width: 767px) {
-  .desktop-only-img { display: none !important; }
-}
-@media (min-width: 768px) {
-  .desktop-only-img { display: block !important; }
-  /* Mobile-only hidden on desktop */
-  .mobile-only-img { display: none !important; }
-}
-
-/* ═══════════════════════════════
-   BANNER SUBTITLES — clean, no conflicts
-═══════════════════════════════ */
-
-/* Подзаголовки на ГЛАВНЫХ баннерах (sessions, individual hero, course, info) */
-/* Используют класс t-caps-sm или reveal d1 */
-.hero-banner-overlay .t-caps-sm {
-  font-size: clamp(1.5rem, 4vw, 1.8rem);
-  line-height: 1.5;
-  color: rgba(255,255,255,.9);
-  max-width: 100%;
-}
-
-@media (max-width: 767px) {
-  .hero-banner-overlay .t-caps-sm {
-    font-size: clamp(1.3rem, 5.5vw, 1.6rem);
+    font-weight: 400 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
   }
 }
