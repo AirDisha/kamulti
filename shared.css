@@ -994,8 +994,8 @@ body{
     font-size: clamp(1.8rem, 8vw, 2.4rem) !important;
     line-height: 1.2 !important;
   }
-  /* Подзаголовок на мобильном — заметно крупнее */
-  .hero-banner-overlay p:not(.t-display) {
+  /* Подзаголовок главных баннеров крупнее — но НЕ для баннера ПРОГРАММА */
+  .hero-banner-overlay p.t-caps-sm {
     font-size: clamp(1.5rem, 6vw, 1.9rem) !important;
     line-height: 1.5 !important;
     max-width: 100% !important;
