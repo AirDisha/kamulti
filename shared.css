@@ -996,7 +996,7 @@ body{
   }
   /* Подзаголовок на мобильном — заметно крупнее */
   .hero-banner-overlay p:not(.t-display) {
-    font-size: clamp(1.2rem, 5vw, 1.5rem) !important;
+    font-size: clamp(1.5rem, 6vw, 1.9rem) !important;
     line-height: 1.5 !important;
     max-width: 100% !important;
   }
