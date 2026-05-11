@@ -965,3 +965,32 @@ body{
 @media (min-width: 768px) {
   .mobile-only-img { display: none !important; }
 }
+
+/* ═══════════════════════════════
+   HERO BANNER MOBILE — больше высота,
+   чтобы текст влезал
+═══════════════════════════════ */
+@media (max-width: 767px) {
+  .hero-banner img {
+    aspect-ratio: 4 / 3 !important;
+    min-height: 320px !important;
+    max-height: 480px !important;
+  }
+  .hero-banner-overlay {
+    padding: 1.25rem 1.5rem 1.5rem !important;
+  }
+  .hero-banner-overlay p {
+    font-size: clamp(1.25rem, 5vw, 1.5rem) !important;
+    line-height: 1.45 !important;
+  }
+  /* Заголовок баннера крупнее на мобильном */
+  .hero-banner-overlay p:first-child {
+    font-size: clamp(1.6rem, 7vw, 2rem) !important;
+    margin-bottom: .5rem !important;
+  }
+  /* Подзаголовок баннера тоже крупный */
+  .hero-banner-overlay p:last-child {
+    font-size: clamp(1.15rem, 4.5vw, 1.35rem) !important;
+    max-width: 100% !important;
+  }
+}
