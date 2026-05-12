@@ -851,8 +851,10 @@ body{
 
   /* Quote banner circle slightly smaller */
   .quote-banner-circle {
-    width: 55%;
-    max-width: 220px;
+    width: 72vw;
+    max-width: 260px;
+    aspect-ratio: 1 !important;
+    border-radius: 50% !important;
   }
 
   /* Footer full width override */
