@@ -14,6 +14,21 @@
 :root { --gold: #c4987a; --gold-light: #e8d5c0; }
 /* Уникальные стили страницы сессий — общие заданы в shared.css */
 
+/* ── photo-half: 50% desktop, 75% mobile ── */
+.photo-half { max-width:50%; margin:0 auto; }
+@media(max-width:767px){ .photo-half { max-width:75%; } }
+
+/* ── FAQ btn larger on mobile ── */
+@media(max-width:767px){ .faq-btn { font-size:1.1rem !important; padding:.9rem 0; } }
+
+/* ── Проверьте на себе — выделенный блок ── */
+.proveryte-wrap {
+  background: linear-gradient(135deg, #f5ede4 0%, #ede5d8 100%);
+  border-top: 1px solid #ddd0c4;
+  border-bottom: 1px solid #ddd0c4;
+}
+
+
 /* ══════════════════════════════════════
    STATS BLOCK — цифры для скептиков
 ══════════════════════════════════════ */
@@ -355,7 +370,7 @@
   </div>
 
   <!-- Фото -->
-  <div style="max-width:50%;margin:0 auto;"><img src="https://i.postimg.cc/wBLhL3PS/Chat-GPT-Image-30-apr-2026-g-21-05-54.jpg" alt="" loading="lazy" class="reveal" style="width:100%;display:block;object-fit:contain;background:#f5f0eb;"></div>
+  <div class="photo-half"><img src="https://i.postimg.cc/wBLhL3PS/Chat-GPT-Image-30-apr-2026-g-21-05-54.jpg" alt="" loading="lazy" class="reveal" style="width:100%;display:block;object-fit:contain;background:#f5f0eb;"></div>
   <div class="spacer"></div>
 
   <!-- ══ 9. КАК ПРОХОДИТ ══ -->
@@ -408,7 +423,7 @@
     <div class="spacer"></div>
   </div>
 
-  <div style="max-width:50%;margin:0 auto;">
+  <div class="photo-half">
     <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1778940482/ChatGPT_Image_16_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._15_46_53_qdhnjp.png" alt="Инна Янкина" loading="lazy" class="reveal" style="width:100%;display:block;object-fit:contain;">
   </div>
   <div class="spacer"></div>
@@ -475,8 +490,8 @@
   <div class="col">
     <div class="spacer"></div>
     <h2 class="t-serif reveal" style="font-family:var(--font-body);font-size:clamp(1.8rem,5vw,2.6rem);font-weight:300;text-align:center;color:var(--text-head);line-height:1.2;margin-bottom:1.25rem;">
-      <span class="t-ru">Проверьте на себе</span>
-      <span class="t-en" style="display:none;">Try it for yourself</span>
+      <span class="t-ru" style="border-bottom:2px solid #c4987a;padding-bottom:.1em;">Проверьте на себе</span>
+      <span class="t-en" style="display:none;border-bottom:2px solid #c4987a;padding-bottom:.1em;">Try it for yourself</span>
     </h2>
     <p class="t-serif reveal d1" style="text-align:center;color:var(--text-body);max-width:700px;margin:0 auto 2rem;">
       <span class="t-ru">Бесплатная 20-минутная диагностика. Без давления, без продаж — только разбор вашего состояния и честный ответ, нужен ли вам этот метод.</span>
