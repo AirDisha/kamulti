@@ -37,7 +37,7 @@ body{
   background: var(--bg);
   color: var(--text-body);
   font-family: var(--font-body);
-  font-size: 19px;
+  font-size: 22px;
   line-height: 1.75;
   overflow-x: hidden;
 }
@@ -999,4 +999,117 @@ body{
 
   /* Subtitle on mobile — 1.5x bigger than before */
 
+}
+
+/* ═══════════════════════════════
+   DESKTOP WIDER COLUMN — 820px
+═══════════════════════════════ */
+@media (min-width: 768px) {
+  :root {
+    --col-w: 900px;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════
+   TYPOGRAPHY SCALE — base 22px, minimum readable size
+   Все rem считаются от 22px
+   Декоративные капс-лейблы намеренно мелче — это дизайн
+═══════════════════════════════════════════════════════ */
+
+/* ── ОСНОВНОЙ ТЕКСТ ── */
+.t-serif,
+.t-serif p           { font-size: 1.2rem !important; line-height: 1.85 !important; }
+
+/* ── СПИСКИ ── */
+.sym-list li,
+.underline-list li,
+.result-list li,
+.ba-list li          { font-size: 1.15rem; line-height: 1.4; padding-top: .35rem; padding-bottom: .35rem; }
+
+/* ── FAQ ── */
+.faq-btn             { font-size: 1rem; }
+.faq-answer          { font-size: 1rem; line-height: 1.85; }
+
+/* ── HIGHLIGHT ── */
+.highlight           { font-size: 1.35rem; font-weight: 600; line-height: 1.65; }
+
+/* ── PULL QUOTE ── */
+.pull-quote          { font-size: clamp(1.05rem, 2.5vw, 1.25rem); }
+
+/* ── НАУКА ── */
+.science-card-title  { font-size: 1.05rem; font-weight: 500; }
+.science-card-text   { font-size: 1rem; line-height: 1.8; }
+.science-note        { font-size: .72rem; letter-spacing: .1em; }
+
+/* ── ЦИФРЫ/СТАТИСТИКА ── */
+.stat-number         { font-size: clamp(2rem, 6vw, 2.8rem); }
+.stat-desc           { font-size: .72rem; letter-spacing: .1em; line-height: 1.55; }
+
+/* ── ПРОТОКОЛ ── */
+.protocol-title      { font-size: 1.05rem; font-weight: 500; }
+.protocol-text       { font-size: 1rem; line-height: 1.75; }
+.protocol-num        { font-size: .75rem; letter-spacing: .15em; }
+.protocol-sublabel   { font-size: .72rem; letter-spacing: .2em; }
+.protocol-maintitle  { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 300; }
+
+/* ── ЗАМЕТКА К РЕЗУЛЬТАТУ ── */
+.result-note         { font-size: 1.1rem; font-style: italic; line-height: 1.8; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+
+/* ── ЦЕНЫ ── */
+.price-name          { font-size: .82rem; letter-spacing: .1em; }
+.price-amount        { font-size: 2rem; }
+.price-dur           { font-size: .85rem; }
+
+/* ── КНОПКИ — намеренно капс-мелкий ── */
+.btn                 { font-size: .78rem; letter-spacing: .14em; padding: 13px 20px; }
+
+/* ── КАРТОЧКИ ЭЛЕМЕНТОВ (карусель) ── */
+.element-card-title  { font-size: 1rem; }
+.element-card-text   { font-size: .95rem; line-height: 1.75; }
+
+/* ── ОТЗЫВЫ ── */
+.review-wa           { font-size: 1rem; line-height: 1.8; }
+
+/* ── СТАТЬИ ── */
+.article-body p,
+.article-body li     { font-size: 1rem; line-height: 1.88; }
+
+/* ── ПАМЯТКА ── */
+.memo-item-text      { font-size: 1rem; line-height: 1.8; }
+
+/* ── FOOTER — намеренно мелче, это служебное ── */
+.footer-nav a        { font-size: .72rem; }
+.footer-sub          { font-size: .72rem; }
+.footer-copy         { font-size: .7rem; }
+.footer-col-title    { font-size: .72rem; }
+
+/* ── НАВИГАЦИЯ ── */
+.nav-links a         { font-size: .72rem; }
+
+/* ── ЛЕЙБЛЫ-КАПСЫ — декоративные, намеренно мелкие ── */
+.s-label             { font-size: .88rem; letter-spacing: .22em; text-transform: uppercase; font-weight: 600; }
+.t-caps-sm           { font-size: .82rem; letter-spacing: .18em; }
+
+/* ── ДЕСКТОП: чуть крупнее ── */
+@media (min-width: 768px) {
+  --col-w: 900px;
+  .t-serif            { font-size: 1.05rem !important; }
+  .sym-list li,
+  .underline-list li,
+  .result-list li,
+  .ba-list li         { font-size: 1.2rem; line-height: 1.4; }
+  .faq-btn            { font-size: 1.05rem; }
+  .faq-answer         { font-size: 1.05rem; }
+  .science-card-text  { font-size: 1.05rem; }
+}
+
+/* ── Price grid: 2 columns on desktop ── */
+#price-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 640px) {
+  #price-grid { grid-template-columns: 1fr 1fr; }
 }
