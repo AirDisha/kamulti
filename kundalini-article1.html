@@ -3,21 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#ffffff">
-<title id="page-title">Не магия, а биология — Инна Янкина</title>
+<title>Не магия, а биология — Инна Янкина</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap">
 <link rel="stylesheet" href="shared.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+<style>
+.article-label{font-family:var(--font-head);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--text-light);margin-bottom:.5rem;display:block;}
+.article-title{font-family:var(--font-body);font-size:clamp(1.8rem,5vw,2.8rem);font-weight:300;color:var(--text-head);line-height:1.2;margin-bottom:1.5rem;}
+.article-lead{font-family:var(--font-body);font-size:1.2rem;color:var(--text-body);line-height:1.85;margin-bottom:2rem;border-left:3px solid #c4987a;padding-left:1.25rem;}
+.article-h2{font-family:var(--font-head);font-size:.85rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--text-head);margin:2.5rem 0 1rem;}
+.article-p{font-family:var(--font-body);font-size:1.1rem;color:var(--text-body);line-height:1.88;margin-bottom:1.25rem;}
+.article-cite{font-family:var(--font-head);font-size:.7rem;letter-spacing:.08em;color:var(--text-light);display:block;margin-top:.5rem;margin-bottom:1rem;font-style:italic;}
+.stat-row{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:2rem 0;}
+@media(min-width:640px){.stat-row{grid-template-columns:repeat(4,1fr);}}
+.stat-box{border-top:2px solid #c4987a;padding-top:1rem;text-align:center;}
+.stat-box-num{font-family:var(--font-body);font-size:2rem;font-weight:300;color:#c4987a;line-height:1;}
+.stat-box-desc{font-family:var(--font-head);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);margin-top:.4rem;line-height:1.5;}
+.article-nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;border-top:1px solid var(--line);margin-top:2rem;flex-wrap:wrap;gap:.5rem;}
+.article-nav a{font-family:var(--font-head);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-head);text-decoration:none;}
+</style>
 </head>
 <body>
+
 <nav class="nav" id="nav-ru">
   <a href="individual.html" class="nav-logo">INNA IANKINA</a>
   <ul class="nav-links">
     <li><a href="individual.html">Индивидуально</a></li>
     <li><a href="sessions.html">Сессии</a></li>
-    <li><a href="index.html">Курс</a></li>
     <li><a href="kundalini-info.html" class="active">О Кундалини</a></li>
     <li><a href="about.html">Обо мне</a></li>
     <li><a href="contact.html">Контакты</a></li>
@@ -27,8 +41,7 @@
 </nav>
 <div class="nav-drawer" id="navDrawer-ru">
   <a href="individual.html">Индивидуально</a><a href="sessions.html">Сессии</a>
-  <a href="index.html">Курс</a><a href="kundalini-info.html">О Кундалини</a>
-  <a href="about.html">Обо мне</a><a href="contact.html">Контакты</a>
+  <a href="kundalini-info.html">О Кундалини</a><a href="about.html">Обо мне</a><a href="contact.html">Контакты</a>
 </div>
 <div class="nav-overlay" id="navOverlay-ru"></div>
 <nav class="nav" id="nav-en" style="display:none;">
@@ -49,22 +62,13 @@
 </div>
 <div class="nav-overlay" id="navOverlay-en" style="display:none;"></div>
 <div class="page-wrap">
-<div class="t-ru">
-<div class="hero-banner">
-    <img src="https://i.postimg.cc/ncFpN0BX/Chat-GPT-Image-9-maa-2026-g-21-15-09.jpg" alt="НЕ МАГИЯ, А БИОЛОГИЯ" loading="eager">
-    <div class="hero-banner-overlay">
-      <p class="t-display reveal" style="font-size:clamp(1.1rem,4vw,1.7rem);">НЕ МАГИЯ, А БИОЛОГИЯ</p>
-      <p class="t-caps-sm reveal d1" style="margin-top:.4rem;">Что происходит с телом и мозгом при активации Кундалини?</p>
-    </div>
-  </div>
-  <div class="col">
-    <div class="spacer"></div>
-    <p class="t-serif" style="font-size:.82rem;color:var(--text-light);margin-bottom:.5rem;">
-      <a href="kundalini-info.html" style="color:var(--text-light);text-decoration:none;">← О Кундалини</a>
-    </p>
-    <div class="article-body reveal">
-      
-      <p>Когда мы слышим слово «Кундалини», воображение часто рисует образы индийских йогов, мистические метафоры про свернувшуюся змею и сложные эзотерические ритуалы. Но что, если посмотреть на этот процесс через призму современной науки? Оказывается, пробуждение Кундалини — это не магия, а вполне измеримый биоэлектрический и нейрофизиологический процесс.</p>
+<div class="t-ru"><div class="col"><div class="spacer"></div>
+<span class="article-label">Не магия, а биология</span>
+<h1 class="article-title">Нейробиология Кундалини</h1>
+<p class="article-lead">Когда мы слышим слово «Кундалини», воображение рисует мистику. Но что, если посмотреть на этот процесс через призму современной науки?</p>
+<img src="https://i.postimg.cc/ncFpN0BX/Chat-GPT-Image-9-maa-2026-g-21-15-09.jpg" alt="" loading="lazy" style="width:100%;display:block;object-fit:cover;aspect-ratio:16/7;max-height:360px;margin-bottom:2rem;">
+<div class="article-body">
+<p>Когда мы слышим слово «Кундалини», воображение часто рисует образы индийских йогов, мистические метафоры про свернувшуюся змею и сложные эзотерические ритуалы. Но что, если посмотреть на этот процесс через призму современной науки? Оказывается, пробуждение Кундалини — это не магия, а вполне измеримый биоэлектрический и нейрофизиологический процесс.</p>
       <h2>Где живёт «спящая змея»?</h2>
       <p>Древние тексты утверждают, что Кундалини спит у основания позвоночника. Современная анатомия находит в этой области кокцигеальную железу — уникальный нейроэндокринный узел. Её активация запускает каскад реакций: выброс норадреналина и оксида азота переводит нервную систему в режим повышенной проводимости. Спинномозговая жидкость становится суперпроводящей, и человек физически ощущает тот самый поток, который древние описывали как «восхождение змеи».</p>
       <h2>Мозг на частоте Кундалини</h2>
@@ -72,30 +76,23 @@
       <h2>Алхимия гормонов</h2>
       <p>Когда энергия поднимается естественно, без насилия над телом, запускается устойчивая гормональная перестройка. Организм начинает вырабатывать естественные эндорфины, серотонин и окситоцин в гармоничном режиме. Именно поэтому люди, прошедшие активацию, отмечают не просто кратковременный экстаз, а глубокое, долгосрочное снижение стресса и возвращение вкуса к жизни.</p>
       <blockquote>Кундалини — это наша базовая частота. Пробуждая её, мы не привносим в тело ничего чужеродного. Мы лишь включаем ту совершенную биологическую систему, которая была дана нам по праву рождения.</blockquote>
-    </div>
-    <div class="spacer"></div>
-    <a href="sessions.html" class="btn btn-arrow reveal">ЗАПИСАТЬСЯ НА СЕССИЮ</a>
-    <div class="spacer-sm"></div>
-    <a href="kundalini-info.html" class="btn btn-outline btn-arrow reveal d1">← НАЗАД К СТАТЬЯМ</a>
-    <div class="spacer"></div>
-  </div>
 </div>
-<div class="t-en" style="display:none;">
-<div class="hero-banner">
-    <img src="https://i.postimg.cc/ncFpN0BX/Chat-GPT-Image-9-maa-2026-g-21-15-09.jpg" alt="NOT MAGIC — BIOLOGY" loading="eager">
-    <div class="hero-banner-overlay">
-      <p class="t-display reveal" style="font-size:clamp(1.1rem,4vw,1.7rem);">NOT MAGIC — BIOLOGY</p>
-      <p class="t-caps-sm reveal d1" style="margin-top:.4rem;">What happens to body and brain during Kundalini activation?</p>
-    </div>
-  </div>
-  <div class="col">
-    <div class="spacer"></div>
-    <p class="t-serif" style="font-size:.82rem;color:var(--text-light);margin-bottom:.5rem;">
-      <a href="kundalini-info.html" style="color:var(--text-light);text-decoration:none;">← About Kundalini</a>
-    </p>
-    <div class="article-body reveal">
-      
-      <p>When we hear the word "Kundalini", the imagination often conjures images of Indian yogis, mystical metaphors about a coiled serpent and complex esoteric rituals. But what if we look at this process through the lens of modern science? It turns out that Kundalini awakening is not magic at all — it is a fully measurable bioelectric and neurophysiological process.</p>
+<div class="spacer-sm"></div>
+<a href="sessions.html" class="btn btn-arrow">ЗАПИСАТЬСЯ НА СЕССИЮ</a>
+<div class="spacer-sm"></div>
+<a href="kundalini-info.html" class="btn btn-outline btn-arrow" style="margin-top:.5rem;">← НАЗАД К СТАТЬЯМ</a>
+<div class="article-nav" style="margin-top:2rem;">
+  <span></span>
+  <a href='kundalini-article2.html'>Крии и видения →</a>
+</div>
+<div class="spacer"></div></div></div>
+<div class="t-en" style="display:none;"><div class="col"><div class="spacer"></div>
+<span class="article-label">Not magic, but biology</span>
+<h1 class="article-title">Neurobiology of Kundalini</h1>
+<p class="article-lead">When we hear the word 'Kundalini', we picture mysticism. But what if we look at this process through the lens of modern science?</p>
+<img src="https://i.postimg.cc/ncFpN0BX/Chat-GPT-Image-9-maa-2026-g-21-15-09.jpg" alt="" loading="lazy" style="width:100%;display:block;object-fit:cover;aspect-ratio:16/7;max-height:360px;margin-bottom:2rem;">
+<div class="article-body">
+<p>When we hear the word "Kundalini", the imagination often conjures images of Indian yogis, mystical metaphors about a coiled serpent and complex esoteric rituals. But what if we look at this process through the lens of modern science? It turns out that Kundalini awakening is not magic at all — it is a fully measurable bioelectric and neurophysiological process.</p>
       <h2>Where does the "sleeping serpent" live?</h2>
       <p>Ancient texts say Kundalini sleeps at the base of the spine. Modern anatomy locates the coccygeal gland there — a unique neuroendocrine node. Its activation triggers a cascade of reactions: the release of noradrenaline and nitric oxide shifts the nervous system into a state of heightened conductivity. Cerebrospinal fluid becomes superconductive, and the person physically experiences the very flow that the ancients described as "the serpent rising".</p>
       <h2>The brain on Kundalini frequency</h2>
@@ -103,32 +100,30 @@
       <h2>The alchemy of hormones</h2>
       <p>When energy rises naturally, without forcing the body, a sustained hormonal reorganisation begins. The body starts producing natural endorphins, serotonin and oxytocin in a harmonious rhythm. This is why people who have experienced activation report not just a brief ecstasy, but a deep, long-term reduction in stress and a return of their taste for life.</p>
       <blockquote>Kundalini is our baseline frequency. In awakening it, we are not introducing anything foreign to the body. We are simply switching on the perfect biological system that was given to us by right of birth.</blockquote>
-    </div>
-    <div class="spacer"></div>
-    <a href="sessions.html" class="btn btn-arrow reveal">BOOK A SESSION</a>
-    <div class="spacer-sm"></div>
-    <a href="kundalini-info.html" class="btn btn-outline btn-arrow reveal d1">← BACK TO ARTICLES</a>
-    <div class="spacer"></div>
-  </div>
 </div>
+<div class="spacer-sm"></div>
+<a href="sessions.html" class="btn btn-arrow">BOOK A SESSION</a>
+<div class="spacer-sm"></div>
+<a href="kundalini-info.html" class="btn btn-outline btn-arrow" style="margin-top:.5rem;">← ALL ARTICLES</a>
+<div class="article-nav" style="margin-top:2rem;">
+  <span></span>
+  <a href='kundalini-article2.html'>Kriyas and visions →</a>
 </div>
+<div class="spacer"></div></div></div>
+</div>
+
 <footer class="footer" id="footer-ru">
   <div class="footer-inner">
     <div><p class="footer-logo">INNA IANKINA</p><p class="footer-sub">Практик кундалини · Англия</p></div>
     <div><p class="footer-col-title">Страницы</p><nav class="footer-nav">
       <a href="individual.html">Индивидуально</a><a href="sessions.html">Сессии</a>
-      <a href="index.html">Курс</a><a href="kundalini-info.html">О Кундалини</a>
-      <a href="about.html">Обо мне</a><a href="contact.html">Контакты</a>
+      <a href="kundalini-info.html">О Кундалини</a><a href="about.html">Обо мне</a><a href="contact.html">Контакты</a>
     </nav></div>
     <div><p class="footer-col-title">Связаться</p><nav class="footer-nav">
-      <a href="https://wa.me/447388825436">WhatsApp</a>
-      <a href="https://instagram.com/inna.uk.iankin/">Instagram</a>
-      <a href="https://t.me/innaiankina">Telegram</a>
-      <a href="mailto:inna.win.iankina@gmail.com">Email</a>
+      <a href="https://wa.me/447388825436">WhatsApp</a><a href="https://instagram.com/inna.uk.iankin/">Instagram</a><a href="https://t.me/innaiankina">Telegram</a>
     </nav></div>
   </div>
-  <div class="footer-bottom">
-    <p class="footer-copy">© 2025 Инна Янкина · <a href="#">Политика конфиденциальности</a></p>
+  <div class="footer-bottom"><p class="footer-copy">© 2025 Инна Янкина</p>
     <div class="nav-lang"><span class="active">RU</span><a href="#" onclick="setLang('en');return false;">EN</a></div>
   </div>
 </footer>
@@ -140,57 +135,35 @@
       <a href="kundalini-info.html">About Kundalini</a><a href="about.html">About</a><a href="contact.html">Contact</a>
     </nav></div>
     <div><p class="footer-col-title">Contact</p><nav class="footer-nav">
-      <a href="https://wa.me/447388825436">WhatsApp</a>
-      <a href="https://instagram.com/inna.uk.iankin/">Instagram</a>
-      <a href="https://t.me/innaiankina">Telegram</a>
-      <a href="mailto:inna.win.iankina@gmail.com">Email</a>
+      <a href="https://wa.me/447388825436">WhatsApp</a><a href="https://instagram.com/inna.uk.iankin/">Instagram</a><a href="https://t.me/innaiankina">Telegram</a>
     </nav></div>
   </div>
-  <div class="footer-bottom">
-    <p class="footer-copy">© 2025 Inna Yankina · <a href="#">Privacy Policy</a></p>
+  <div class="footer-bottom"><p class="footer-copy">© 2025 Inna Yankina</p>
     <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span></div>
   </div>
 </footer>
 <script src="shared.js"></script>
 <script>
-function setLang(lang) {
-  document.getElementById('html-root').lang = lang;
-  ['ru','en'].forEach(l => {
-    const show = l === lang;
-    ['nav-'+l, 'navDrawer-'+l, 'navOverlay-'+l, 'footer-'+l].forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.style.display = show ? '' : 'none';
+function setLang(lang){
+  document.getElementById('html-root').lang=lang;
+  ['ru','en'].forEach(l=>{const show=l===lang;
+    ['nav-'+l,'navDrawer-'+l,'navOverlay-'+l,'footer-'+l].forEach(id=>{
+      const el=document.getElementById(id);if(el)el.style.display=show?'':'none';
     });
   });
-  document.querySelectorAll('.t-ru').forEach(el => el.style.display = lang==='ru' ? '' : 'none');
-  document.querySelectorAll('.t-en').forEach(el => el.style.display = lang==='en' ? '' : 'none');
-  // Update title
-  const titles = {"ru":"Не магия, а биология — Инна Янкина","en":"Not Magic, But Biology — Inna Yankina"};
-  if (titles[lang]) document.getElementById('page-title').textContent = titles[lang];
-  // Update internal links
-  document.querySelectorAll('[data-href-ru]').forEach(el => {
-    el.href = lang==='ru' ? el.dataset.hrefRu : el.dataset.hrefEn;
-  });
-  try { localStorage.setItem('lang', lang); } catch(e) {}
-  initBurgers(lang);
+  document.querySelectorAll('.t-ru').forEach(el=>el.style.display=lang==='ru'?'':'none');
+  document.querySelectorAll('.t-en').forEach(el=>el.style.display=lang==='en'?'':'none');
+  try{localStorage.setItem('lang',lang);}catch(e){}
+  initBurger(lang);
 }
-function initBurgers(lang) {
-  const burger = document.getElementById('burger-'+lang);
-  const drawer = document.getElementById('navDrawer-'+lang);
-  const overlay = document.getElementById('navOverlay-'+lang);
-  if (!burger) return;
-  burger.onclick = () => {
-    const open = drawer.classList.contains('open');
-    [burger, drawer, overlay].forEach(el => el.classList.toggle('open', !open));
-    document.body.style.overflow = open ? '' : 'hidden';
-  };
-  if (overlay) overlay.onclick = () => {
-    [burger, drawer, overlay].forEach(el => el.classList.remove('open'));
-    document.body.style.overflow = '';
-  };
+function initBurger(lang){
+  const b=document.getElementById('burger-'+lang),d=document.getElementById('navDrawer-'+lang),o=document.getElementById('navOverlay-'+lang);
+  if(!b)return;
+  b.onclick=()=>{const open=d.classList.contains('open');[b,d,o].forEach(el=>el.classList.toggle('open',!open));document.body.style.overflow=open?'':'hidden';};
+  if(o)o.onclick=()=>{[b,d,o].forEach(el=>el.classList.remove('open'));document.body.style.overflow='';};
 }
-initBurgers('ru');
-try { const s = localStorage.getItem('lang'); if (s === 'en') setLang('en'); } catch(e) {}
+initBurger('ru');
+try{const s=localStorage.getItem('lang');if(s==='en')setLang('en');}catch(e){}
 </script>
 </body>
 </html>

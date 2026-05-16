@@ -3,21 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#ffffff">
-<title id="page-title">Крии и видения — Инна Янкина</title>
+<title>Крии и видения — Инна Янкина</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap">
 <link rel="stylesheet" href="shared.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+<style>
+.article-label{font-family:var(--font-head);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--text-light);margin-bottom:.5rem;display:block;}
+.article-title{font-family:var(--font-body);font-size:clamp(1.8rem,5vw,2.8rem);font-weight:300;color:var(--text-head);line-height:1.2;margin-bottom:1.5rem;}
+.article-lead{font-family:var(--font-body);font-size:1.2rem;color:var(--text-body);line-height:1.85;margin-bottom:2rem;border-left:3px solid #c4987a;padding-left:1.25rem;}
+.article-h2{font-family:var(--font-head);font-size:.85rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--text-head);margin:2.5rem 0 1rem;}
+.article-p{font-family:var(--font-body);font-size:1.1rem;color:var(--text-body);line-height:1.88;margin-bottom:1.25rem;}
+.article-cite{font-family:var(--font-head);font-size:.7rem;letter-spacing:.08em;color:var(--text-light);display:block;margin-top:.5rem;margin-bottom:1rem;font-style:italic;}
+.stat-row{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin:2rem 0;}
+@media(min-width:640px){.stat-row{grid-template-columns:repeat(4,1fr);}}
+.stat-box{border-top:2px solid #c4987a;padding-top:1rem;text-align:center;}
+.stat-box-num{font-family:var(--font-body);font-size:2rem;font-weight:300;color:#c4987a;line-height:1;}
+.stat-box-desc{font-family:var(--font-head);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);margin-top:.4rem;line-height:1.5;}
+.article-nav{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;border-top:1px solid var(--line);margin-top:2rem;flex-wrap:wrap;gap:.5rem;}
+.article-nav a{font-family:var(--font-head);font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--text-head);text-decoration:none;}
+</style>
 </head>
 <body>
+
 <nav class="nav" id="nav-ru">
   <a href="individual.html" class="nav-logo">INNA IANKINA</a>
   <ul class="nav-links">
     <li><a href="individual.html">Индивидуально</a></li>
     <li><a href="sessions.html">Сессии</a></li>
-    <li><a href="index.html">Курс</a></li>
     <li><a href="kundalini-info.html" class="active">О Кундалини</a></li>
     <li><a href="about.html">Обо мне</a></li>
     <li><a href="contact.html">Контакты</a></li>
@@ -27,8 +41,7 @@
 </nav>
 <div class="nav-drawer" id="navDrawer-ru">
   <a href="individual.html">Индивидуально</a><a href="sessions.html">Сессии</a>
-  <a href="index.html">Курс</a><a href="kundalini-info.html">О Кундалини</a>
-  <a href="about.html">Обо мне</a><a href="contact.html">Контакты</a>
+  <a href="kundalini-info.html">О Кундалини</a><a href="about.html">Обо мне</a><a href="contact.html">Контакты</a>
 </div>
 <div class="nav-overlay" id="navOverlay-ru"></div>
 <nav class="nav" id="nav-en" style="display:none;">
@@ -49,22 +62,13 @@
 </div>
 <div class="nav-overlay" id="navOverlay-en" style="display:none;"></div>
 <div class="page-wrap">
-<div class="t-ru">
-<div class="hero-banner">
-    <img src="https://i.postimg.cc/vHYbC3fg/Chat-GPT-Image-9-maa-2026-g-20-02-46.jpg" alt="КРИИ, ВИДЕНИЯ И ЛЕВОПОЛУШАРНЫЙ ФРИЗ" loading="eager">
-    <div class="hero-banner-overlay">
-      <p class="t-display reveal" style="font-size:clamp(1.1rem,4vw,1.7rem);">КРИИ, ВИДЕНИЯ И ЛЕВОПОЛУШАРНЫЙ ФРИЗ</p>
-      <p class="t-caps-sm reveal d1" style="margin-top:.4rem;">Как расшифровать симптомы пробуждения?</p>
-    </div>
-  </div>
-  <div class="col">
-    <div class="spacer"></div>
-    <p class="t-serif" style="font-size:.82rem;color:var(--text-light);margin-bottom:.5rem;">
-      <a href="kundalini-info.html" style="color:var(--text-light);text-decoration:none;">← О Кундалини</a>
-    </p>
-    <div class="article-body reveal">
-      
-      <p>Активация Кундалини — это не просто медитация, после которой вы чувствуете лёгкое расслабление. Это глубокая метаморфоза, которая иногда сопровождается весьма необычными телесными и эмоциональными проявлениями. Если не знать их природы, можно испугаться. Но если понимать физиологию процесса, становится ясно: тело совершает гениальную работу по самоисцелению.</p>
+<div class="t-ru"><div class="col"><div class="spacer"></div>
+<span class="article-label">Крии, видения и левополушарный фриз</span>
+<h1 class="article-title">Симптомы пробуждения</h1>
+<p class="article-lead">Активация Кундалини сопровождается необычными телесными феноменами. Если не знать их природы, можно испугаться. Физиология объясняет всё.</p>
+<img src="https://i.postimg.cc/vHYbC3fg/Chat-GPT-Image-9-maa-2026-g-20-02-46.jpg" alt="" loading="lazy" style="width:100%;display:block;object-fit:cover;aspect-ratio:16/7;max-height:360px;margin-bottom:2rem;">
+<div class="article-body">
+<p>Активация Кундалини — это не просто медитация, после которой вы чувствуете лёгкое расслабление. Это глубокая метаморфоза, которая иногда сопровождается весьма необычными телесными и эмоциональными проявлениями. Если не знать их природы, можно испугаться. Но если понимать физиологию процесса, становится ясно: тело совершает гениальную работу по самоисцелению.</p>
       <h2>1. Крии: спонтанный танец тела</h2>
       <p>Во время активации многие замечают непроизвольные движения — подёргивания, выгибания спины, тряску. В йоге это называется «крии». Нейробиология объясняет это просто: происходит разбалансировка тормозных нейронов в моторных центрах мозга. Накопленная годами «замороженная» энергия стресса и травм буквально вытряхивается из нервных путей. Ваше тело избавляется от блоков.</p>
       <h2>2. Видения и «Трансцендентное зрение»</h2>
@@ -74,30 +78,23 @@
       <h2>4. Стадия распада (Die-off)</h2>
       <p>Иногда после яркой вспышки пробуждения наступает резкая усталость. Иммунная система входит в катаболическое состояние: клетки-макрофаги буквально «разбирают» отжившие структуры в организме. Это внутренняя «линька»: разрушается старое, чтобы освободить место для новой ёмкости вашей нервной системы.</p>
       <blockquote>Все эти состояния — не цель процесса. Это лишь знаки того, что ваша старая «броня» сгорает. Позвольте своему телу пройти этот путь, и за стадией очищения обязательно придёт этап невероятной лёгкости и свободы.</blockquote>
-    </div>
-    <div class="spacer"></div>
-    <a href="sessions.html" class="btn btn-arrow reveal">ЗАПИСАТЬСЯ НА СЕССИЮ</a>
-    <div class="spacer-sm"></div>
-    <a href="kundalini-info.html" class="btn btn-outline btn-arrow reveal d1">← НАЗАД К СТАТЬЯМ</a>
-    <div class="spacer"></div>
-  </div>
 </div>
-<div class="t-en" style="display:none;">
-<div class="hero-banner">
-    <img src="https://i.postimg.cc/vHYbC3fg/Chat-GPT-Image-9-maa-2026-g-20-02-46.jpg" alt="KRIYAS, VISIONS & THE LEFT-BRAIN FREEZE" loading="eager">
-    <div class="hero-banner-overlay">
-      <p class="t-display reveal" style="font-size:clamp(1.1rem,4vw,1.7rem);">KRIYAS, VISIONS & THE LEFT-BRAIN FREEZE</p>
-      <p class="t-caps-sm reveal d1" style="margin-top:.4rem;">How to decode the symptoms of awakening?</p>
-    </div>
-  </div>
-  <div class="col">
-    <div class="spacer"></div>
-    <p class="t-serif" style="font-size:.82rem;color:var(--text-light);margin-bottom:.5rem;">
-      <a href="kundalini-info.html" style="color:var(--text-light);text-decoration:none;">← About Kundalini</a>
-    </p>
-    <div class="article-body reveal">
-      
-      <p>Kundalini activation is not simply a meditation that leaves you feeling mildly relaxed. It is a deep metamorphosis, sometimes accompanied by quite unusual physical and emotional manifestations. Without understanding their nature, one might be alarmed. But with knowledge of the physiology, it becomes clear: the body is doing brilliant work of self-healing.</p>
+<div class="spacer-sm"></div>
+<a href="sessions.html" class="btn btn-arrow">ЗАПИСАТЬСЯ НА СЕССИЮ</a>
+<div class="spacer-sm"></div>
+<a href="kundalini-info.html" class="btn btn-outline btn-arrow" style="margin-top:.5rem;">← НАЗАД К СТАТЬЯМ</a>
+<div class="article-nav" style="margin-top:2rem;">
+  <a href='kundalini-article1.html'>← Не магия</a>
+  <a href='kundalini-article3.html'>Кундалини Земли →</a>
+</div>
+<div class="spacer"></div></div></div>
+<div class="t-en" style="display:none;"><div class="col"><div class="spacer"></div>
+<span class="article-label">Kriyas, visions and left-brain freeze</span>
+<h1 class="article-title">Symptoms of awakening</h1>
+<p class="article-lead">Kundalini Activation is accompanied by unusual somatic phenomena. If you don't know their nature, they can be alarming. Physiology explains everything.</p>
+<img src="https://i.postimg.cc/vHYbC3fg/Chat-GPT-Image-9-maa-2026-g-20-02-46.jpg" alt="" loading="lazy" style="width:100%;display:block;object-fit:cover;aspect-ratio:16/7;max-height:360px;margin-bottom:2rem;">
+<div class="article-body">
+<p>Kundalini activation is not simply a meditation that leaves you feeling mildly relaxed. It is a deep metamorphosis, sometimes accompanied by quite unusual physical and emotional manifestations. Without understanding their nature, one might be alarmed. But with knowledge of the physiology, it becomes clear: the body is doing brilliant work of self-healing.</p>
       <h2>1. Kriyas: the body's spontaneous dance</h2>
       <p>During activation, many notice involuntary movements — twitching, back arching, shaking. In yoga these are called "kriyas". Neurobiology offers a straightforward explanation: an imbalance occurs in the inhibitory neurons of the brain's motor centres. Years of accumulated, "frozen" stress and trauma energy is literally shaken out of the neural pathways. Your body is releasing its blocks.</p>
       <h2>2. Visions and "transcendent sight"</h2>
@@ -107,32 +104,30 @@
       <h2>4. The die-off phase</h2>
       <p>Sometimes after a vivid awakening flash, deep fatigue sets in. The immune system enters a catabolic state: macrophage cells begin "dismantling" spent structures in the organism. This is an internal "moulting": the old is broken down to free space for a new, greater capacity in your nervous system.</p>
       <blockquote>All these states are not the goal of the process — they are simply signs that your old "armour" is burning away. Allow your body to make this journey, and after the cleansing phase, a stage of extraordinary lightness and freedom will surely follow.</blockquote>
-    </div>
-    <div class="spacer"></div>
-    <a href="sessions.html" class="btn btn-arrow reveal">BOOK A SESSION</a>
-    <div class="spacer-sm"></div>
-    <a href="kundalini-info.html" class="btn btn-outline btn-arrow reveal d1">← BACK TO ARTICLES</a>
-    <div class="spacer"></div>
-  </div>
 </div>
+<div class="spacer-sm"></div>
+<a href="sessions.html" class="btn btn-arrow">BOOK A SESSION</a>
+<div class="spacer-sm"></div>
+<a href="kundalini-info.html" class="btn btn-outline btn-arrow" style="margin-top:.5rem;">← ALL ARTICLES</a>
+<div class="article-nav" style="margin-top:2rem;">
+  <a href='kundalini-article1.html'>← Not magic</a>
+  <a href='kundalini-article3.html'>Earth Kundalini →</a>
 </div>
+<div class="spacer"></div></div></div>
+</div>
+
 <footer class="footer" id="footer-ru">
   <div class="footer-inner">
     <div><p class="footer-logo">INNA IANKINA</p><p class="footer-sub">Практик кундалини · Англия</p></div>
     <div><p class="footer-col-title">Страницы</p><nav class="footer-nav">
       <a href="individual.html">Индивидуально</a><a href="sessions.html">Сессии</a>
-      <a href="index.html">Курс</a><a href="kundalini-info.html">О Кундалини</a>
-      <a href="about.html">Обо мне</a><a href="contact.html">Контакты</a>
+      <a href="kundalini-info.html">О Кундалини</a><a href="about.html">Обо мне</a><a href="contact.html">Контакты</a>
     </nav></div>
     <div><p class="footer-col-title">Связаться</p><nav class="footer-nav">
-      <a href="https://wa.me/447388825436">WhatsApp</a>
-      <a href="https://instagram.com/inna.uk.iankin/">Instagram</a>
-      <a href="https://t.me/innaiankina">Telegram</a>
-      <a href="mailto:inna.win.iankina@gmail.com">Email</a>
+      <a href="https://wa.me/447388825436">WhatsApp</a><a href="https://instagram.com/inna.uk.iankin/">Instagram</a><a href="https://t.me/innaiankina">Telegram</a>
     </nav></div>
   </div>
-  <div class="footer-bottom">
-    <p class="footer-copy">© 2025 Инна Янкина · <a href="#">Политика конфиденциальности</a></p>
+  <div class="footer-bottom"><p class="footer-copy">© 2025 Инна Янкина</p>
     <div class="nav-lang"><span class="active">RU</span><a href="#" onclick="setLang('en');return false;">EN</a></div>
   </div>
 </footer>
@@ -144,57 +139,35 @@
       <a href="kundalini-info.html">About Kundalini</a><a href="about.html">About</a><a href="contact.html">Contact</a>
     </nav></div>
     <div><p class="footer-col-title">Contact</p><nav class="footer-nav">
-      <a href="https://wa.me/447388825436">WhatsApp</a>
-      <a href="https://instagram.com/inna.uk.iankin/">Instagram</a>
-      <a href="https://t.me/innaiankina">Telegram</a>
-      <a href="mailto:inna.win.iankina@gmail.com">Email</a>
+      <a href="https://wa.me/447388825436">WhatsApp</a><a href="https://instagram.com/inna.uk.iankin/">Instagram</a><a href="https://t.me/innaiankina">Telegram</a>
     </nav></div>
   </div>
-  <div class="footer-bottom">
-    <p class="footer-copy">© 2025 Inna Yankina · <a href="#">Privacy Policy</a></p>
+  <div class="footer-bottom"><p class="footer-copy">© 2025 Inna Yankina</p>
     <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span></div>
   </div>
 </footer>
 <script src="shared.js"></script>
 <script>
-function setLang(lang) {
-  document.getElementById('html-root').lang = lang;
-  ['ru','en'].forEach(l => {
-    const show = l === lang;
-    ['nav-'+l, 'navDrawer-'+l, 'navOverlay-'+l, 'footer-'+l].forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.style.display = show ? '' : 'none';
+function setLang(lang){
+  document.getElementById('html-root').lang=lang;
+  ['ru','en'].forEach(l=>{const show=l===lang;
+    ['nav-'+l,'navDrawer-'+l,'navOverlay-'+l,'footer-'+l].forEach(id=>{
+      const el=document.getElementById(id);if(el)el.style.display=show?'':'none';
     });
   });
-  document.querySelectorAll('.t-ru').forEach(el => el.style.display = lang==='ru' ? '' : 'none');
-  document.querySelectorAll('.t-en').forEach(el => el.style.display = lang==='en' ? '' : 'none');
-  // Update title
-  const titles = {"ru":"Крии и видения — Инна Янкина","en":"Kriyas and Visions — Inna Yankina"};
-  if (titles[lang]) document.getElementById('page-title').textContent = titles[lang];
-  // Update internal links
-  document.querySelectorAll('[data-href-ru]').forEach(el => {
-    el.href = lang==='ru' ? el.dataset.hrefRu : el.dataset.hrefEn;
-  });
-  try { localStorage.setItem('lang', lang); } catch(e) {}
-  initBurgers(lang);
+  document.querySelectorAll('.t-ru').forEach(el=>el.style.display=lang==='ru'?'':'none');
+  document.querySelectorAll('.t-en').forEach(el=>el.style.display=lang==='en'?'':'none');
+  try{localStorage.setItem('lang',lang);}catch(e){}
+  initBurger(lang);
 }
-function initBurgers(lang) {
-  const burger = document.getElementById('burger-'+lang);
-  const drawer = document.getElementById('navDrawer-'+lang);
-  const overlay = document.getElementById('navOverlay-'+lang);
-  if (!burger) return;
-  burger.onclick = () => {
-    const open = drawer.classList.contains('open');
-    [burger, drawer, overlay].forEach(el => el.classList.toggle('open', !open));
-    document.body.style.overflow = open ? '' : 'hidden';
-  };
-  if (overlay) overlay.onclick = () => {
-    [burger, drawer, overlay].forEach(el => el.classList.remove('open'));
-    document.body.style.overflow = '';
-  };
+function initBurger(lang){
+  const b=document.getElementById('burger-'+lang),d=document.getElementById('navDrawer-'+lang),o=document.getElementById('navOverlay-'+lang);
+  if(!b)return;
+  b.onclick=()=>{const open=d.classList.contains('open');[b,d,o].forEach(el=>el.classList.toggle('open',!open));document.body.style.overflow=open?'':'hidden';};
+  if(o)o.onclick=()=>{[b,d,o].forEach(el=>el.classList.remove('open'));document.body.style.overflow='';};
 }
-initBurgers('ru');
-try { const s = localStorage.getItem('lang'); if (s === 'en') setLang('en'); } catch(e) {}
+initBurger('ru');
+try{const s=localStorage.getItem('lang');if(s==='en')setLang('en');}catch(e){}
 </script>
 </body>
 </html>

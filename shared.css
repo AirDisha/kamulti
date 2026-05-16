@@ -1113,3 +1113,18 @@ body{
 @media (min-width: 640px) {
   #price-grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ── Кнопки: компактные на десктопе ── */
+@media (min-width: 768px) {
+  .btn {
+    width: auto !important;
+    display: inline-block !important;
+    min-width: 220px;
+    max-width: 420px;
+  }
+  .btn.btn-arrow { padding-right: 2.5rem; }
+  /* Исключение: price block кнопки растягиваем */
+  .price-block .btn { width: 100% !important; max-width: 100%; }
+  /* И кнопки в блоке Проверьте */
+  #price-grid .btn { width: 100% !important; max-width: 100%; }
+}
