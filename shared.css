@@ -1128,3 +1128,15 @@ body{
   /* И кнопки в блоке Проверьте */
   #price-grid .btn { width: 100% !important; max-width: 100%; }
 }
+
+/* ── Кнопки: центрирование текста по вертикали ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .btn { display: inline-flex; }
+  .price-block .btn,
+  #price-grid .btn { display: flex; }
+}
