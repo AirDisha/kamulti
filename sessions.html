@@ -391,26 +391,24 @@
 
   <!-- ══ КАРУСЕЛЬ ФОТО/ВИДЕО ══ -->
   <div class="hr"></div>
-  <div class="col">
-    <div class="spacer"></div>
-  </div>
-  <div style="position:relative;overflow:hidden;max-width:var(--col-w);margin:0 auto;" data-carousel>
-    <div class="carousel-track" style="display:flex;transition:transform .4s ease;">
-      <div class="carousel-slide" style="min-width:100%;position:relative;">
-        <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779024281/ChatGPT_Image_17_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._16_20_18_vtnptw.jpg" loading="lazy" style="width:100%;display:block;aspect-ratio:4/3;object-fit:cover;max-height:480px;">
+  <div class="col"><div class="spacer"></div></div>
+  <div style="max-width:420px;margin:0 auto;" data-carousel>
+    <div class="carousel-track">
+      <div class="element-card" style="min-width:100%;">
+        <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779024281/ChatGPT_Image_17_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._16_20_18_vtnptw.jpg" loading="lazy" style="width:100%;display:block;aspect-ratio:3/4;object-fit:cover;">
       </div>
-      <div class="carousel-slide" style="min-width:100%;position:relative;">
-        <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779024282/ChatGPT_Image_17_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._16_22_29_oha9jf.jpg" loading="lazy" style="width:100%;display:block;aspect-ratio:4/3;object-fit:cover;max-height:480px;">
+      <div class="element-card" style="min-width:100%;">
+        <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779024282/ChatGPT_Image_17_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._16_22_29_oha9jf.jpg" loading="lazy" style="width:100%;display:block;aspect-ratio:3/4;object-fit:cover;">
       </div>
-      <div class="carousel-slide" style="min-width:100%;position:relative;">
-        <video controls playsinline preload="none" poster="" style="width:100%;display:block;aspect-ratio:4/3;object-fit:cover;max-height:480px;background:#111;">
+      <div class="element-card" style="min-width:100%;">
+        <video controls playsinline preload="none" style="width:100%;display:block;aspect-ratio:3/4;object-fit:cover;background:#111;">
           <source src="https://res.cloudinary.com/dzu9phbzr/video/upload/v1779021757/video_2026-05-16_15-11-53_eq9m8s.mp4" type="video/mp4">
         </video>
       </div>
     </div>
-    <button class="carousel-btn carousel-prev" style="position:absolute;left:1rem;top:50%;transform:translateY(-50%);">‹</button>
-    <button class="carousel-btn carousel-next" style="position:absolute;right:1rem;top:50%;transform:translateY(-50%);">›</button>
-    <div class="carousel-dots" style="position:absolute;bottom:.75rem;left:0;right:0;display:flex;justify-content:center;gap:.5rem;"></div>
+    <button class="carousel-btn carousel-prev">‹</button>
+    <button class="carousel-btn carousel-next">›</button>
+    <div class="carousel-dots"></div>
   </div>
   <div class="col"><div class="spacer"></div></div>
   <!-- ══ 10. ОБО МНЕ ══ -->
