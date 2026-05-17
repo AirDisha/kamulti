@@ -1140,3 +1140,29 @@ body{
   .price-block .btn,
   #price-grid .btn { display: flex; }
 }
+
+
+/* ── Before/After grid ── */
+.ba-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--line);
+  gap: 1px;
+}
+.ba-cell {
+  background: #fff;
+  padding: .75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  color: var(--text-body);
+  line-height: 1.5;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+}
+.ba-cell::before { content: '— '; color: var(--text-light); flex-shrink: 0; }
+.ba-cell.after { color: var(--text-head); }
+.ba-cell.after::before { color: var(--gold); }
+.ba-cell.ba-head { font-family: var(--font-head); font-size: 1rem; letter-spacing: .18em; text-transform: uppercase; color: var(--text-light); font-weight: 400; align-items: flex-end; padding-bottom: .6rem; }
+.ba-cell.ba-head::before { display: none; }
+.ba-cell.last { border-bottom: none; }

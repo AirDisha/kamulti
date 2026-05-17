@@ -58,11 +58,9 @@
 /* ══════════════════════════════════════
    BEFORE / AFTER
 ══════════════════════════════════════ */
-.ba-grid { display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line); }
-.ba-col { background:#fff;padding:1.5rem 1rem; }
 .ba-label { font-family:var(--font-head);font-size:1rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-light);margin-bottom:1rem;display:block; }
 .ba-list { list-style:none; }
-.ba-list li { font-family:var(--font-body);font-size:1.16rem;color:var(--text-body);padding:.6rem 0;border-bottom:1px solid var(--line);line-height:1.5; }
+.ba-list li { font-family:var(--font-body);font-size:1.16rem;color:var(--text-body);padding:.6rem 0;border-bottom:1px solid var(--line);line-height:1.5;min-height:3.5rem;display:flex;align-items:center; }
 .ba-list li::before { content:'— ';color:var(--text-light); }
 .ba-col.after .ba-list li { color:var(--text-head); }
 .ba-col.after .ba-list li::before { content:'— ';color:var(--gold); }
@@ -284,26 +282,24 @@
     <div class="spacer-sm"></div>
   </div>
   <div class="ba-grid reveal">
-    <div class="ba-col">
-      <span class="ba-label"><span class="t-ru">ДО</span><span class="t-en" style="display:none;">BEFORE</span></span>
-      <ul class="ba-list">
-        <li><span class="t-ru">Хроническая усталость без причины</span><span class="t-en" style="display:none;">Chronic fatigue without reason</span></li>
-        <li><span class="t-ru">Сон не восстанавливает</span><span class="t-en" style="display:none;">Sleep doesn't restore</span></li>
-        <li><span class="t-ru">Реактивность, тревога фоном</span><span class="t-en" style="display:none;">Reactivity, background anxiety</span></li>
-        <li><span class="t-ru">Решения «по инерции»</span><span class="t-en" style="display:none;">Decisions made "on autopilot"</span></li>
-        <li><span class="t-ru">Жизнь на автопилоте</span><span class="t-en" style="display:none;">Life on autopilot</span></li>
-      </ul>
-    </div>
-    <div class="ba-col after">
-      <span class="ba-label"><span class="t-ru">ПОСЛЕ</span><span class="t-en" style="display:none;">AFTER</span></span>
-      <ul class="ba-list">
-        <li><span class="t-ru">Стабильный энергетический фон</span><span class="t-en" style="display:none;">Stable energy throughout the day</span></li>
-        <li><span class="t-ru">Глубокий сон, REM в норме</span><span class="t-en" style="display:none;">Deep sleep, REM normalised</span></li>
-        <li><span class="t-ru">Нейтральная реакция на стресс</span><span class="t-en" style="display:none;">Neutral response to stress</span></li>
-        <li><span class="t-ru">Ясность в принятии решений</span><span class="t-en" style="display:none;">Clarity in decision making</span></li>
-        <li><span class="t-ru">Внутренняя опора</span><span class="t-en" style="display:none;">Inner groundedness</span></li>
-      </ul>
-    </div>
+    <!-- Labels row -->
+    <div class="ba-cell ba-head"><span class="ba-label"><span class="t-ru">ДО</span><span class="t-en" style="display:none;">BEFORE</span></span></div>
+    <div class="ba-cell ba-head after"><span class="ba-label"><span class="t-ru">ПОСЛЕ</span><span class="t-en" style="display:none;">AFTER</span></span></div>
+    <!-- Row 1 -->
+    <div class="ba-cell"><span class="t-ru">Хроническая усталость без причины</span><span class="t-en" style="display:none;">Chronic fatigue without reason</span></div>
+    <div class="ba-cell after"><span class="t-ru">Стабильный энергетический фон</span><span class="t-en" style="display:none;">Stable energy throughout the day</span></div>
+    <!-- Row 2 -->
+    <div class="ba-cell"><span class="t-ru">Сон не восстанавливает</span><span class="t-en" style="display:none;">Sleep doesn't restore</span></div>
+    <div class="ba-cell after"><span class="t-ru">Глубокий сон, REM в норме</span><span class="t-en" style="display:none;">Deep sleep, REM normalised</span></div>
+    <!-- Row 3 -->
+    <div class="ba-cell"><span class="t-ru">Реактивность, тревога фоном</span><span class="t-en" style="display:none;">Reactivity, background anxiety</span></div>
+    <div class="ba-cell after"><span class="t-ru">Нейтральная реакция на стресс</span><span class="t-en" style="display:none;">Neutral response to stress</span></div>
+    <!-- Row 4 -->
+    <div class="ba-cell"><span class="t-ru">Решения «по инерции»</span><span class="t-en" style="display:none;">Decisions made "on autopilot"</span></div>
+    <div class="ba-cell after"><span class="t-ru">Ясность в принятии решений</span><span class="t-en" style="display:none;">Clarity in decision making</span></div>
+    <!-- Row 5 -->
+    <div class="ba-cell last"><span class="t-ru">Жизнь на автопилоте</span><span class="t-en" style="display:none;">Life on autopilot</span></div>
+    <div class="ba-cell after last"><span class="t-ru">Внутренняя опора</span><span class="t-en" style="display:none;">Inner groundedness</span></div>
   </div>
   <div class="col"><div class="spacer"></div></div>
 
@@ -526,7 +522,7 @@
         <span class="t-ru">ЗАПИСАТЬСЯ НА ДИАГНОСТИКУ</span>
         <span class="t-en" style="display:none;">BOOK A FREE ASSESSMENT</span>
       </a>
-      <a href="kundalini_science_review.pdf" class="btn btn-outline" download style="flex:1;min-width:200px;max-width:280px;display:inline-flex;align-items:center;justify-content:center;text-align:center;">
+      <a href="https://drive.google.com/file/d/1Ii7URrpvtmjTEQpGwWRcls6OiQNekaMa/view?usp=sharing" target="_blank" class="btn btn-outline" download style="flex:1;min-width:200px;max-width:280px;display:inline-flex;align-items:center;justify-content:center;text-align:center;">
         <span class="t-ru">⬇ СКАЧАТЬ НАУЧНЫЙ ОБЗОР PDF</span><span class="t-en" style="display:none;">⬇ DOWNLOAD SCIENCE OVERVIEW PDF</span>
       </a>
     </div>
