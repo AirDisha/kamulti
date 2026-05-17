@@ -52,10 +52,50 @@ document.querySelectorAll('[data-carousel]').forEach(wrap=>{
     dotsWrap.appendChild(d);
   });
 
+  function handleVideo(idx){
+    slides.forEach((slide,i)=>{
+      const v=slide.querySelector('video');
+      if(!v)return;
+      if(i===idx){
+        // try with sound first (requires prior user gesture)
+        v.muted=false;
+        const p=v.play();
+        if(p!==undefined){
+          p.catch(()=>{
+            // fallback: play muted, show tap-to-unmute overlay
+            v.muted=true;
+            v.play().catch(()=>{});
+            let overlay=slide.querySelector('.vid-unmute');
+            if(!overlay){
+              overlay=document.createElement('button');
+              overlay.className='vid-unmute';
+              overlay.textContent='🔊 Нажмите для звука';
+              overlay.style.cssText='position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.6);color:#fff;border:none;padding:.5rem 1rem;font-size:.8rem;cursor:pointer;border-radius:2rem;z-index:20;';
+              slide.style.position='relative';
+              slide.appendChild(overlay);
+              overlay.addEventListener('click',()=>{
+                v.muted=false;
+                v.play().catch(()=>{});
+                overlay.remove();
+              },{once:true});
+            }
+          });
+        }
+      } else {
+        v.pause();
+        v.currentTime=0;
+        v.muted=true;
+        const overlay=slide.querySelector('.vid-unmute');
+        if(overlay)overlay.remove();
+      }
+    });
+  }
+
   function go(n){
     cur=(n+total)%total;
     track.style.transform=`translateX(-${cur*100}%)`;
     wrap.querySelectorAll('.carousel-dot').forEach((d,i)=>d.classList.toggle('active',i===cur));
+    handleVideo(cur);
   }
   if(prev)prev.addEventListener('click',()=>go(cur-1));
   if(next)next.addEventListener('click',()=>go(cur+1));
