@@ -58,9 +58,11 @@
 /* ══════════════════════════════════════
    BEFORE / AFTER
 ══════════════════════════════════════ */
+.ba-grid { display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line); }
+.ba-col { background:#fff;padding:1.5rem 1rem; }
 .ba-label { font-family:var(--font-head);font-size:1rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-light);margin-bottom:1rem;display:block; }
 .ba-list { list-style:none; }
-.ba-list li { font-family:var(--font-body);font-size:1.16rem;color:var(--text-body);padding:.6rem 0;border-bottom:1px solid var(--line);line-height:1.5;min-height:3.5rem;display:flex;align-items:center; }
+.ba-list li { font-family:var(--font-body);font-size:1.16rem;color:var(--text-body);padding:.6rem 0;border-bottom:1px solid var(--line);line-height:1.5; }
 .ba-list li::before { content:'— ';color:var(--text-light); }
 .ba-col.after .ba-list li { color:var(--text-head); }
 .ba-col.after .ba-list li::before { content:'— ';color:var(--gold); }
@@ -176,6 +178,10 @@
     <span class="s-label reveal">
       <span class="t-ru">Доказательная база</span><span class="t-en" style="display:none;">Evidence base</span>
     </span>
+    <p class="science-note reveal" style="margin-bottom:1rem;">
+      <span class="t-ru">Здесь нет «энергий из тонкого мира». Только измеримые изменения в нервной, эндокринной и иммунной системах — задокументированные в peer-reviewed журналах.</span>
+      <span class="t-en" style="display:none;">No "subtle energies". Only measurable changes in the nervous, endocrine and immune systems — documented in peer-reviewed journals.</span>
+    </p>
     <h2 class="t-caps reveal">
       <span class="t-ru">ЧТО ГОВОРИТ НАУКА</span><span class="t-en" style="display:none;">WHAT SCIENCE SAYS</span>
     </h2>
@@ -282,24 +288,26 @@
     <div class="spacer-sm"></div>
   </div>
   <div class="ba-grid reveal">
-    <!-- Labels row -->
-    <div class="ba-cell ba-head"><span class="ba-label"><span class="t-ru">ДО</span><span class="t-en" style="display:none;">BEFORE</span></span></div>
-    <div class="ba-cell ba-head after"><span class="ba-label"><span class="t-ru">ПОСЛЕ</span><span class="t-en" style="display:none;">AFTER</span></span></div>
-    <!-- Row 1 -->
-    <div class="ba-cell"><span class="t-ru">Хроническая усталость без причины</span><span class="t-en" style="display:none;">Chronic fatigue without reason</span></div>
-    <div class="ba-cell after"><span class="t-ru">Стабильный энергетический фон</span><span class="t-en" style="display:none;">Stable energy throughout the day</span></div>
-    <!-- Row 2 -->
-    <div class="ba-cell"><span class="t-ru">Сон не восстанавливает</span><span class="t-en" style="display:none;">Sleep doesn't restore</span></div>
-    <div class="ba-cell after"><span class="t-ru">Глубокий сон, REM в норме</span><span class="t-en" style="display:none;">Deep sleep, REM normalised</span></div>
-    <!-- Row 3 -->
-    <div class="ba-cell"><span class="t-ru">Реактивность, тревога фоном</span><span class="t-en" style="display:none;">Reactivity, background anxiety</span></div>
-    <div class="ba-cell after"><span class="t-ru">Нейтральная реакция на стресс</span><span class="t-en" style="display:none;">Neutral response to stress</span></div>
-    <!-- Row 4 -->
-    <div class="ba-cell"><span class="t-ru">Решения «по инерции»</span><span class="t-en" style="display:none;">Decisions made "on autopilot"</span></div>
-    <div class="ba-cell after"><span class="t-ru">Ясность в принятии решений</span><span class="t-en" style="display:none;">Clarity in decision making</span></div>
-    <!-- Row 5 -->
-    <div class="ba-cell last"><span class="t-ru">Жизнь на автопилоте</span><span class="t-en" style="display:none;">Life on autopilot</span></div>
-    <div class="ba-cell after last"><span class="t-ru">Внутренняя опора</span><span class="t-en" style="display:none;">Inner groundedness</span></div>
+    <div class="ba-col">
+      <span class="ba-label"><span class="t-ru">ДО</span><span class="t-en" style="display:none;">BEFORE</span></span>
+      <ul class="ba-list">
+        <li><span class="t-ru">Хроническая усталость без причины</span><span class="t-en" style="display:none;">Chronic fatigue without reason</span></li>
+        <li><span class="t-ru">Сон не восстанавливает</span><span class="t-en" style="display:none;">Sleep doesn't restore</span></li>
+        <li><span class="t-ru">Реактивность, тревога фоном</span><span class="t-en" style="display:none;">Reactivity, background anxiety</span></li>
+        <li><span class="t-ru">Решения «по инерции»</span><span class="t-en" style="display:none;">Decisions made "on autopilot"</span></li>
+        <li><span class="t-ru">Жизнь на автопилоте</span><span class="t-en" style="display:none;">Life on autopilot</span></li>
+      </ul>
+    </div>
+    <div class="ba-col after">
+      <span class="ba-label"><span class="t-ru">ПОСЛЕ</span><span class="t-en" style="display:none;">AFTER</span></span>
+      <ul class="ba-list">
+        <li><span class="t-ru">Стабильный энергетический фон</span><span class="t-en" style="display:none;">Stable energy throughout the day</span></li>
+        <li><span class="t-ru">Глубокий сон, REM в норме</span><span class="t-en" style="display:none;">Deep sleep, REM normalised</span></li>
+        <li><span class="t-ru">Нейтральная реакция на стресс</span><span class="t-en" style="display:none;">Neutral response to stress</span></li>
+        <li><span class="t-ru">Ясность в принятии решений</span><span class="t-en" style="display:none;">Clarity in decision making</span></li>
+        <li><span class="t-ru">Внутренняя опора</span><span class="t-en" style="display:none;">Inner groundedness</span></li>
+      </ul>
+    </div>
   </div>
   <div class="col"><div class="spacer"></div></div>
 
@@ -364,7 +372,7 @@
   </div>
 
   <!-- Фото -->
-  <div class="photo-half"><img src="https://i.postimg.cc/wBLhL3PS/Chat-GPT-Image-30-apr-2026-g-21-05-54.jpg" alt="" loading="lazy" class="reveal" style="width:100%;display:block;object-fit:contain;background:#f5f0eb;"></div>
+  <div class="photo-half"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779810779/photo_2026-05-19_01-24-52_zezsvs.jpg" alt="" loading="lazy" class="reveal" style="width:100%;display:block;object-fit:cover;aspect-ratio:3/4;"></div>
   <div class="spacer"></div>
 
   <!-- ══ 9. КАК ПРОХОДИТ ══ -->
@@ -395,11 +403,24 @@
         <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779024281/ChatGPT_Image_17_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._16_20_18_vtnptw.jpg" loading="lazy" style="width:100%;display:block;aspect-ratio:3/4;object-fit:cover;">
       </div>
       <div class="slide">
-        <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779024282/ChatGPT_Image_17_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._16_22_29_oha9jf.jpg" loading="lazy" style="width:100%;display:block;aspect-ratio:3/4;object-fit:cover;">
+        <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779810648/ChatGPT_Image_26_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._20_49_58_pkm3rf.jpg" loading="lazy" style="width:100%;display:block;aspect-ratio:3/4;object-fit:cover;">
+      </div>
+      <div class="slide">
+        <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779813724/ChatGPT_Image_26_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._19_39_31_dndgb8.jpg" loading="lazy" style="width:100%;display:block;aspect-ratio:3/4;object-fit:cover;">
       </div>
       <div class="slide">
         <video muted playsinline preload="auto" style="width:100%;display:block;aspect-ratio:3/4;object-fit:cover;background:#111;">
           <source src="https://res.cloudinary.com/dzu9phbzr/video/upload/v1779021757/video_2026-05-16_15-11-53_eq9m8s.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="slide">
+        <video muted playsinline preload="auto" style="width:100%;display:block;aspect-ratio:3/4;object-fit:cover;background:#111;">
+          <source src="https://res.cloudinary.com/dzu9phbzr/video/upload/v1779817643/lv_0_20260526204604_jtnbce.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="slide">
+        <video muted playsinline preload="auto" style="width:100%;display:block;aspect-ratio:3/4;object-fit:cover;background:#111;">
+          <source src="https://res.cloudinary.com/dzu9phbzr/video/upload/v1779821708/video_2026-05-26_21-54-36_kblard.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -418,7 +439,7 @@
     <h2 class="t-caps reveal"><span class="t-ru">ОБО МНЕ</span><span class="t-en" style="display:none;">ABOUT ME</span></h2>
     <div class="spacer-sm"></div>
     <p class="t-serif reveal d1">
-      <span class="t-ru">Я работаю с человеком целостно — через тело, энергию, сознание и душу — используя трансперсональный метод и интегративную психологию. Это холистический подход, в котором каждый уровень существа получает внимание и поддержку.</span>
+      <span class="t-ru">Я работаю с человеком целостно — на уровне тела, энергии, сознания, подсознания, души — со всей его многомерностью, через трансперсональный метод и интегративную психологию. Это холистический подход, в котором каждый слой человеческой структуры, каждая сфера человека получает внимание и поддержку.</span>
       <span class="t-en" style="display:none;">I work with the person as a whole — through body, energy, mind and soul — drawing on the transpersonal method and integrative psychology. This is a holistic approach in which every level of being receives attention and support.</span>
     </p>
     <div class="spacer-sm"></div>
@@ -444,7 +465,7 @@
   </div>
 
   <div class="photo-half">
-    <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1778958680/ChatGPT_Image_16_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._15_46_53_lat3dd.jpg" alt="Инна Янкина" loading="lazy" class="reveal" style="width:100%;display:block;object-fit:contain;">
+    <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779815498/ChatGPT_Image_26_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._20_11_02_ecmelh.jpg" alt="Инна Янкина" loading="lazy" class="reveal" style="width:100%;display:block;object-fit:contain;">
   </div>
   <div class="spacer"></div>
 
@@ -514,7 +535,7 @@
       <span class="t-en" style="display:none;border-bottom:2px solid #c4987a;padding-bottom:.1em;">Try it for yourself</span>
     </h2>
     <p class="t-serif reveal d1" style="text-align:center;color:var(--text-body);max-width:700px;margin:0 auto 2rem;">
-      <span class="t-ru">Бесплатная 20-минутная диагностика. Без давления, без продаж — только разбор вашего состояния и честный ответ, нужен ли вам этот метод.</span>
+      <span class="t-ru">Бесплатная 20-минутная диагностика, где мы проведём исследование вашего состояния и дадим честный ответ — нужен ли вам этот метод.</span>
       <span class="t-en" style="display:none;">A free 20-minute assessment. No pressure, no sales — just an honest analysis of your state and a genuine answer as to whether this method is right for you.</span>
     </p>
     <div class="reveal d2" style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.5rem;">
@@ -522,7 +543,7 @@
         <span class="t-ru">ЗАПИСАТЬСЯ НА ДИАГНОСТИКУ</span>
         <span class="t-en" style="display:none;">BOOK A FREE ASSESSMENT</span>
       </a>
-      <a href="https://drive.google.com/file/d/1Ii7URrpvtmjTEQpGwWRcls6OiQNekaMa/view?usp=sharing" target="_blank" class="btn btn-outline" download style="flex:1;min-width:200px;max-width:280px;display:inline-flex;align-items:center;justify-content:center;text-align:center;">
+      <a href="kundalini_science_review.pdf" class="btn btn-outline" download style="flex:1;min-width:200px;max-width:280px;display:inline-flex;align-items:center;justify-content:center;text-align:center;">
         <span class="t-ru">⬇ СКАЧАТЬ НАУЧНЫЙ ОБЗОР PDF</span><span class="t-en" style="display:none;">⬇ DOWNLOAD SCIENCE OVERVIEW PDF</span>
       </a>
     </div>
