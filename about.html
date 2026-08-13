@@ -45,7 +45,7 @@
     <li><a href="about.html" class="active">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span></div>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang(\'ua\');return false;">UA</a></div>
   <button class="nav-burger" id="burger-en"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-drawer" id="navDrawer-en" style="display:none;">
@@ -298,7 +298,7 @@
   </div>
   <div class="footer-bottom">
     <p class="footer-copy">© 2025 Inna Yankina · <a href="#">Privacy Policy</a></p>
-    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span></div>
+    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang(\'ua\');return false;">UA</a></div>
   </div>
 </footer>
 <footer class="footer" id="footer-ua" style="display:none;">
@@ -321,29 +321,40 @@
 
 <script src="shared.js"></script>
 <script>
-function setLang(lang){
-  document.getElementById('html-root').lang=lang;
-  ['ru','en','ua'].forEach(l=>{const show=l===lang;
-    ['nav-'+l,'navDrawer-'+l,'navOverlay-'+l,'footer-'+l].forEach(id=>{
-      const el=document.getElementById(id);if(el)el.style.display=show?'':'none';
+function setLang(lang) {
+  document.getElementById('html-root').lang = lang;
+  ['ru','en','ua'].forEach(l => {
+    const show = l === lang;
+    ['nav-'+l,'navDrawer-'+l,'navOverlay-'+l,'footer-'+l].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = show ? '' : 'none';
     });
   });
-  document.querySelectorAll('.t-ru').forEach(el=>el.style.display=lang==='ru'?'':'none');
-  document.querySelectorAll('.t-en').forEach(el=>el.style.display=lang==='en'?'':'none');
-  document.querySelectorAll('.t-ua').forEach(el=>el.style.display=lang==='ua'?'':'none');
-  document.querySelectorAll('.t-uk').forEach(el=>el.style.display=lang==='uk'?'':'none');
-  document.getElementById('page-title').textContent=lang==='ru'?'Обо мне — Инна Янкина':'About — Inna Yankina';
-  try{localStorage.setItem('lang',lang);}catch(e){}
+  document.querySelectorAll('.t-ru').forEach(el => el.style.display = lang==='ru' ? '' : 'none');
+  document.querySelectorAll('.t-en').forEach(el => el.style.display = lang==='en' ? '' : 'none');
+  document.querySelectorAll('.t-ua').forEach(el => el.style.display = lang==='ua' ? '' : 'none');
+  try { localStorage.setItem('lang', lang); } catch(e) {}
   initBurger(lang);
 }
-function initBurger(lang){
-  const b=document.getElementById('burger-'+lang),d=document.getElementById('navDrawer-'+lang),o=document.getElementById('navOverlay-'+lang);
-  if(!b)return;
-  b.onclick=()=>{const open=d.classList.contains('open');[b,d,o].forEach(el=>el.classList.toggle('open',!open));document.body.style.overflow=open?'':'hidden';};
-  if(o)o.onclick=()=>{[b,d,o].forEach(el=>el.classList.remove('open'));document.body.style.overflow='';};
+
+function initBurger(lang) {
+  const burger = document.getElementById('burger-'+lang);
+  const drawer = document.getElementById('navDrawer-'+lang);
+  const overlay = document.getElementById('navOverlay-'+lang);
+  if (!burger || !drawer) return;
+  burger.onclick = () => {
+    const open = drawer.classList.contains('open');
+    [burger, drawer, overlay].forEach(el => { if(el) el.classList.toggle('open', !open); });
+    document.body.style.overflow = open ? '' : 'hidden';
+  };
+  if (overlay) overlay.onclick = () => {
+    [burger, drawer, overlay].forEach(el => { if(el) el.classList.remove('open'); });
+    document.body.style.overflow = '';
+  };
 }
+
 initBurger('ru');
-try{const s=localStorage.getItem('lang');if(s==='en')setLang('en');else if(s==='uk')setLang('ua');}catch(e){}
+try { const s = localStorage.getItem('lang'); if (s==='en') setLang('en'); else if (s==='ua') setLang('ua'); } catch(e) {}
 </script>
 </body>
 </html>
