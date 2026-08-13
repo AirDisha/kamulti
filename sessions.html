@@ -723,6 +723,7 @@ function setLang(lang) {
   });
   document.querySelectorAll('.t-ru').forEach(el => el.style.display = lang==='ru' ? '' : 'none');
   document.querySelectorAll('.t-en').forEach(el => el.style.display = lang==='en' ? '' : 'none');
+  setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('on')),50);
   document.getElementById('about-link').href = lang==='ru' ? 'about.html' : 'about.html';
   document.getElementById('diag-link').href = lang==='ru' ? 'contact.html' : 'contact.html';
   document.getElementById('contact-link').href = lang==='ru' ? 'contact.html' : 'contact.html';

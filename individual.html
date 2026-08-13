@@ -619,6 +619,7 @@ function setLang(lang) {
   });
   document.querySelectorAll('.t-ru').forEach(el => el.style.display = lang==='ru' ? '' : 'none');
   document.querySelectorAll('.t-en').forEach(el => el.style.display = lang==='en' ? '' : 'none');
+  setTimeout(()=>document.querySelectorAll('.reveal').forEach(el=>el.classList.add('on')),50);
   // Update title
   const titles = {"ru":"Индивидуальное сопровождение — Инна Янкина","en":"Individual Accompaniment — Inna Yankina"};
   if (titles[lang]) document.getElementById('page-title').textContent = titles[lang];
