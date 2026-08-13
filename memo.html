@@ -38,14 +38,33 @@
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang(\'ua\');return false;">UA</a></div>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang('ua');return false;">UA</a></div>
   <button class="nav-burger" id="burger-en"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-drawer" id="navDrawer-en" style="display:none;">
   <a href="individual.html">Individual</a><a href="sessions.html">Sessions</a>
   <a href="kundalini-info.html">About Kundalini</a><a href="about.html">About</a><a href="contact.html">Contact</a>
 </div>
-<div class="nav-overlay" id="navOverlay-en" style="display:none;"></div>
+<div class="nav-overlay" id="navOverlay-en" style="display:none;">
+
+<!-- NAV UA -->
+<nav class="nav" id="nav-ua" style="display:none;">
+  <a href="individual.html" class="nav-logo">INNA IANKINA</a>
+  <ul class="nav-links">
+    <li><a href="individual.html">Індивідуально</a></li>
+    <li><a href="sessions.html" class="active">Сесії</a></li>
+    <li><a href="kundalini-info.html">Про Кундаліні</a></li>
+    <li><a href="about.html">Про мене</a></li>
+    <li><a href="contact.html">Контакти</a></li>
+  </ul>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a>EN<span class="active">UA</span></div>
+  <button class="nav-burger" id="burger-ua"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="navDrawer-ua" style="display:none;">
+  <a href="individual.html">Індивідуально</a><a href="sessions.html">Сесії</a>
+  <a href="kundalini-info.html">Про Кундаліні</a><a href="about.html">Про мене</a><a href="contact.html">Контакти</a>
+</div>
+<div class="nav-overlay" id="navOverlay-ua" style="display:none;"></div></div>
 <div class="page-wrap">
 <div class="t-ru">
 <div class="hero-banner">
@@ -170,12 +189,13 @@
 </div>
 </div>
 
+
 <div class="t-ua" style="display:none;">
 <div class="hero-banner">
     <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779024429/ChatGPT_Image_17_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._15_52_13_cvaqrs.jpg" alt="" loading="eager" style="width:100%;display:block;object-fit:cover;aspect-ratio:16/7;max-height:380px;">
     <div class="hero-banner-overlay" style="justify-content:flex-end;padding-bottom:2rem;">
-      <p class="t-display reveal" style="font-weight:700;letter-spacing:.06em;text-shadow:0 1px 8px rgba(0,0,0,.4);margin-bottom:.6rem;">ПАМ'ЯТКА УЧАСНИКА</p>
-      <p class="reveal" style="font-family:var(--font-head);font-size:clamp(.95rem,2.8vw,1.15rem);font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.78);">Як підготуватися до сесії і що робити після</p>
+      <p class="t-display reveal" style="font-weight:700;letter-spacing:.06em;text-shadow:0 1px 8px rgba(0,0,0,.4);margin-bottom:.6rem;">SESSION GUIDE</p>
+      <p class="reveal" style="font-family:var(--font-head);font-size:clamp(.95rem,2.8vw,1.15rem);font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.78);">How to prepare and what to do after</p>
     </div>
   </div>
 
@@ -218,7 +238,7 @@
     </div>
 
     <div class="memo-section reveal d4">
-      <p class="memo-section-title">ПІСЛЯ СЕСІЇ — Integration</p>
+      <p class="memo-section-title">AFTER THE SESSION — Integration</p>
       <div class="memo-item"><p class="memo-item-label">Be gentle with yourself</p><p class="memo-item-text">In the first few hours your consciousness may feel "floating". Cancel tasks requiring hard logic. Give yourself rest.</p></div>
       <div class="memo-item"><p class="memo-item-label">Emotional waves are normal</p><p class="memo-item-text">Activation often brings suppressed emotions to the surface. A flash of irritation or deep sensitivity is an <strong>ecological cleansing process</strong>. Observe without judgement.</p></div>
       <div class="memo-item"><p class="memo-item-label">Sustaining your resource</p><p class="memo-item-text">For 24 hours after the session, keep drinking plenty of water. Strictly avoid alcohol and caffeine.</p></div>
@@ -230,6 +250,8 @@
     <a href="sessions.html" class="btn btn-arrow reveal">ЗАПИСАТИСЯ НА СЕСІЮ</a>
     <div class="spacer"></div>
   </div>
+</div>
+
 </div>
 </div>
 <footer class="footer" id="footer-ru">
@@ -267,7 +289,26 @@
   </div>
   <div class="footer-bottom">
     <p class="footer-copy">© 2025 Inna Yankina · <a href="#">Privacy Policy</a></p>
-    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang(\'ua\');return false;">UA</a></div>
+    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang('ua');return false;">UA</a></div>
+  </div>
+</footer>
+<footer class="footer" id="footer-ua" style="display:none;">
+  <div class="footer-inner">
+    <div><p class="footer-logo">INNA IANKINA</p><p class="footer-sub">Kundalini Practitioner · England</p></div>
+    <div><p class="footer-col-title">Сторінки</p><nav class="footer-nav">
+      <a href="individual.html">Індивідуально</a><a href="sessions.html">Сесії</a>
+      <a href="kundalini-info.html">Про Кундаліні</a><a href="about.html">Про мене</a><a href="contact.html">Контакти</a>
+    </nav></div>
+    <div><p class="footer-col-title">Контакти</p><nav class="footer-nav">
+      <a href="https://wa.me/447759390423">WhatsApp</a>
+      <a href="https://instagram.com/inna.uk.iankin/">Instagram</a>
+      <a href="https://t.me/innaiankina">Telegram</a>
+      <a href="mailto:inna.win.iankina@gmail.com">Email</a>
+    </nav></div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 Inna Yankina · <a href="#">Політика конфіденційності</a></p>
+    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a>EN<a href="#" onclick="<span class="active">UA</span></a></div>
   </div>
 </footer>
 <script src="shared.js"></script>
@@ -276,7 +317,7 @@ function setLang(lang) {
   document.getElementById('html-root').lang = lang;
   ['ru','en','ua'].forEach(l => {
     const show = l === lang;
-    ['nav-'+l, 'navDrawer-'+l, 'navOverlay-'+l, 'footer-'+l].forEach(id => {
+    ['nav-'+l,'navDrawer-'+l,'navOverlay-'+l,'footer-'+l].forEach(id => {
       const el = document.getElementById(id);
       if (el) el.style.display = show ? '' : 'none';
     });
@@ -284,14 +325,35 @@ function setLang(lang) {
   document.querySelectorAll('.t-ru').forEach(el => el.style.display = lang==='ru' ? '' : 'none');
   document.querySelectorAll('.t-en').forEach(el => el.style.display = lang==='en' ? '' : 'none');
   document.querySelectorAll('.t-ua').forEach(el => el.style.display = lang==='ua' ? '' : 'none');
-  // Update title
-  const titles = {"ru":"Памятка — Инна Янкина","en":"Session Guide — Inna Yankina"};
-  if (titles[lang]) document.getElementById('page-title').textContent = titles[lang];
-  // Update internal links
-  document.querySelectorAll('[data-href-ru]').forEach(el => {
-    el.href = lang==='ru' ? el.dataset.hrefRu : el.dataset.hrefEn;
-  });
+  const titles = {ru:'Памятка участнику', en:'Session Guide', ua:'Пам'ятка учасника'};
+  const titleEl = document.getElementById('page-title');
+  if (titleEl) titleEl.textContent = titles[lang] || titles.ru;
   try { localStorage.setItem('lang', lang); } catch(e) {}
+  initBurger(lang);
+}
+
+function initBurger(lang) {
+  const burger = document.getElementById('burger-'+lang);
+  const drawer = document.getElementById('navDrawer-'+lang);
+  const overlay = document.getElementById('navOverlay-'+lang);
+  if (!burger || !drawer) return;
+  burger.onclick = () => {
+    const open = drawer.classList.contains('open');
+    [burger, drawer, overlay].forEach(el => { if (el) el.classList.toggle('open', !open); });
+    document.body.style.overflow = open ? '' : 'hidden';
+  };
+  if (overlay) overlay.onclick = () => {
+    [burger, drawer, overlay].forEach(el => { if (el) el.classList.remove('open'); });
+    document.body.style.overflow = '';
+  };
+}
+
+initBurger('ru');
+try {
+  const s = localStorage.getItem('lang');
+  if (s === 'en') setLang('en');
+  else if (s === 'ua') setLang('ua');
+} catch(e) {}
   initBurgers(lang);
 }
 function initBurgers(lang) {

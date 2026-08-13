@@ -46,14 +46,33 @@
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang(\'ua\');return false;">UA</a></div>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang('ua');return false;">UA</a></div>
   <button class="nav-burger" id="burger-en"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-drawer" id="navDrawer-en" style="display:none;">
   <a href="individual.html">Individual</a><a href="sessions.html">Sessions</a>
   <a href="kundalini-info.html">About Kundalini</a><a href="about.html">About</a><a href="contact.html">Contact</a>
 </div>
-<div class="nav-overlay" id="navOverlay-en" style="display:none;"></div>
+<div class="nav-overlay" id="navOverlay-en" style="display:none;">
+
+<!-- NAV UA -->
+<nav class="nav" id="nav-ua" style="display:none;">
+  <a href="individual.html" class="nav-logo">INNA IANKINA</a>
+  <ul class="nav-links">
+    <li><a href="kundalini-info.html">Про Кундаліні</a></li>
+    <li><a href="sessions.html">Сесії</a></li>
+    <li><a href="individual.html" class="active">Індивідуально</a></li>
+    <li><a href="about.html">Про мене</a></li>
+    <li><a href="contact.html">Контакти</a></li>
+  </ul>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a>EN<span class="active">UA</span></div>
+  <button class="nav-burger" id="burger-ua"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="navDrawer-ua" style="display:none;">
+  <a href="individual.html">Індивідуально</a><a href="sessions.html">Сесії</a>
+  <a href="kundalini-info.html">Про Кундаліні</a><a href="about.html">Про мене</a><a href="contact.html">Контакти</a>
+</div>
+<div class="nav-overlay" id="navOverlay-ua" style="display:none;"></div></div>
 <div class="page-wrap">
 <div class="t-ru">
 <!-- HERO BANNER — Инна в пустыне -->
@@ -568,6 +587,7 @@
   </div>
 </div>
 </div>
+
 <div class="t-ua" style="display:none;">
 <!-- HERO BANNER -->
   <div class="hero-banner">
@@ -801,21 +821,21 @@
   </div>
 
   <div class="hr"></div>
-  <!-- ПРО МЕНЕ block at bottom -->
+  <!-- ABOUT ME block at bottom -->
   <div class="col">
     <div class="spacer"></div>
-    <h2 class="t-caps reveal">ПРО МЕНЕ</h2>
+    <h2 class="t-caps reveal">ABOUT ME</h2>
     <div class="spacer-sm"></div>
     <img loading="lazy" src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779817180/ChatGPT_Image_26_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._20_36_52_avvhz0.jpg" alt="Inna Yankina" style="width:100%;display:block;margin-bottom:1.25rem;">
-    <p class="t-serif reveal"><strong>13 років</strong> exploring the Alchemy of our feminine nature.</p>
+    <p class="t-serif reveal"><strong>13 years</strong> exploring the Alchemy of our feminine nature.</p>
     <div class="spacer-sm"></div>
     <p class="t-serif reveal d1"><strong>A guide</strong> to the multidimensionality, strength and wholeness of Woman.</p>
     <div class="spacer-sm"></div>
-    <p class="t-serif reveal d2">Core values — <strong>ПРИЙНЯТТЯ, ТУРБОТА, ЛЮБОВ.</strong></p>
+    <p class="t-serif reveal d2">Core values — <strong>ACCEPTANCE, CARE, LOVE.</strong></p>
     <div class="spacer-sm"></div>
     <p class="t-serif reveal d3">Having walked my own path of deep transformation, I found living <strong>experience</strong>, strength and <strong>states</strong> that I now share with other women.</p>
     <div class="spacer-sm"></div>
-    <a href="contact.html" class="btn btn-arrow reveal d4">ЗВ'ЯЗАТИСЯ</a>
+    <a href="contact.html" class="btn btn-arrow reveal d4">GET IN TOUCH</a>
     <div class="spacer-sm"></div>
     <div style="display:flex;gap:.85rem;align-items:center;justify-content:center;margin-top:1rem;">
     <a href="https://wa.me/447759390423" class="social-btn" title="WhatsApp" target="_blank" style="background:#25D366;"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
@@ -826,6 +846,8 @@
     <p class="t-caps-sm reveal" style="text-align:center;letter-spacing:.25em;">INNA IANKINA</p>
     <div class="spacer"></div>
   </div>
+</div>
+
 </div>
 </div>
 <footer class="footer" id="footer-ru">
@@ -863,7 +885,7 @@
   </div>
   <div class="footer-bottom">
     <p class="footer-copy">© 2025 Inna Yankina · <a href="#">Privacy Policy</a></p>
-    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang(\'ua\');return false;">UA</a></div>
+    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang('ua');return false;">UA</a></div>
   </div>
 </footer>
 <footer class="footer" id="footer-ua" style="display:none;">
@@ -891,21 +913,43 @@ function setLang(lang) {
   document.getElementById('html-root').lang = lang;
   ['ru','en','ua'].forEach(l => {
     const show = l === lang;
-    ['nav-'+l, 'navDrawer-'+l, 'navOverlay-'+l, 'footer-'+l].forEach(id => {
+    ['nav-'+l,'navDrawer-'+l,'navOverlay-'+l,'footer-'+l].forEach(id => {
       const el = document.getElementById(id);
       if (el) el.style.display = show ? '' : 'none';
     });
   });
   document.querySelectorAll('.t-ru').forEach(el => el.style.display = lang==='ru' ? '' : 'none');
   document.querySelectorAll('.t-en').forEach(el => el.style.display = lang==='en' ? '' : 'none');
-  // Update title
-  const titles = {"ru":"Индивидуальное сопровождение — Инна Янкина","en":"Individual Accompaniment — Inna Yankina"};
-  if (titles[lang]) document.getElementById('page-title').textContent = titles[lang];
-  // Update internal links
-  document.querySelectorAll('[data-href-ru]').forEach(el => {
-    el.href = lang==='ru' ? el.dataset.hrefRu : el.dataset.hrefEn;
-  });
+  document.querySelectorAll('.t-ua').forEach(el => el.style.display = lang==='ua' ? '' : 'none');
+  const titles = {ru:'Индивидуальное сопровождение — Инна Янкина', en:'Individual — Inna Yankina', ua:'Індивідуально — Інна Янкіна'};
+  const titleEl = document.getElementById('page-title');
+  if (titleEl) titleEl.textContent = titles[lang] || titles.ru;
   try { localStorage.setItem('lang', lang); } catch(e) {}
+  initBurger(lang);
+}
+
+function initBurger(lang) {
+  const burger = document.getElementById('burger-'+lang);
+  const drawer = document.getElementById('navDrawer-'+lang);
+  const overlay = document.getElementById('navOverlay-'+lang);
+  if (!burger || !drawer) return;
+  burger.onclick = () => {
+    const open = drawer.classList.contains('open');
+    [burger, drawer, overlay].forEach(el => { if (el) el.classList.toggle('open', !open); });
+    document.body.style.overflow = open ? '' : 'hidden';
+  };
+  if (overlay) overlay.onclick = () => {
+    [burger, drawer, overlay].forEach(el => { if (el) el.classList.remove('open'); });
+    document.body.style.overflow = '';
+  };
+}
+
+initBurger('ru');
+try {
+  const s = localStorage.getItem('lang');
+  if (s === 'en') setLang('en');
+  else if (s === 'ua') setLang('ua');
+} catch(e) {}
   initBurgers(lang);
 }
 function initBurgers(lang) {

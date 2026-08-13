@@ -38,14 +38,33 @@
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html" class="active">Contact</a></li>
   </ul>
-  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang(\'ua\');return false;">UA</a></div>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang('ua');return false;">UA</a></div>
   <button class="nav-burger" id="burger-en"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-drawer" id="navDrawer-en" style="display:none;">
   <a href="individual.html">Individual</a><a href="sessions.html">Sessions</a>
   <a href="kundalini-info.html">About Kundalini</a><a href="about.html">About</a><a href="contact.html">Contact</a>
 </div>
-<div class="nav-overlay" id="navOverlay-en" style="display:none;"></div>
+<div class="nav-overlay" id="navOverlay-en" style="display:none;">
+
+<!-- NAV UA -->
+<nav class="nav" id="nav-ua" style="display:none;">
+  <a href="individual.html" class="nav-logo">INNA IANKINA</a>
+  <ul class="nav-links">
+    <li><a href="individual.html">Індивідуально</a></li>
+    <li><a href="sessions.html">Сесії</a></li>
+    <li><a href="kundalini-info.html">Про Кундаліні</a></li>
+    <li><a href="about.html">Про мене</a></li>
+    <li><a href="contact.html" class="active">Контакти</a></li>
+  </ul>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a>EN<span class="active">UA</span></div>
+  <button class="nav-burger" id="burger-ua"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="navDrawer-ua" style="display:none;">
+  <a href="individual.html">Індивідуально</a><a href="sessions.html">Сесії</a>
+  <a href="kundalini-info.html">Про Кундаліні</a><a href="about.html">Про мене</a><a href="contact.html">Контакти</a>
+</div>
+<div class="nav-overlay" id="navOverlay-ua" style="display:none;"></div></div>
 <div class="page-wrap">
 <div class="t-ru">
 <div class="col">
@@ -121,10 +140,11 @@
 </div>
 </div>
 
+
 <div class="t-ua" style="display:none;">
 <div class="col">
     <div class="spacer"></div>
-    <h1 class="t-caps reveal">КОНТАКТИ</h1>
+    <h1 class="t-caps reveal">CONTACT</h1>
     <div class="spacer-sm"></div><hr class="hr"><div class="spacer-sm"></div>
     <a href="https://wa.me/447759390423" class="contact-link reveal" style="margin-bottom:0;"><div><span class="label">WhatsApp</span>+447759390423</div><span>›</span></a>
     <a href="https://t.me/innaiankina" class="contact-link reveal d1"><div><span class="label">Telegram</span>@innaiankina</div><span>›</span></a>
@@ -156,6 +176,8 @@
     </form>
     <p id="fs" style="display:none;font-family:var(--font-head);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-body);margin-top:1.5rem;">Message sent! I'll reply within 24 hours.</p>
     <div class="spacer"></div>
+</div>
+
 </div>
 </div>
 <footer class="footer" id="footer-ru">
@@ -193,7 +215,26 @@
   </div>
   <div class="footer-bottom">
     <p class="footer-copy">© 2025 Inna Yankina · <a href="#">Privacy Policy</a></p>
-    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang(\'ua\');return false;">UA</a></div>
+    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang('ua');return false;">UA</a></div>
+  </div>
+</footer>
+<footer class="footer" id="footer-ua" style="display:none;">
+  <div class="footer-inner">
+    <div><p class="footer-logo">INNA IANKINA</p><p class="footer-sub">Kundalini Practitioner · England</p></div>
+    <div><p class="footer-col-title">Сторінки</p><nav class="footer-nav">
+      <a href="individual.html">Індивідуально</a><a href="sessions.html">Сесії</a>
+      <a href="kundalini-info.html">Про Кундаліні</a><a href="about.html">Про мене</a><a href="contact.html">Контакти</a>
+    </nav></div>
+    <div><p class="footer-col-title">Контакти</p><nav class="footer-nav">
+      <a href="https://wa.me/447759390423">WhatsApp</a>
+      <a href="https://instagram.com/inna.uk.iankin/">Instagram</a>
+      <a href="https://t.me/innaiankina">Telegram</a>
+      <a href="mailto:inna.win.iankina@gmail.com">Email</a>
+    </nav></div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 Inna Yankina · <a href="#">Політика конфіденційності</a></p>
+    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a>EN<a href="#" onclick="<span class="active">UA</span></a></div>
   </div>
 </footer>
 <script src="shared.js"></script>
@@ -202,7 +243,7 @@ function setLang(lang) {
   document.getElementById('html-root').lang = lang;
   ['ru','en','ua'].forEach(l => {
     const show = l === lang;
-    ['nav-'+l, 'navDrawer-'+l, 'navOverlay-'+l, 'footer-'+l].forEach(id => {
+    ['nav-'+l,'navDrawer-'+l,'navOverlay-'+l,'footer-'+l].forEach(id => {
       const el = document.getElementById(id);
       if (el) el.style.display = show ? '' : 'none';
     });
@@ -210,14 +251,35 @@ function setLang(lang) {
   document.querySelectorAll('.t-ru').forEach(el => el.style.display = lang==='ru' ? '' : 'none');
   document.querySelectorAll('.t-en').forEach(el => el.style.display = lang==='en' ? '' : 'none');
   document.querySelectorAll('.t-ua').forEach(el => el.style.display = lang==='ua' ? '' : 'none');
-  // Update title
-  const titles = {"ru":"Контакты — Инна Янкина","en":"Contact — Inna Yankina"};
-  if (titles[lang]) document.getElementById('page-title').textContent = titles[lang];
-  // Update internal links
-  document.querySelectorAll('[data-href-ru]').forEach(el => {
-    el.href = lang==='ru' ? el.dataset.hrefRu : el.dataset.hrefEn;
-  });
+  const titles = {ru:'Контакты — Инна Янкина', en:'Contact — Inna Yankina', ua:'Контакти — Інна Янкіна'};
+  const titleEl = document.getElementById('page-title');
+  if (titleEl) titleEl.textContent = titles[lang] || titles.ru;
   try { localStorage.setItem('lang', lang); } catch(e) {}
+  initBurger(lang);
+}
+
+function initBurger(lang) {
+  const burger = document.getElementById('burger-'+lang);
+  const drawer = document.getElementById('navDrawer-'+lang);
+  const overlay = document.getElementById('navOverlay-'+lang);
+  if (!burger || !drawer) return;
+  burger.onclick = () => {
+    const open = drawer.classList.contains('open');
+    [burger, drawer, overlay].forEach(el => { if (el) el.classList.toggle('open', !open); });
+    document.body.style.overflow = open ? '' : 'hidden';
+  };
+  if (overlay) overlay.onclick = () => {
+    [burger, drawer, overlay].forEach(el => { if (el) el.classList.remove('open'); });
+    document.body.style.overflow = '';
+  };
+}
+
+initBurger('ru');
+try {
+  const s = localStorage.getItem('lang');
+  if (s === 'en') setLang('en');
+  else if (s === 'ua') setLang('ua');
+} catch(e) {}
   initBurgers(lang);
 }
 function initBurgers(lang) {

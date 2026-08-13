@@ -53,14 +53,33 @@
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang(\'ua\');return false;">UA</a></div>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang('ua');return false;">UA</a></div>
   <button class="nav-burger" id="burger-en"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-drawer" id="navDrawer-en" style="display:none;">
   <a href="individual.html">Individual</a><a href="sessions.html">Sessions</a>
   <a href="kundalini-info.html">About Kundalini</a><a href="about.html">About</a><a href="contact.html">Contact</a>
 </div>
-<div class="nav-overlay" id="navOverlay-en" style="display:none;"></div>
+<div class="nav-overlay" id="navOverlay-en" style="display:none;">
+
+<!-- NAV UA -->
+<nav class="nav" id="nav-ua" style="display:none;">
+  <a href="individual.html" class="nav-logo">INNA IANKINA</a>
+  <ul class="nav-links">
+    <li><a href="individual.html">Індивідуально</a></li>
+    <li><a href="sessions.html">Сесії</a></li>
+    <li><a href="kundalini-info.html" class="active">Про Кундаліні</a></li>
+    <li><a href="about.html">Про мене</a></li>
+    <li><a href="contact.html">Контакти</a></li>
+  </ul>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a>EN<span class="active">UA</span></div>
+  <button class="nav-burger" id="burger-ua"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="navDrawer-ua" style="display:none;">
+  <a href="individual.html">Індивідуально</a><a href="sessions.html">Сесії</a>
+  <a href="kundalini-info.html">Про Кундаліні</a><a href="about.html">Про мене</a><a href="contact.html">Контакти</a>
+</div>
+<div class="nav-overlay" id="navOverlay-ua" style="display:none;"></div></div>
 <div class="page-wrap">
 <div class="t-ru"><div class="col"><div class="spacer"></div>
 <span class="article-label">Научный обзор · Данные и тенденции</span>
@@ -124,6 +143,37 @@
 <div class="spacer"></div></div></div>
 </div>
 
+
+<div class="t-ua" style="display:none;"><div class="col"><div class="spacer"></div>
+<span class="article-label">Scientific review · Дані та тенденції</span>
+<h1 class="article-title">Глобальна активація:<br>дані та тенденції</h1>
+<p class="article-lead">The surge of interest in meditation and somatic practices is not cultural fashion. Behind it lie measurable processes — neurobiological, social and planetary. What the statistics and science show.</p>
+<img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779024283/ChatGPT_Image_17_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._15_53_51_ckhgp1.jpg" alt="" loading="lazy" style="width:100%;display:block;object-fit:cover;aspect-ratio:16/7;max-height:360px;margin-bottom:2rem;"
+
+
+<p class="article-h2">The numbers: meditation in the 21st century</p>
+<p class="article-p">According to the US NIH (2022), over 18% of American adults practice meditation regularly — three times the figure of a decade ago. In the UK, approximately 15%. The mindfulness technology market reached $2.08 billion in 2022. Peer-reviewed meditation studies grew from ~10 per year in the 1990s to over 1,000 annually by the 2020s.</p>
+
+<p class="article-h2">Why now</p>
+<p class="article-p">Chronic stress has reached a level where the nervous system cannot recover between episodes. WHO data: anxiety disorders affect 264 million people worldwide. Pharmaceutical approaches provide temporary relief without addressing the cause. Kundalini Activation and similar practices work differently — acting directly on the nervous system's baseline operating mode.</p>
+
+<p class="article-h2">Intuition, creativity, neuroscience</p>
+<p class="article-p">Theta rhythm — dominant during meditation — is linked to intuitive, imagistic thinking and creative insight. Gamma rhythm synchronises distant neural networks, enabling integration of information across brain regions. This is the neuroscience of intuition: the capacity to "know without explaining" has a concrete neural substrate. Practices developing "intuition" and "feeling" are not esoteric — they are training specific nervous system modes that modern life systematically suppresses.</p>
+
+<p class="article-h2">Conclusion: the accessibility of transformation</p>
+<p class="article-p">Whether or not the language of planetary ages resonates — physiology remains physiology. The nervous system responds equally in sceptics and believers. The tools for changing nervous system states exist, work, are backed by science, and are becoming increasingly accessible. In the most practical sense — this is the age of awakening.</p>
+
+<div class="spacer-sm"></div>
+<a href="sessions.html" class="btn btn-arrow">ЗАПИСАТИСЯ НА СЕСІЮ</a>
+<div class="spacer-sm"></div>
+<a href="kundalini-info.html" class="btn btn-outline btn-arrow" style="margin-top:.5rem;">← ALL ARTICLES</a>
+<div class="article-nav" style="margin-top:2rem;">
+  <a href="kundalini-article5.html">← Neuroscience of symptoms</a>
+  <span></span>
+</div>
+<div class="spacer"></div></div></div>
+
+</div>
 <footer class="footer" id="footer-ru">
   <div class="footer-inner">
     <div><p class="footer-logo">INNA IANKINA</p><p class="footer-sub">Практик кундалини · Англия</p></div>
@@ -151,7 +201,22 @@
     </nav></div>
   </div>
   <div class="footer-bottom"><p class="footer-copy">© 2025 Inna Yankina</p>
-    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang(\'ua\');return false;">UA</a></div>
+    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang('ua');return false;">UA</a></div>
+  </div>
+</footer>
+<footer class="footer" id="footer-ua" style="display:none;">
+  <div class="footer-inner">
+    <div><p class="footer-logo">INNA IANKINA</p><p class="footer-sub">Kundalini Practitioner · England</p></div>
+    <div><p class="footer-col-title">Сторінки</p><nav class="footer-nav">
+      <a href="individual.html">Індивідуально</a><a href="sessions.html">Сесії</a>
+      <a href="kundalini-info.html">Про Кундаліні</a><a href="about.html">Про мене</a><a href="contact.html">Контакти</a>
+    </nav></div>
+    <div><p class="footer-col-title">Контакти</p><nav class="footer-nav">
+      <a href="https://wa.me/447759390423">WhatsApp</a><a href="https://instagram.com/inna.uk.iankin/">Instagram</a><a href="https://t.me/innaiankina">Telegram</a>
+    </nav></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2025 Inna Yankina</p>
+    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a>EN<a href="#" onclick="<span class="active">UA</span></a></div>
   </div>
 </footer>
 <script src="shared.js"></script>
@@ -168,7 +233,35 @@ function setLang(lang) {
   document.querySelectorAll('.t-ru').forEach(el => el.style.display = lang==='ru' ? '' : 'none');
   document.querySelectorAll('.t-en').forEach(el => el.style.display = lang==='en' ? '' : 'none');
   document.querySelectorAll('.t-ua').forEach(el => el.style.display = lang==='ua' ? '' : 'none');
+  const titles = {ru:'Глобальная активация', en:'Global Activation', ua:'Глобальна активація'};
+  const titleEl = document.getElementById('page-title');
+  if (titleEl) titleEl.textContent = titles[lang] || titles.ru;
   try { localStorage.setItem('lang', lang); } catch(e) {}
+  initBurger(lang);
+}
+
+function initBurger(lang) {
+  const burger = document.getElementById('burger-'+lang);
+  const drawer = document.getElementById('navDrawer-'+lang);
+  const overlay = document.getElementById('navOverlay-'+lang);
+  if (!burger || !drawer) return;
+  burger.onclick = () => {
+    const open = drawer.classList.contains('open');
+    [burger, drawer, overlay].forEach(el => { if (el) el.classList.toggle('open', !open); });
+    document.body.style.overflow = open ? '' : 'hidden';
+  };
+  if (overlay) overlay.onclick = () => {
+    [burger, drawer, overlay].forEach(el => { if (el) el.classList.remove('open'); });
+    document.body.style.overflow = '';
+  };
+}
+
+initBurger('ru');
+try {
+  const s = localStorage.getItem('lang');
+  if (s === 'en') setLang('en');
+  else if (s === 'ua') setLang('ua');
+} catch(e) {}
   initBurger(lang);
 }
 

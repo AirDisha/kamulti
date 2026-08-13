@@ -109,14 +109,33 @@
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang(\'ua\');return false;">UA</a></div>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang('ua');return false;">UA</a></div>
   <button class="nav-burger" id="burger-en"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-drawer" id="navDrawer-en" style="display:none;">
   <a href="individual.html">Individual</a><a href="sessions.html">Sessions</a>
   <a href="kundalini-info.html">About Kundalini</a><a href="about.html">About</a><a href="contact.html">Contact</a>
 </div>
-<div class="nav-overlay" id="navOverlay-en" style="display:none;"></div>
+<div class="nav-overlay" id="navOverlay-en" style="display:none;">
+
+<!-- NAV UA -->
+<nav class="nav" id="nav-ua" style="display:none;">
+  <a href="individual.html" class="nav-logo">INNA IANKINA</a>
+  <ul class="nav-links">
+    <li><a href="kundalini-info.html" class="active">Про Кундаліні</a></li>
+    <li><a href="sessions.html">Сесії</a></li>
+    <li><a href="individual.html">Індивідуально</a></li>
+    <li><a href="about.html">Про мене</a></li>
+    <li><a href="contact.html">Контакти</a></li>
+  </ul>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a>EN<span class="active">UA</span></div>
+  <button class="nav-burger" id="burger-ua"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="navDrawer-ua" style="display:none;">
+  <a href="individual.html">Індивідуально</a><a href="sessions.html">Сесії</a>
+  <a href="kundalini-info.html">Про Кундаліні</a><a href="about.html">Про мене</a><a href="contact.html">Контакти</a>
+</div>
+<div class="nav-overlay" id="navOverlay-ua" style="display:none;"></div></div>
 <div class="page-wrap">
 
 <div class="page-wrap">
@@ -335,12 +354,13 @@
   </div>
 </div>
 </div>
+
 <div class="t-ua" style="display:none;">
   <div class="ki-hero">
     <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779025416/ChatGPT_Image_17_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._16_43_01_ns4tnv.jpg" alt="Про Кундаліні" loading="eager" style="object-position:center;">
     <div class="hero-banner-overlay" style="justify-content:flex-end;padding-bottom:2rem;">
-      <p class="t-display reveal" style="font-weight:700;letter-spacing:.06em;text-shadow:0 1px 8px rgba(0,0,0,.4);margin-bottom:.5rem;">ПРО КУНДАЛІНІ</p>
-      <p class="reveal" style="font-family:var(--font-head);font-size:clamp(.95rem,2.8vw,1.15rem);font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.78);">Феномен всередині тебе</p>
+      <p class="t-display reveal" style="font-weight:700;letter-spacing:.06em;text-shadow:0 1px 8px rgba(0,0,0,.4);margin-bottom:.5rem;">ABOUT KUNDALINI</p>
+      <p class="reveal" style="font-family:var(--font-head);font-size:clamp(.95rem,2.8vw,1.15rem);font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.78);">The phenomenon within you</p>
     </div>
   </div>
 <div class="hr"></div>
@@ -352,7 +372,7 @@
   <div class="hr"></div>
   <div class="col">
     <div class="spacer"></div>
-    <h2 class="t-caps reveal">ЩО ТАКЕ КУНДАЛІНІ</h2>
+    <h2 class="t-caps reveal">WHAT IS KUNDALINI</h2>
     <div class="spacer-sm"></div>
     <p class="t-serif reveal d1">Kundalini is the primordial life energy present within every human being. In various spiritual traditions it is described as a "coiled serpent" at the base of the spine — a seed of inner potential awaiting awakening.</p>
     <div class="spacer-sm"></div>
@@ -365,8 +385,8 @@
   <div class="info-science">
     <div class="info-science-inner">
       <div class="spacer"></div>
-      <span style="font-family:var(--font-head);font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--text-light);display:block;margin-bottom:.75rem;">Доказова база</span>
-      <h2 class="t-caps" style="margin-bottom:1.5rem;">ЩО КАЖЕ НАУКА</h2>
+      <span style="font-family:var(--font-head);font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--text-light);display:block;margin-bottom:.75rem;">Evidence base</span>
+      <h2 class="t-caps" style="margin-bottom:1.5rem;">WHAT SCIENCE SAYS</h2>
       <div class="stat-strip">
         <div class="ss-box"><div class="ss-num">40 Hz</div><div class="ss-desc">Gamma brain rhythm during meditation (Lutz et al., PNAS, 2004)</div></div>
         <div class="ss-box"><div class="ss-num">−27%</div><div class="ss-desc">Cortisol reduction after 8 weeks of practice (Pascoe, 2017)</div></div>
@@ -374,10 +394,10 @@
         <div class="ss-box"><div class="ss-num">1000+</div><div class="ss-desc">Peer-reviewed meditation studies annually (2020s)</div></div>
       </div>
       <div class="science-grid-2">
-        <div class="science-card-2"><p class="sc2-title">Нейровізуалізація</p><p class="sc2-text">fMRI studies by Andrew Newberg (University of Pennsylvania) show lasting changes in the prefrontal cortex and reduced parietal lobe activity in practitioners.</p><span class="sc2-cite">Newberg A. et al. Psychiatry Research, 2001</span></div>
-        <div class="science-card-2"><p class="sc2-title">Ендокринна система</p><p class="sc2-text">A 2017 meta-analysis (J. of Psychiatric Research, n=1602) documents cortisol reduction and HPA axis normalisation following regular practice.</p><span class="sc2-cite">Pascoe M.C. et al. J. Psychiatric Research, 2017</span></div>
-        <div class="science-card-2"><p class="sc2-title">Біоелектрика</p><p class="sc2-text">EEG data demonstrates hemispheric synchronisation and increased gamma and theta activity — neurophysiological correlates of flow states.</p><span class="sc2-cite">Lutz A. et al. PNAS, 2004</span></div>
-        <div class="science-card-2"><p class="sc2-title">Полігенна експресія</p><p class="sc2-text">Research by Richard Davidson (UW–Madison) shows changes in inflammatory gene expression after just 8 hours of intensive practice.</p><span class="sc2-cite">Kaliman P. et al. Psychoneuroendocrinology, 2014</span></div>
+        <div class="science-card-2"><p class="sc2-title">Neuroimaging</p><p class="sc2-text">fMRI studies by Andrew Newberg (University of Pennsylvania) show lasting changes in the prefrontal cortex and reduced parietal lobe activity in practitioners.</p><span class="sc2-cite">Newberg A. et al. Psychiatry Research, 2001</span></div>
+        <div class="science-card-2"><p class="sc2-title">Endocrine system</p><p class="sc2-text">A 2017 meta-analysis (J. of Psychiatric Research, n=1602) documents cortisol reduction and HPA axis normalisation following regular practice.</p><span class="sc2-cite">Pascoe M.C. et al. J. Psychiatric Research, 2017</span></div>
+        <div class="science-card-2"><p class="sc2-title">Bioelectrics</p><p class="sc2-text">EEG data demonstrates hemispheric synchronisation and increased gamma and theta activity — neurophysiological correlates of flow states.</p><span class="sc2-cite">Lutz A. et al. PNAS, 2004</span></div>
+        <div class="science-card-2"><p class="sc2-title">Gene expression</p><p class="sc2-text">Research by Richard Davidson (UW–Madison) shows changes in inflammatory gene expression after just 8 hours of intensive practice.</p><span class="sc2-cite">Kaliman P. et al. Psychoneuroendocrinology, 2014</span></div>
       </div>
       <p style="font-family:var(--font-head);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);text-align:center;margin-top:1.5rem;line-height:1.7;">Only measurable changes in the nervous, endocrine and immune systems — documented in peer-reviewed journals</p>
       <div class="spacer"></div>
@@ -386,61 +406,63 @@
 <div class="hr"></div>
   <div class="col">
     <div class="spacer"></div>
-    <h2 class="t-caps reveal">СТАТТІ ТА МАТЕРІАЛИ</h2>
+    <h2 class="t-caps reveal">ARTICLES & MATERIALS</h2>
     <div class="spacer-sm"></div>
     <div class="art-grid">
       <div class="art-card">
         <img src="https://i.postimg.cc/ncFpN0BX/Chat-GPT-Image-9-maa-2026-g-21-15-09.jpg" alt="" class="art-img" loading="lazy">
-        <span class="art-label">Not magic, but biology</span>
+        <span class="art-label">Не магія, а біологія</span>
         <p class="art-title">Neurobiology of Kundalini</p>
         <p class="art-text">What happens to body and brain during activation? EEG, hormones, bioelectrics — no mysticism.</p>
-        <a href="kundalini-article1.html" class="art-link">Читати статтю</a>
+        <a href="kundalini-article1.html" class="art-link">Read article</a>
       </div>
       <div class="art-card">
         <img src="https://i.postimg.cc/vHYbC3fg/Chat-GPT-Image-9-maa-2026-g-20-02-46.jpg" alt="" class="art-img" loading="lazy">
-        <span class="art-label">Kriyas, visions and left-brain freeze</span>
+        <span class="art-label">Крії, видіння та лівопівкульний фриз</span>
         <p class="art-title">Symptoms of Awakening</p>
         <p class="art-text">How to decode somatic phenomena? What "body shaking" and "freeze" mean.</p>
-        <a href="kundalini-article2.html" class="art-link">Читати статтю</a>
+        <a href="kundalini-article2.html" class="art-link">Read article</a>
       </div>
       <div class="art-card">
         <img src="https://i.postimg.cc/bNyp43kG/Chat-GPT-Image-9-maa-2026-g-20-17-43.jpg" alt="" class="art-img" loading="lazy">
-        <span class="art-label">Earth Kundalini and the Age of Aquarius</span>
+        <span class="art-label">Кундаліні Землі та Епоха Водолія</span>
         <p class="art-title">The Age of Aquarius</p>
         <p class="art-text">Why now — the time of awakening? Planetary cycles and collective transformation.</p>
-        <a href="kundalini-article3.html" class="art-link">Читати статтю</a>
+        <a href="kundalini-article3.html" class="art-link">Read article</a>
       </div>
       <div class="art-card">
         <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779024284/ChatGPT_Image_17_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._15_47_57_n9tgaq.jpg" alt="" class="art-img" loading="lazy">
-        <span class="art-label">Neuroscience · Full overview</span>
+        <span class="art-label">Нейронауки · Повний огляд</span>
         <p class="art-title">Neuroscience of Meditation</p>
         <p class="art-text">40 Hz, −27% cortisol, inflammatory genes. Data from leading world laboratories.</p>
-        <a href="kundalini-article4.html" class="art-link">Читати статтю</a>
+        <a href="kundalini-article4.html" class="art-link">Read article</a>
       </div>
       <div class="art-card">
         <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779024283/ChatGPT_Image_17_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._15_52_23_bn4ngt.jpg" alt="" class="art-img" loading="lazy">
-        <span class="art-label">Somatics and neuroscience</span>
+        <span class="art-label">Соматика та нейробіологія</span>
         <p class="art-title">Neuroscience of Symptoms</p>
         <p class="art-text">Kriyas, DMN, HRV — physiological mechanisms of somatic phenomena.</p>
-        <a href="kundalini-article5.html" class="art-link">Читати статтю</a>
+        <a href="kundalini-article5.html" class="art-link">Read article</a>
       </div>
       <div class="art-card">
         <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779024283/ChatGPT_Image_17_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._15_53_51_ckhgp1.jpg" alt="" class="art-img" loading="lazy">
-        <span class="art-label">Data and trends</span>
+        <span class="art-label">Дані та тенденції</span>
         <p class="art-title">Global Activation</p>
         <p class="art-text">18% of adults meditate. 1000+ papers per year. What the statistics say.</p>
-        <a href="kundalini-article6.html" class="art-link">Читати статтю</a>
+        <a href="kundalini-article6.html" class="art-link">Read article</a>
       </div>
     </div>
     <div class="spacer-sm"></div>
     <div style="text-align:center;">
-      <a href="https://drive.google.com/file/d/1_ua2LVjVcLtPE5t0GqiPsz_YJ72cRQjN/view?usp=sharing" target="_blank" class="btn btn-outline"
+      <a href="https://drive.google.com/file/d/185O5zMiRE0vChjxa2kjz4ZvtnBje7yWH/view?usp=sharing" target="_blank" class="btn btn-outline"
          style="display:inline-flex;align-items:center;justify-content:center;text-align:center;min-width:280px;">
-        ⬇ ЗАВАНТАЖИТИ НАУКОВИЙ ОГЛЯД PDF
+        ⬇ DOWNLOAD SCIENCE OVERVIEW PDF
       </a>
     </div>
     <div class="spacer"></div>
   </div>
+</div>
+
 </div>
 </div>
 <footer class="footer" id="footer-ru">
@@ -478,7 +500,7 @@
   </div>
   <div class="footer-bottom">
     <p class="footer-copy">© 2025 Inna Yankina · <a href="#">Privacy Policy</a></p>
-    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang(\'ua\');return false;">UA</a></div>
+    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang('ua');return false;">UA</a></div>
   </div>
 </footer>
 <footer class="footer" id="footer-ua" style="display:none;">
@@ -506,21 +528,43 @@ function setLang(lang) {
   document.getElementById('html-root').lang = lang;
   ['ru','en','ua'].forEach(l => {
     const show = l === lang;
-    ['nav-'+l, 'navDrawer-'+l, 'navOverlay-'+l, 'footer-'+l].forEach(id => {
+    ['nav-'+l,'navDrawer-'+l,'navOverlay-'+l,'footer-'+l].forEach(id => {
       const el = document.getElementById(id);
       if (el) el.style.display = show ? '' : 'none';
     });
   });
   document.querySelectorAll('.t-ru').forEach(el => el.style.display = lang==='ru' ? '' : 'none');
   document.querySelectorAll('.t-en').forEach(el => el.style.display = lang==='en' ? '' : 'none');
-  // Update title
-  const titles = {"ru":"О Кундалини — Инна Янкина","en":"About Kundalini — Inna Yankina"};
-  if (titles[lang]) document.getElementById('page-title').textContent = titles[lang];
-  // Update internal links
-  document.querySelectorAll('[data-href-ru]').forEach(el => {
-    el.href = lang==='ru' ? el.dataset.hrefRu : el.dataset.hrefEn;
-  });
+  document.querySelectorAll('.t-ua').forEach(el => el.style.display = lang==='ua' ? '' : 'none');
+  const titles = {ru:'О Кундалини — Инна Янкина', en:'About Kundalini — Inna Yankina', ua:'Про Кундаліні — Інна Янкіна'};
+  const titleEl = document.getElementById('page-title');
+  if (titleEl) titleEl.textContent = titles[lang] || titles.ru;
   try { localStorage.setItem('lang', lang); } catch(e) {}
+  initBurger(lang);
+}
+
+function initBurger(lang) {
+  const burger = document.getElementById('burger-'+lang);
+  const drawer = document.getElementById('navDrawer-'+lang);
+  const overlay = document.getElementById('navOverlay-'+lang);
+  if (!burger || !drawer) return;
+  burger.onclick = () => {
+    const open = drawer.classList.contains('open');
+    [burger, drawer, overlay].forEach(el => { if (el) el.classList.toggle('open', !open); });
+    document.body.style.overflow = open ? '' : 'hidden';
+  };
+  if (overlay) overlay.onclick = () => {
+    [burger, drawer, overlay].forEach(el => { if (el) el.classList.remove('open'); });
+    document.body.style.overflow = '';
+  };
+}
+
+initBurger('ru');
+try {
+  const s = localStorage.getItem('lang');
+  if (s === 'en') setLang('en');
+  else if (s === 'ua') setLang('ua');
+} catch(e) {}
   initBurgers(lang);
 }
 function initBurgers(lang) {

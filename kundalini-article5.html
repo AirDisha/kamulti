@@ -53,14 +53,33 @@
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang(\'ua\');return false;">UA</a></div>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang('ua');return false;">UA</a></div>
   <button class="nav-burger" id="burger-en"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-drawer" id="navDrawer-en" style="display:none;">
   <a href="individual.html">Individual</a><a href="sessions.html">Sessions</a>
   <a href="kundalini-info.html">About Kundalini</a><a href="about.html">About</a><a href="contact.html">Contact</a>
 </div>
-<div class="nav-overlay" id="navOverlay-en" style="display:none;"></div>
+<div class="nav-overlay" id="navOverlay-en" style="display:none;">
+
+<!-- NAV UA -->
+<nav class="nav" id="nav-ua" style="display:none;">
+  <a href="individual.html" class="nav-logo">INNA IANKINA</a>
+  <ul class="nav-links">
+    <li><a href="individual.html">Індивідуально</a></li>
+    <li><a href="sessions.html">Сесії</a></li>
+    <li><a href="kundalini-info.html" class="active">Про Кундаліні</a></li>
+    <li><a href="about.html">Про мене</a></li>
+    <li><a href="contact.html">Контакти</a></li>
+  </ul>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a>EN<span class="active">UA</span></div>
+  <button class="nav-burger" id="burger-ua"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="navDrawer-ua" style="display:none;">
+  <a href="individual.html">Індивідуально</a><a href="sessions.html">Сесії</a>
+  <a href="kundalini-info.html">Про Кундаліні</a><a href="about.html">Про мене</a><a href="contact.html">Контакти</a>
+</div>
+<div class="nav-overlay" id="navOverlay-ua" style="display:none;"></div></div>
 <div class="page-wrap">
 <div class="t-ru"><div class="col"><div class="spacer"></div>
 <span class="article-label">Научный обзор · Соматика и нейробиология</span>
@@ -128,6 +147,39 @@
 <div class="spacer"></div></div></div>
 </div>
 
+
+<div class="t-ua" style="display:none;"><div class="col"><div class="spacer"></div>
+<span class="article-label">Scientific review · Соматика та нейробіологія</span>
+<h1 class="article-title">Що відбувається в тілі:<br>нейронаука симптомів</h1>
+<p class="article-lead">The body shakes. The hands move on their own. Thought stops. People experiencing this for the first time are often alarmed — though all of these phenomena are well documented by neuroscience and have clear physiological explanations.</p>
+<img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779024283/ChatGPT_Image_17_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._15_52_23_bn4ngt.jpg" alt="" loading="lazy" style="width:100%;display:block;object-fit:cover;aspect-ratio:16/7;max-height:360px;margin-bottom:2rem;"
+
+
+<p class="article-h2">Kriyas: neurophysiology of involuntary movements</p>
+<p class="article-p">During deep relaxation combined with heightened motor cortex activity, the body begins to discharge accumulated neuromuscular tension — the same mechanism as trembling at the end of an acute stress response. In animals this occurs naturally. In humans it is typically suppressed by social norms. Peter Levine, creator of Somatic Experiencing, identifies this as key to trauma healing: the body completes interrupted motor responses.</p>
+<span class="article-cite">Levine P. Waking the Tiger: Healing Trauma. 1997. Van der Kolk B. The Body Keeps the Score. 2014.</span>
+
+<p class="article-h2">The default mode network: why thought stops</p>
+<p class="article-p">The experience of inner monologue simply ceasing is the temporary reduction of Default Mode Network (DMN) activity — the network responsible for inner dialogue, rumination and worry. During meditation its activity drops significantly. This correlates with reduced anxiety and greater psychological resilience. Not pathology — a functional state.</p>
+<span class="article-cite">Brewer J.A. et al. PNAS. 2011. Garrison K.A. et al. Social Cognitive and Affective Neuroscience. 2015.</span>
+
+<p class="article-h2">Heart rate variability (HRV)</p>
+<p class="article-p">HRV measures nervous system adaptability. High HRV is associated with better health, emotional regulation and stress resilience. Research shows a 65% increase in HRV through regular meditative practice — the nervous system becomes more flexible, with improved vagal tone regulating the "rest and restore" response against "fight or flight".</p>
+
+<p class="article-h2">Emotional waves: the mechanism of integration</p>
+<p class="article-p">Feelings sometimes surface during or after a session — sometimes unexpected, sometimes long-dormant. Van der Kolk's formulation is precise: emotional states are encoded in patterns of bodily tension. When the tension releases, so does the associated feeling. Not regression — physiological integration. The body completes interrupted responses. With proper facilitation, this process is safe and leads to lasting improvement.</p>
+
+<div class="spacer-sm"></div>
+<a href="sessions.html" class="btn btn-arrow">ЗАПИСАТИСЯ НА СЕСІЮ</a>
+<div class="spacer-sm"></div>
+<a href="kundalini-info.html" class="btn btn-outline btn-arrow" style="margin-top:.5rem;">← ALL ARTICLES</a>
+<div class="article-nav" style="margin-top:2rem;">
+  <a href="kundalini-article4.html">← Neurobiology (science)</a>
+  <a href="kundalini-article6.html">Age of Aquarius (science) →</a>
+</div>
+<div class="spacer"></div></div></div>
+
+</div>
 <footer class="footer" id="footer-ru">
   <div class="footer-inner">
     <div><p class="footer-logo">INNA IANKINA</p><p class="footer-sub">Практик кундалини · Англия</p></div>
@@ -155,7 +207,22 @@
     </nav></div>
   </div>
   <div class="footer-bottom"><p class="footer-copy">© 2025 Inna Yankina</p>
-    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang(\'ua\');return false;">UA</a></div>
+    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang('ua');return false;">UA</a></div>
+  </div>
+</footer>
+<footer class="footer" id="footer-ua" style="display:none;">
+  <div class="footer-inner">
+    <div><p class="footer-logo">INNA IANKINA</p><p class="footer-sub">Kundalini Practitioner · England</p></div>
+    <div><p class="footer-col-title">Сторінки</p><nav class="footer-nav">
+      <a href="individual.html">Індивідуально</a><a href="sessions.html">Сесії</a>
+      <a href="kundalini-info.html">Про Кундаліні</a><a href="about.html">Про мене</a><a href="contact.html">Контакти</a>
+    </nav></div>
+    <div><p class="footer-col-title">Контакти</p><nav class="footer-nav">
+      <a href="https://wa.me/447759390423">WhatsApp</a><a href="https://instagram.com/inna.uk.iankin/">Instagram</a><a href="https://t.me/innaiankina">Telegram</a>
+    </nav></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2025 Inna Yankina</p>
+    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a>EN<a href="#" onclick="<span class="active">UA</span></a></div>
   </div>
 </footer>
 <script src="shared.js"></script>
@@ -172,7 +239,35 @@ function setLang(lang) {
   document.querySelectorAll('.t-ru').forEach(el => el.style.display = lang==='ru' ? '' : 'none');
   document.querySelectorAll('.t-en').forEach(el => el.style.display = lang==='en' ? '' : 'none');
   document.querySelectorAll('.t-ua').forEach(el => el.style.display = lang==='ua' ? '' : 'none');
+  const titles = {ru:'Нейронаука симптомов', en:'Neuroscience of Symptoms', ua:'Нейронаука симптомів'};
+  const titleEl = document.getElementById('page-title');
+  if (titleEl) titleEl.textContent = titles[lang] || titles.ru;
   try { localStorage.setItem('lang', lang); } catch(e) {}
+  initBurger(lang);
+}
+
+function initBurger(lang) {
+  const burger = document.getElementById('burger-'+lang);
+  const drawer = document.getElementById('navDrawer-'+lang);
+  const overlay = document.getElementById('navOverlay-'+lang);
+  if (!burger || !drawer) return;
+  burger.onclick = () => {
+    const open = drawer.classList.contains('open');
+    [burger, drawer, overlay].forEach(el => { if (el) el.classList.toggle('open', !open); });
+    document.body.style.overflow = open ? '' : 'hidden';
+  };
+  if (overlay) overlay.onclick = () => {
+    [burger, drawer, overlay].forEach(el => { if (el) el.classList.remove('open'); });
+    document.body.style.overflow = '';
+  };
+}
+
+initBurger('ru');
+try {
+  const s = localStorage.getItem('lang');
+  if (s === 'en') setLang('en');
+  else if (s === 'ua') setLang('ua');
+} catch(e) {}
   initBurger(lang);
 }
 
