@@ -36,7 +36,7 @@
     <li><a href="about.html">Обо мне</a></li>
     <li><a href="contact.html">Контакты</a></li>
   </ul>
-  <div class="nav-lang"><span class="active">RU</span><a href="#" onclick="setLang('en');return false;">EN</a></div>
+  <div class="nav-lang"><span class="active">RU</span><a href="#" onclick="setLang('en');return false;">EN</a><a href="#" onclick="setLang('ua');return false;">UA</a></div>
   <button class="nav-burger" id="burger-ru"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-drawer" id="navDrawer-ru">
@@ -132,11 +132,11 @@
       <a href="kundalini-info.html">О Кундалини</a><a href="about.html">Обо мне</a><a href="contact.html">Контакты</a>
     </nav></div>
     <div><p class="footer-col-title">Связаться</p><nav class="footer-nav">
-      <a href="https://wa.me/447388825436">WhatsApp</a><a href="https://instagram.com/inna.uk.iankin/">Instagram</a><a href="https://t.me/innaiankina">Telegram</a>
+      <a href="https://wa.me/447759390423">WhatsApp</a><a href="https://instagram.com/inna.uk.iankin/">Instagram</a><a href="https://t.me/innaiankina">Telegram</a>
     </nav></div>
   </div>
   <div class="footer-bottom"><p class="footer-copy">© 2025 Инна Янкина</p>
-    <div class="nav-lang"><span class="active">RU</span><a href="#" onclick="setLang('en');return false;">EN</a></div>
+    <div class="nav-lang"><span class="active">RU</span><a href="#" onclick="setLang('en');return false;">EN</a><a href="#" onclick="setLang('ua');return false;">UA</a></div>
   </div>
 </footer>
 <footer class="footer" id="footer-en" style="display:none;">
@@ -147,7 +147,7 @@
       <a href="kundalini-info.html">About Kundalini</a><a href="about.html">About</a><a href="contact.html">Contact</a>
     </nav></div>
     <div><p class="footer-col-title">Contact</p><nav class="footer-nav">
-      <a href="https://wa.me/447388825436">WhatsApp</a><a href="https://instagram.com/inna.uk.iankin/">Instagram</a><a href="https://t.me/innaiankina">Telegram</a>
+      <a href="https://wa.me/447759390423">WhatsApp</a><a href="https://instagram.com/inna.uk.iankin/">Instagram</a><a href="https://t.me/innaiankina">Telegram</a>
     </nav></div>
   </div>
   <div class="footer-bottom"><p class="footer-copy">© 2025 Inna Yankina</p>
@@ -158,13 +158,14 @@
 <script>
 function setLang(lang){
   document.getElementById('html-root').lang=lang;
-  ['ru','en'].forEach(l=>{const show=l===lang;
+  ['ru','en','ua'].forEach(l=>{const show=l===lang;
     ['nav-'+l,'navDrawer-'+l,'navOverlay-'+l,'footer-'+l].forEach(id=>{
       const el=document.getElementById(id);if(el)el.style.display=show?'':'none';
     });
   });
   document.querySelectorAll('.t-ru').forEach(el=>el.style.display=lang==='ru'?'':'none');
   document.querySelectorAll('.t-en').forEach(el=>el.style.display=lang==='en'?'':'none');
+  document.querySelectorAll('.t-ua').forEach(el=>el.style.display=lang==='ua'?'':'none');
   try{localStorage.setItem('lang',lang);}catch(e){}
   initBurger(lang);
 }
@@ -175,7 +176,7 @@ function initBurger(lang){
   if(o)o.onclick=()=>{[b,d,o].forEach(el=>el.classList.remove('open'));document.body.style.overflow='';};
 }
 initBurger('ru');
-try{const s=localStorage.getItem('lang');if(s==='en')setLang('en');}catch(e){}
+try{const s=localStorage.getItem('lang');if(s==='en')setLang('en');else if(s==='ua')setLang('ua');}catch(e){}
 </script>
 </body>
 </html>
