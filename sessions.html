@@ -733,7 +733,7 @@ function setLang(lang) {
   document.getElementById('html-root').lang = lang;
   ['ru','en','ua'].forEach(l => {
     const show = l === lang;
-    ['nav-'+l, 'navDrawer-'+l, 'navOverlay-'+l, 'footer-'+l].forEach(id => {
+    ['nav-'+l,'navDrawer-'+l,'navOverlay-'+l,'footer-'+l].forEach(id => {
       const el = document.getElementById(id);
       if (el) el.style.display = show ? '' : 'none';
     });
@@ -741,15 +741,7 @@ function setLang(lang) {
   document.querySelectorAll('.t-ru').forEach(el => el.style.display = lang==='ru' ? '' : 'none');
   document.querySelectorAll('.t-en').forEach(el => el.style.display = lang==='en' ? '' : 'none');
   document.querySelectorAll('.t-ua').forEach(el => el.style.display = lang==='ua' ? '' : 'none');
-  ['about-link','diag-link','contact-link','memo-link'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.href = el.href; // links are language-neutral
-  });
-  const titles = {
-    ru: 'Активация Кундалини — Инна Янкина',
-    en: 'Kundalini Activation — Inna Yankina',
-    ua: 'Активація Кундаліні — Інна Янкіна'
-  };
+  const titles = {ru:'Активация Кундалини — Инна Янкина', en:'Kundalini Activation — Inna Yankina', ua:"Активація Кундаліні — Інна Янкіна"};
   const titleEl = document.getElementById('page-title');
   if (titleEl) titleEl.textContent = titles[lang] || titles.ru;
   try { localStorage.setItem('lang', lang); } catch(e) {}
@@ -778,27 +770,6 @@ try {
   if (s === 'en') setLang('en');
   else if (s === 'ua') setLang('ua');
 } catch(e) {}
-  initBurger(lang);
-}
-
-function initBurger(lang) {
-  const burger = document.getElementById('burger-'+lang);
-  const drawer = document.getElementById('navDrawer-'+lang);
-  const overlay = document.getElementById('navOverlay-'+lang);
-  if (!burger || !drawer) return;
-  burger.onclick = () => {
-    const open = drawer.classList.contains('open');
-    [burger, drawer, overlay].forEach(el => { if(el) el.classList.toggle('open', !open); });
-    document.body.style.overflow = open ? '' : 'hidden';
-  };
-  if (overlay) overlay.onclick = () => {
-    [burger, drawer, overlay].forEach(el => { if(el) el.classList.remove('open'); });
-    document.body.style.overflow = '';
-  };
-}
-
-initBurger('ru');
-try { const s = localStorage.getItem('lang'); if (s==='en') setLang('en'); else if (s==='ua') setLang('ua'); } catch(e) {}
 </script>
 </body>
 </html>

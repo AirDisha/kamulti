@@ -220,7 +220,7 @@ function setLang(lang) {
   document.querySelectorAll('.t-ru').forEach(el => el.style.display = lang==='ru' ? '' : 'none');
   document.querySelectorAll('.t-en').forEach(el => el.style.display = lang==='en' ? '' : 'none');
   document.querySelectorAll('.t-ua').forEach(el => el.style.display = lang==='ua' ? '' : 'none');
-  const titles = {ru:'Эпоха Водолея', en:'Age of Aquarius', ua:'Епоха Водолія'};
+  const titles = {ru:'Эпоха Водолея', en:'Age of Aquarius', ua:"Епоха Водолія"};
   const titleEl = document.getElementById('page-title');
   if (titleEl) titleEl.textContent = titles[lang] || titles.ru;
   try { localStorage.setItem('lang', lang); } catch(e) {}
@@ -249,27 +249,6 @@ try {
   if (s === 'en') setLang('en');
   else if (s === 'ua') setLang('ua');
 } catch(e) {}
-  initBurger(lang);
-}
-
-function initBurger(lang) {
-  const burger = document.getElementById('burger-'+lang);
-  const drawer = document.getElementById('navDrawer-'+lang);
-  const overlay = document.getElementById('navOverlay-'+lang);
-  if (!burger || !drawer) return;
-  burger.onclick = () => {
-    const open = drawer.classList.contains('open');
-    [burger, drawer, overlay].forEach(el => { if(el) el.classList.toggle('open', !open); });
-    document.body.style.overflow = open ? '' : 'hidden';
-  };
-  if (overlay) overlay.onclick = () => {
-    [burger, drawer, overlay].forEach(el => { if(el) el.classList.remove('open'); });
-    document.body.style.overflow = '';
-  };
-}
-
-initBurger('ru');
-try { const s = localStorage.getItem('lang'); if (s==='en') setLang('en'); else if (s==='ua') setLang('ua'); } catch(e) {}
 </script>
 </body>
 </html>
