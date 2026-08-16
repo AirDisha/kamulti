@@ -30,7 +30,7 @@ body {
   color: var(--bark);
   font-family: 'Jost', sans-serif;
   font-weight: 300;
-  font-size: 17px;
+  font-size: 21px;
   line-height: 1.75;
   overflow-x: hidden;
 }
@@ -43,17 +43,17 @@ body {
   position: relative;
   overflow: hidden;
 }
-.hero-img {
+.lotus-hero-img {
   position: relative;
   overflow: hidden;
 }
-.hero-img img {
+.lotus-hero-img img {
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: center 40%;
   filter: brightness(.85) sepia(.15);
 }
-.hero-img::after {
+.lotus-hero-img::after {
   content: '';
   position: absolute; inset: 0;
   background: linear-gradient(to right, rgba(61,43,31,.12), transparent);
@@ -85,7 +85,7 @@ body {
 }
 .hero-tagline {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.1rem,2.2vw,1.4rem);
+  font-size: clamp(1.3rem,2.6vw,1.6rem);
   font-style: italic;
   font-weight: 300;
   color: var(--clay);
@@ -656,7 +656,7 @@ section { position: relative; }
 /* Responsive */
 @media (max-width: 768px) {
   .hero { grid-template-columns: 1fr; }
-  .hero-img { height: 50vw; }
+  .lotus-hero-img { height: 50vw; }
   .identity-grid, .portrait-grid, .sym-grid, .app-cards,
   .quotes-row, .quotes-row-2, .spiral-grid, .cp-row,
   .rhythm-grid { grid-template-columns: 1fr; }
@@ -673,11 +673,12 @@ section { position: relative; }
 
 
 /* Match site font sizes */
-body { font-size: 16px; }
-.s-body { font-size: 1rem; }
+body { font-size: 21px; }
+.s-body { font-size: 1.15rem; }
 .id-text, .p-item, .sym-text, .app-card-text, .j-text,
 .month-body, .int-text, .sp-text, .cp-text, .rh-text,
-.rh-list li, .q-text { font-size: .95rem; }
+.rh-list li, .q-text { font-size: 1.15rem; }
+.hero-sub, .cta-text { font-size: 1.15rem; }
 
 </style>
 </head>
@@ -704,7 +705,7 @@ body { font-size: 16px; }
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-img">
+  <div class="lotus-hero-img">
     <img src="https://images.unsplash.com/photo-1518710843675-2540dd79065c?w=900&q=80" alt="Лотос в тумане">
   </div>
   <div class="hero-text">
