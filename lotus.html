@@ -6,6 +6,7 @@
 <title>LOTUS — программа трансформации · Инна Янкина</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="shared.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
 <style>
 :root {
@@ -668,73 +669,15 @@ section { position: relative; }
   .pc-arrow { transform: rotate(90deg); }
 }
 
-/* ── SITE NAV ── */
-.nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 2.5rem;
-  height: 60px;
-  background: rgba(242,236,228,.96);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(196,164,138,.25);
-}
-.nav-logo {
-  font-family: 'Jost', sans-serif;
-  font-size: .72rem; font-weight: 500;
-  letter-spacing: .28em; text-transform: uppercase;
-  color: var(--bark); text-decoration: none;
-}
-.nav-links {
-  display: flex; list-style: none; gap: 2rem;
-}
-.nav-links a {
-  font-family: 'Jost', sans-serif;
-  font-size: .72rem; font-weight: 400;
-  letter-spacing: .14em; text-transform: uppercase;
-  color: var(--clay); text-decoration: none;
-  transition: color .2s;
-}
-.nav-links a:hover, .nav-links a.active { color: var(--bark); }
-.nav-lang {
-  font-family: 'Jost', sans-serif;
-  font-size: .7rem; font-weight: 500;
-  letter-spacing: .18em;
-  color: var(--bark);
-}
-.nav-burger {
-  display: none; flex-direction: column;
-  gap: 5px; background: none; border: none;
-  cursor: pointer; padding: .5rem;
-}
-.nav-burger span {
-  display: block; width: 22px; height: 1px;
-  background: var(--bark); transition: .25s;
-}
-.nav-drawer {
-  display: none; position: fixed;
-  top: 60px; left: 0; right: 0; bottom: 0;
-  background: var(--white); z-index: 99;
-  flex-direction: column; padding: 2rem;
-  gap: 1.5rem;
-}
-.nav-drawer a {
-  font-family: 'Jost', sans-serif;
-  font-size: 1rem; letter-spacing: .12em;
-  text-transform: uppercase; color: var(--bark);
-  text-decoration: none;
-}
-.nav-overlay {
-  display: none; position: fixed;
-  inset: 0; z-index: 98;
-  background: rgba(0,0,0,.2);
-}
-.nav-drawer.open, .nav-overlay.open { display: flex; }
-body { padding-top: 60px; }
-.hero { min-height: calc(100svh - 60px); }
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  .nav-burger { display: flex; }
-}
+
+
+/* Match site font sizes */
+body { font-size: 16px; }
+.s-body { font-size: 1rem; }
+.id-text, .p-item, .sym-text, .app-card-text, .j-text,
+.month-body, .int-text, .sp-text, .cp-text, .rh-text,
+.rh-list li, .q-text { font-size: .95rem; }
+
 </style>
 </head>
 <body>
@@ -748,15 +691,34 @@ body { padding-top: 60px; }
     <li><a href="about.html">Обо мне</a></li>
     <li><a href="contact.html">Контакты</a></li>
   </ul>
+  <div class="nav-lang"><span class="active">RU</span><a href="#" onclick="setLang('en');return false;">EN</a><a href="#" onclick="setLang('ua');return false;">UA</a></div>
+  <button class="nav-burger" id="burger-ru"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="navDrawer-ru">
+  <a href="kundalini-info.html">О Кундалини</a><a href="sessions.html">Сессии</a><a href="individual.html">Индивидуально</a>
+  <a href="about.html">Обо мне</a><a href="contact.html">Контакты</a>
+</div>
+<div class="nav-overlay" id="navOverlay-ru">
+
+<nav class="nav" id="nav-ru">
+  <a href="individual.html" class="nav-logo">INNA IANKINA</a>
+  <ul class="nav-links">
+    <li><a href="kundalini-info.html">О Кундалини</a></li>
+    <li><a href="sessions.html">Сессии</a></li>
+    <li><a href="individual.html">Индивидуально</a></li>
+    <li><a href="lotus.html" class="active">Lotus</a></li>
+    <li><a href="about.html">Обо мне</a></li>
+    <li><a href="contact.html">Контакты</a></li>
+  </ul>
   <div class="nav-lang"><span class="active">RU</span></div>
-  <button class="nav-burger" id="burger-ru" onclick="toggleBurger()"><span></span><span></span><span></span></button>
+  <button class="nav-burger" id="burger-ru" ><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-drawer" id="navDrawer-ru">
   <a href="kundalini-info.html">О Кундалини</a><a href="sessions.html">Сессии</a>
   <a href="individual.html">Индивидуально</a><a href="lotus.html">Lotus</a>
   <a href="about.html">Обо мне</a><a href="contact.html">Контакты</a>
 </div>
-<div class="nav-overlay" id="navOverlay-ru" onclick="toggleBurger()"></div>
+<div class="nav-overlay" id="navOverlay-ru" ></div>
 
 <!-- HERO -->
 <section class="hero">
@@ -1238,6 +1200,8 @@ body { padding-top: 60px; }
   </div>
 </section>
 
+
+
 <!-- CTA -->
 <section class="cta-section">
   <div class="col">
@@ -1250,16 +1214,42 @@ body { padding-top: 60px; }
   </div>
 </section>
 
+<footer class="footer" id="footer-ru">
+  <div class="footer-inner">
+    <div><p class="footer-logo">INNA IANKINA</p><p class="footer-sub">Практик кундалини · Англия</p></div>
+    <div><p class="footer-col-title">Страницы</p><nav class="footer-nav"><a href="individual.html">Индивидуально</a><a href="lotus.html">Lotus</a><a href="sessions.html">Сессии</a><a href="kundalini-info.html">О Кундалини</a><a href="about.html">Обо мне</a><a href="contact.html">Контакты</a></nav></div>
+    <div><p class="footer-col-title">Связаться</p><nav class="footer-nav"><a href="https://wa.me/447759390423">WhatsApp</a><a href="https://instagram.com/inna.uk.iankin/">Instagram</a><a href="https://t.me/innaiankina">Telegram</a><a href="mailto:inna.win.iankina@gmail.com">Email</a></nav></div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 Инна Янкина · <a href="#">Политика конфиденциальности</a></p>
+    <div class="nav-lang"><span class="active">RU</span><a href="#" onclick="setLang('en');return false;">EN</a></div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
 <script>
+function setLang(lang) {
+  document.getElementById('html-root').lang = lang;
+  ['ru','en','ua'].forEach(l => {
+    const show = l === lang;
+    document.getElementById('nav-'+l).style.display = show ? '' : 'none';
+    document.getElementById('navDrawer-'+l).style.display = show ? '' : 'none';
+    document.getElementById('navOverlay-'+l).style.display = show ? '' : 'none';
+    document.getElementById('footer-'+l).style.display = show ? '' : 'none';
+  });
+  document.querySelectorAll('.t-ru').forEach(el => el.style.display = lang==='ru' ? '' : 'none');
+  document.querySelectorAll('.t-en').forEach(el => el.style.display = lang==='en' ? '' : 'none');
+  document.querySelectorAll('.t-ua').forEach(el => el.style.display = lang==='ua' ? '' : 'none');
+  document.getElementById('about-link').href = lang==='ru' ? 'about.html' : 'about.html';
+  document.getElementById('diag-link').href = lang==='ru' ? 'contact.html' : 'contact.html';
+  document.getElementById('contact-link').href = lang==='ru' ? 'contact.html' : 'contact.html';
+  document.getElementById('memo-link').href = lang==='ru' ? 'memo.html' : 'memo.html';
+  document.getElementById('page-title').textContent = lang==='ru' ? 'Активация Кундалини — Инна Янкина' : 'Kundalini Activation — Inna Yankina';
+  try { localStorage.setItem('lang', lang); } catch(e) {}
+
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
 }, { threshold: 0.12 });
-
-function toggleBurger() {
-  document.getElementById('navDrawer-ru').classList.toggle('open');
-  document.getElementById('navOverlay-ru').classList.toggle('open');
-}
-
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
 </body>
