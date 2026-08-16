@@ -6,7 +6,6 @@
 <title>LOTUS — программа трансформации · Инна Янкина</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="shared.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
 <style>
 :root {
@@ -1228,24 +1227,22 @@ body { font-size: 16px; }
 
 <script src="shared.js"></script>
 <script>
-function setLang(lang) {
-  document.getElementById('html-root').lang = lang;
-  ['ru','en','ua'].forEach(l => {
-    const show = l === lang;
-    document.getElementById('nav-'+l).style.display = show ? '' : 'none';
-    document.getElementById('navDrawer-'+l).style.display = show ? '' : 'none';
-    document.getElementById('navOverlay-'+l).style.display = show ? '' : 'none';
-    document.getElementById('footer-'+l).style.display = show ? '' : 'none';
-  });
-  document.querySelectorAll('.t-ru').forEach(el => el.style.display = lang==='ru' ? '' : 'none');
-  document.querySelectorAll('.t-en').forEach(el => el.style.display = lang==='en' ? '' : 'none');
-  document.querySelectorAll('.t-ua').forEach(el => el.style.display = lang==='ua' ? '' : 'none');
-  document.getElementById('about-link').href = lang==='ru' ? 'about.html' : 'about.html';
-  document.getElementById('diag-link').href = lang==='ru' ? 'contact.html' : 'contact.html';
-  document.getElementById('contact-link').href = lang==='ru' ? 'contact.html' : 'contact.html';
-  document.getElementById('memo-link').href = lang==='ru' ? 'memo.html' : 'memo.html';
-  document.getElementById('page-title').textContent = lang==='ru' ? 'Активация Кундалини — Инна Янкина' : 'Kundalini Activation — Inna Yankina';
-  try { localStorage.setItem('lang', lang); } catch(e) {}
+function initBurger() {
+  const burger = document.getElementById('burger-ru');
+  const drawer = document.getElementById('navDrawer-ru');
+  const overlay = document.getElementById('navOverlay-ru');
+  if (!burger) return;
+  burger.onclick = () => {
+    const open = drawer.classList.contains('open');
+    [burger, drawer, overlay].forEach(el => { if(el) el.classList.toggle('open', !open); });
+    document.body.style.overflow = open ? '' : 'hidden';
+  };
+  if (overlay) overlay.onclick = () => {
+    [burger, drawer, overlay].forEach(el => { if(el) el.classList.remove('open'); });
+    document.body.style.overflow = '';
+  };
+}
+initBurger();
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
