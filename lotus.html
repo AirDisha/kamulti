@@ -64,7 +64,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(3rem,8vw,7rem) clamp(2.5rem,6vw,6rem);
+  align-items: flex-start;
+  padding: clamp(1.5rem,3vw,2.5rem) clamp(2.5rem,6vw,6rem);
+  padding-top: calc(var(--nav-h, 56px) + 2rem);
 }
 .hero-label {
   font-family: 'Jost', sans-serif;
@@ -118,6 +120,7 @@ section { position: relative; }
 
 .spacer { height: 5rem; }
 .spacer-sm { height: 2.5rem; }
+.hero + section .spacer:first-child { height: 1rem; }
 .hr-line { border: none; border-top: 1px solid var(--mist); opacity: .5; }
 
 /* Section label */
@@ -155,6 +158,7 @@ section { position: relative; }
   background: var(--white);
   padding: 6rem 0;
 }
+.for-whom { padding-top: 1.5rem; }
 .fw-quote {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.5rem,3.5vw,2.4rem);
