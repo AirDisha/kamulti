@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Глобальная активация — Инна Янкина</title>
+<!-- --><title id="page-title">Глобальная активация — Инна Янкина</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap">
@@ -30,37 +30,57 @@
 <nav class="nav" id="nav-ru">
   <a href="individual.html" class="nav-logo">INNA IANKINA</a>
   <ul class="nav-links">
-    <li><a href="individual.html">Индивидуально</a></li>
+    <li><a href="individual.html">Индивидуально</a><a href="lotus.html">Lotus</a></li>
+    <li><a href="lotus.html">Lotus</a></li>
     <li><a href="sessions.html">Сессии</a></li>
     <li><a href="kundalini-info.html" class="active">О Кундалини</a></li>
     <li><a href="about.html">Обо мне</a></li>
     <li><a href="contact.html">Контакты</a></li>
   </ul>
-  <div class="nav-lang"><span class="active">RU</span><a href="#" onclick="setLang('en');return false;">EN</a></div>
+  <div class="nav-lang"><span class="active">RU</span><a href="#" onclick="setLang('en');return false;">EN</a><a href="#" onclick="setLang('ua');return false;">UA</a></div>
   <button class="nav-burger" id="burger-ru"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-drawer" id="navDrawer-ru">
-  <a href="individual.html">Индивидуально</a><a href="sessions.html">Сессии</a>
+  <a href="individual.html">Индивидуально</a><a href="lotus.html">Lotus</a><a href="sessions.html">Сессии</a>
   <a href="kundalini-info.html">О Кундалини</a><a href="about.html">Обо мне</a><a href="contact.html">Контакты</a>
 </div>
 <div class="nav-overlay" id="navOverlay-ru"></div>
 <nav class="nav" id="nav-en" style="display:none;">
   <a href="individual.html" class="nav-logo">INNA IANKINA</a>
   <ul class="nav-links">
-    <li><a href="individual.html">Individual</a></li>
+    <li><a href="individual.html">Individual</a><a href="lotus.html">Lotus</a></li>
+    <li><a href="lotus.html">Lotus</a></li>
     <li><a href="sessions.html">Sessions</a></li>
     <li><a href="kundalini-info.html" class="active">About Kundalini</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
-  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span></div>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang('ua');return false;">UA</a></div>
   <button class="nav-burger" id="burger-en"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-drawer" id="navDrawer-en" style="display:none;">
-  <a href="individual.html">Individual</a><a href="sessions.html">Sessions</a>
+  <a href="individual.html">Individual</a><a href="lotus.html">Lotus</a><a href="sessions.html">Sessions</a>
   <a href="kundalini-info.html">About Kundalini</a><a href="about.html">About</a><a href="contact.html">Contact</a>
 </div>
 <div class="nav-overlay" id="navOverlay-en" style="display:none;"></div>
+<nav class="nav" id="nav-ua" style="display:none;">
+  <a href="individual.html" class="nav-logo">INNA IANKINA</a>
+  <ul class="nav-links">
+    <li><a href="kundalini-info.html" class="active">Про Кундаліні</a></li>
+    <li><a href="sessions.html">Сесії</a></li>
+    <li><a href="individual.html">Індивідуально</a><a href="lotus.html">Lotus</a></li>
+    <li><a href="lotus.html">Lotus</a></li>
+    <li><a href="about.html">Про мене</a></li>
+    <li><a href="contact.html">Контакти</a></li>
+  </ul>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><a href="#" onclick="setLang('en');return false;">EN</a><span class="active">UA</span></div>
+  <button class="nav-burger" id="burger-ua"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="navDrawer-ua" style="display:none;">
+  <a href="kundalini-info.html">Про Кундаліні</a><a href="sessions.html">Сесії</a>
+  <a href="individual.html">Індивідуально</a><a href="lotus.html">Lotus</a><a href="about.html">Про мене</a><a href="contact.html">Контакти</a>
+</div>
+<div class="nav-overlay" id="navOverlay-ua" style="display:none;"></div>
 <div class="page-wrap">
 <div class="t-ru"><div class="col"><div class="spacer"></div>
 <span class="article-label">Научный обзор · Данные и тенденции</span>
@@ -122,13 +142,37 @@
   <span></span>
 </div>
 <div class="spacer"></div></div></div>
+<div class="t-ua" style="display:none;"><div class="col"><div class="spacer"></div>
+<span class="article-label">Дані та тенденції</span>
+<h1 class="article-title">Глобальна активація</h1>
+<p class="article-lead">Зростання інтересу до медитації — не культурна мода. За цим стоять вимірювані соціологічні та нейробіологічні процеси.</p>
+<img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1779024283/ChatGPT_Image_17_%D0%BC%D0%B0%D1%8F_2026_%D0%B3._15_53_51_ckhgp1.jpg" alt="" loading="lazy" style="width:100%;display:block;object-fit:cover;aspect-ratio:16/7;max-height:360px;margin-bottom:2rem;">
+<div class="article-body">
+<h2>Цифри</h2>
+      <p>За даними NIH (2022), понад 18% дорослих американців регулярно практикують медитацію — утричі більше, ніж 10 років тому. У Великобританії — близько 15%. Кількість рецензованих статей з медитації: з ~10/рік у 1990-х до 1000+/рік у 2020-х. Ринок додатків для медитації: $2,08 млрд у 2022-му, прогноз до $10+ млрд до 2030-го.</p>
+      <h2>Чому саме зараз</h2>
+      <p>Хронічний стрес досяг рівня, при якому нервова система не встигає відновлюватися. За даними ВООЗ, тривожні розлади торкаються 264 мільйонів людей. Традиційних інструментів — відпустки, розваг, навіть психотерапії — часто недостатньо для роботи з глибиною накопиченого. Активація Кундаліні діє безпосередньо на нервову систему, змінюючи її базовий режим роботи.</p>
+      <h2>Інтуїція та нейронауки</h2>
+      <p>Тета-ритм — домінуючий при медитації — пов'язаний з інтуїтивним, образним мисленням. Гамма-ритм синхронізує віддалені нейронні мережі, забезпечуючи «спалахи осяяння». Це буквально нейронаука інтуїції. Люди, які регулярно практикують, відзначають покращення здатності приймати рішення, творчого мислення та відчуття «внутрішнього компаса».</p>
+      <h2>Висновок</h2>
+      <p>Інструменти для зміни стану нервової системи існують, працюють і стають дедалі більш доступними. Те, що раніше було доступне лише в монастирях або в рамках дорогих ретритів, сьогодні можна отримати в форматі індивідуальної або групової сесії — онлайн або офлайн. Це і є, у найпрактичнішому сенсі, «епоха пробудження».</p>
+</div>
+<div class="spacer-sm"></div>
+<a href="sessions.html" class="btn btn-arrow">ЗАПИСАТИСЯ НА СЕСІЮ</a>
+<div class="spacer-sm"></div>
+<a href="kundalini-info.html" class="btn btn-outline btn-arrow" style="margin-top:.5rem;">← НАЗАД ДО СТАТЕЙ</a>
+<div class="article-nav" style="margin-top:2rem;">
+  <a href="kundalini-article5.html">← Нейронаука симптомів</a>
+  <span></span>
+</div>
+<div class="spacer"></div></div></div>
 </div>
 
 <footer class="footer" id="footer-ru">
   <div class="footer-inner">
     <div><p class="footer-logo">INNA IANKINA</p><p class="footer-sub">Практик кундалини · Англия</p></div>
     <div><p class="footer-col-title">Страницы</p><nav class="footer-nav">
-      <a href="individual.html">Индивидуально</a><a href="sessions.html">Сессии</a>
+      <a href="individual.html">Индивидуально</a><a href="lotus.html">Lotus</a><a href="sessions.html">Сессии</a>
       <a href="kundalini-info.html">О Кундалини</a><a href="about.html">Обо мне</a><a href="contact.html">Контакты</a>
     </nav></div>
     <div><p class="footer-col-title">Связаться</p><nav class="footer-nav">
@@ -136,14 +180,31 @@
     </nav></div>
   </div>
   <div class="footer-bottom"><p class="footer-copy">© 2025 Инна Янкина</p>
-    <div class="nav-lang"><span class="active">RU</span><a href="#" onclick="setLang('en');return false;">EN</a></div>
+    <div class="nav-lang"><span class="active">RU</span><a href="#" onclick="setLang('en');return false;">EN</a><a href="#" onclick="setLang('ua');return false;">UA</a></div>
+  </div>
+</footer>
+<footer class="footer" id="footer-ua" style="display:none;">
+  <div class="footer-inner">
+    <div><p class="footer-logo">INNA IANKINA</p><p class="footer-sub">Фасилітатор кундаліні · Англія</p></div>
+    <div><p class="footer-col-title">Сторінки</p><nav class="footer-nav">
+      <a href="kundalini-info.html">Про Кундаліні</a><a href="sessions.html">Сесії</a>
+      <a href="individual.html">Індивідуально</a><a href="lotus.html">Lotus</a><a href="about.html">Про мене</a><a href="contact.html">Контакти</a>
+    </nav></div>
+    <div><p class="footer-col-title">Зв'язатися</p><nav class="footer-nav">
+      <a href="https://wa.me/447759390423">WhatsApp</a>
+      <a href="https://instagram.com/inna.uk.iankin/">Instagram</a>
+      <a href="https://t.me/innaiankina">Telegram</a>
+    </nav></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2025 Інна Янкіна</p>
+    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><a href="#" onclick="setLang('en');return false;">EN</a><span class="active">UA</span></div>
   </div>
 </footer>
 <footer class="footer" id="footer-en" style="display:none;">
   <div class="footer-inner">
     <div><p class="footer-logo">INNA IANKINA</p><p class="footer-sub">Kundalini Practitioner · England</p></div>
     <div><p class="footer-col-title">Pages</p><nav class="footer-nav">
-      <a href="individual.html">Individual</a><a href="sessions.html">Sessions</a>
+      <a href="individual.html">Individual</a><a href="lotus.html">Lotus</a><a href="sessions.html">Sessions</a>
       <a href="kundalini-info.html">About Kundalini</a><a href="about.html">About</a><a href="contact.html">Contact</a>
     </nav></div>
     <div><p class="footer-col-title">Contact</p><nav class="footer-nav">
@@ -151,20 +212,21 @@
     </nav></div>
   </div>
   <div class="footer-bottom"><p class="footer-copy">© 2025 Inna Yankina</p>
-    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span></div>
+    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang('ua');return false;">UA</a></div>
   </div>
 </footer>
 <script src="shared.js"></script>
 <script>
 function setLang(lang){
   document.getElementById('html-root').lang=lang;
-  ['ru','en'].forEach(l=>{const show=l===lang;
+  ['ru','en','ua'].forEach(l=>{const show=l===lang;
     ['nav-'+l,'navDrawer-'+l,'navOverlay-'+l,'footer-'+l].forEach(id=>{
       const el=document.getElementById(id);if(el)el.style.display=show?'':'none';
     });
   });
   document.querySelectorAll('.t-ru').forEach(el=>el.style.display=lang==='ru'?'':'none');
   document.querySelectorAll('.t-en').forEach(el=>el.style.display=lang==='en'?'':'none');
+  document.querySelectorAll('.t-ua').forEach(el=>el.style.display=lang==='ua'?'':'none');
   try{localStorage.setItem('lang',lang);}catch(e){}
   initBurger(lang);
 }
@@ -175,7 +237,7 @@ function initBurger(lang){
   if(o)o.onclick=()=>{[b,d,o].forEach(el=>el.classList.remove('open'));document.body.style.overflow='';};
 }
 initBurger('ru');
-try{const s=localStorage.getItem('lang');if(s==='en')setLang('en');}catch(e){}
+try{const s=localStorage.getItem('lang');if(s==='en')setLang('en');else if(s==='ua')setLang('ua');}catch(e){}
 </script>
 </body>
 </html>

@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOTUS — программа трансформации · Инна Янкина</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+<style>
+:root {
+  --cream:   #F2ECE4;
+  --linen:   #EAE0D4;
+  --bark:    #3D2B1F;
+  --clay:    #7A5244;
+  --petal:   #C4A48A;
+  --mist:    #C8B8A8;
+  --white:   #FDFAF6;
+  --ink:     #2A1F18;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--bark);
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+/* ── HERO ── */
+.hero {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+}
+.hero-img {
+  position: relative;
+  overflow: hidden;
+}
+.hero-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  filter: brightness(.85) sepia(.15);
+}
+.hero-img::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(61,43,31,.12), transparent);
+}
+.hero-text {
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(3rem,8vw,7rem) clamp(2.5rem,6vw,6rem);
+}
+.hero-label {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: .72rem;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 2rem;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(4.5rem,9vw,8rem);
+  font-weight: 300;
+  line-height: .95;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  margin-bottom: 2.5rem;
+}
+.hero-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.1rem,2.2vw,1.4rem);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--clay);
+  line-height: 1.6;
+  max-width: 28ch;
+  margin-bottom: 3rem;
+}
+.hero-sub {
+  font-size: .85rem;
+  letter-spacing: .06em;
+  color: var(--clay);
+  font-weight: 400;
+}
+.hero-duration {
+  display: inline-block;
+  margin-top: .5rem;
+  font-size: .72rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--mist);
+  font-weight: 400;
+}
+
+/* ── SECTIONS ── */
+section { position: relative; }
+
+.col { max-width: 820px; margin: 0 auto; padding: 0 2rem; }
+.col-wide { max-width: 1060px; margin: 0 auto; padding: 0 2rem; }
+
+.spacer { height: 5rem; }
+.spacer-sm { height: 2.5rem; }
+.hr-line { border: none; border-top: 1px solid var(--mist); opacity: .5; }
+
+/* Section label */
+.s-label {
+  font-family: 'Jost', sans-serif;
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--petal);
+  display: block;
+  margin-bottom: 1.25rem;
+}
+.s-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem,5vw,3.6rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 1.75rem;
+}
+.s-lead {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.15rem,2vw,1.35rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--clay);
+  line-height: 1.65;
+  max-width: 60ch;
+}
+.s-body { line-height: 1.85; color: var(--bark); max-width: 62ch; }
+
+/* ── FOR WHOM ── */
+.for-whom {
+  background: var(--white);
+  padding: 6rem 0;
+}
+.fw-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem,3.5vw,2.4rem);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--ink);
+  border-left: 2px solid var(--petal);
+  padding-left: 2rem;
+  margin: 3rem 0;
+}
+.fw-quote strong { font-weight: 600; }
+
+/* Кто она */
+.identity-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.id-card {
+  background: var(--linen);
+  border-radius: 2px;
+  padding: 1.75rem 2rem;
+}
+.id-card-wide {
+  grid-column: 1 / -1;
+}
+.id-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: .5rem;
+}
+.id-text { font-size: .92rem; color: var(--clay); line-height: 1.65; }
+
+/* Портрет */
+.portrait {
+  background: var(--cream);
+  padding: 6rem 0;
+}
+.portrait-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.p-outside {
+  background: var(--clay);
+  color: var(--white);
+  border-radius: 2px;
+  padding: 2rem;
+}
+.p-outside .p-col-title { color: rgba(255,255,255,.6); }
+.p-outside .p-item { color: rgba(255,255,255,.9); }
+.p-inside { padding: 2rem 0; }
+.p-col-title {
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 1.25rem;
+}
+.p-item {
+  display: flex;
+  align-items: baseline;
+  gap: .75rem;
+  margin-bottom: .9rem;
+  font-size: .95rem;
+  color: var(--bark);
+}
+.p-arrow { color: var(--petal); flex-shrink: 0; }
+
+/* Голос */
+.voice {
+  background: var(--linen);
+  padding: 6rem 0;
+}
+.quotes-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.q-card {
+  background: var(--white);
+  border-radius: 2px;
+  padding: 2rem;
+  position: relative;
+}
+.q-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--petal);
+  opacity: .5;
+  position: absolute;
+  top: .5rem;
+  left: 1rem;
+}
+.q-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--bark);
+  line-height: 1.6;
+  padding-top: 1.5rem;
+}
+.quotes-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Симптомы */
+.symptoms {
+  background: var(--cream);
+  padding: 6rem 0;
+}
+.sym-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.sym-card {
+  background: var(--linen);
+  border-radius: 2px;
+  padding: 2rem;
+}
+.sym-icon {
+  width: 44px; height: 44px;
+  background: var(--clay);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.25rem;
+  font-size: 1.1rem;
+}
+.sym-title { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:var(--ink); margin-bottom:.5rem; }
+.sym-text { font-size:.9rem; color:var(--clay); line-height:1.6; }
+
+/* Подход */
+.approach {
+  background: var(--bark);
+  color: var(--cream);
+  padding: 7rem 0;
+}
+.approach .s-title { color: var(--cream); }
+.approach .s-label { color: var(--petal); }
+.approach .s-lead { color: var(--mist); }
+.app-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+}
+.app-card {
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 2px;
+  padding: 2rem;
+}
+.app-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: .75rem;
+}
+.app-card-text { font-size: .9rem; color: var(--mist); line-height: 1.65; }
+
+/* Путь (результат) */
+.journey {
+  background: var(--white);
+  padding: 6rem 0;
+}
+.journey-flow {
+  display: flex;
+  gap: 0;
+  margin-top: 3.5rem;
+  align-items: stretch;
+}
+.j-stage {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  border: 1px solid var(--mist);
+  position: relative;
+}
+.j-stage + .j-stage { border-left: none; }
+.j-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--mist);
+  line-height: 1;
+  margin-bottom: .75rem;
+}
+.j-title { font-family:'Cormorant Garamond',serif; font-size:1.15rem; font-weight:600; color:var(--ink); margin-bottom:.5rem; }
+.j-arrow {
+  position: absolute;
+  right: -1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--petal);
+  font-size: 1.2rem;
+  z-index: 2;
+  background: var(--white);
+  padding: .2rem .15rem;
+}
+.j-text { font-size: .88rem; color: var(--clay); line-height: 1.6; }
+
+/* Три месяца */
+.months {
+  background: var(--cream);
+  padding: 6rem 0;
+}
+.months-timeline {
+  margin-top: 4rem;
+  position: relative;
+}
+.months-timeline::before {
+  content: '';
+  position: absolute;
+  left: 2.5rem;
+  top: 0; bottom: 0;
+  width: 1px;
+  background: var(--mist);
+}
+.month-block {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+.month-num-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: .25rem;
+}
+.month-num {
+  width: 44px; height: 44px;
+  background: var(--clay);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .1em;
+  flex-shrink: 0;
+  z-index: 1;
+  position: relative;
+}
+.month-content { padding-top: .25rem; }
+.month-eyebrow {
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--petal);
+  margin-bottom: .5rem;
+}
+.month-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem,3vw,2.2rem);
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: .5rem;
+}
+.month-sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--clay);
+  margin-bottom: 1.5rem;
+}
+.month-body { font-size: .95rem; line-height: 1.85; color: var(--bark); max-width: 55ch; }
+
+/* Integration block */
+.integration-block {
+  background: var(--linen);
+  border-left: 3px solid var(--petal);
+  padding: 2rem 2.5rem;
+  margin: 2rem 0 4rem;
+  max-width: 55ch;
+}
+.int-title { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:var(--ink); margin-bottom:.5rem; }
+.int-text { font-size:.9rem; color:var(--clay); line-height:1.7; }
+
+/* Спираль */
+.spiral {
+  background: var(--white);
+  padding: 6rem 0;
+}
+.spiral-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+.sp-col { }
+.sp-theme {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid var(--mist);
+}
+.sp-row { margin-bottom: .75rem; }
+.sp-month { font-size: .72rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--petal); }
+.sp-text { font-size: .9rem; color: var(--bark); line-height: 1.55; }
+
+/* Контрольные точки */
+.checkpoints {
+  background: var(--cream);
+  padding: 6rem 0;
+}
+.cp-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.cp-card {
+  position: relative;
+  padding: 2.5rem 2rem 2rem;
+  border: 1px solid var(--mist);
+  border-radius: 2px;
+}
+.cp-dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--petal);
+  position: absolute;
+  top: -6px; left: 2rem;
+}
+.cp-label { font-size:.7rem; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--petal); margin-bottom:.75rem; }
+.cp-title { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:600; color:var(--ink); margin-bottom:.75rem; }
+.cp-text { font-size:.9rem; color:var(--clay); line-height:1.65; }
+
+/* Ритм */
+.rhythm {
+  background: var(--linen);
+  padding: 6rem 0;
+}
+.rhythm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.rh-card {
+  background: var(--white);
+  border-radius: 2px;
+  padding: 2.5rem;
+}
+.rh-freq {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--petal);
+  margin-bottom: .25rem;
+}
+.rh-title { font-family:'Cormorant Garamond',serif; font-size:1.2rem; font-weight:600; color:var(--ink); margin-bottom:.75rem; }
+.rh-text { font-size:.9rem; color:var(--clay); line-height:1.65; }
+.rh-list { margin-top:.75rem; padding-left:1rem; }
+.rh-list li { font-size:.88rem; color:var(--clay); margin-bottom:.4rem; line-height:1.55; }
+
+/* Маршрут */
+.route {
+  background: var(--bark);
+  padding: 7rem 0;
+}
+.route .s-title { color:var(--cream); }
+.route .s-label { color:var(--petal); }
+.route-path {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+.route-step {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 2px;
+  padding: .6rem 1.1rem;
+  font-size: .82rem;
+  font-weight: 400;
+  color: var(--cream);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.route-step.highlight {
+  background: var(--clay);
+  border-color: var(--clay);
+  font-weight: 500;
+}
+.route-arrow { color: var(--petal); font-size: 1rem; flex-shrink: 0; }
+.route-note {
+  margin-top: 3rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--mist);
+  max-width: 55ch;
+  line-height: 1.65;
+}
+
+/* Принцип */
+.principle {
+  background: var(--cream);
+  padding: 7rem 0;
+}
+.principle-chain {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 3.5rem;
+  flex-wrap: wrap;
+}
+.pc-step {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 500;
+  color: var(--ink);
+  padding: 1.25rem 1.75rem;
+  border: 1px solid var(--mist);
+  border-radius: 2px;
+  background: var(--white);
+  text-align: center;
+  flex: 1;
+  min-width: 140px;
+}
+.pc-arrow { color: var(--petal); padding: 0 .5rem; font-size: 1.2rem; flex-shrink: 0; }
+.principle-coda {
+  margin-top: 3.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.3rem,2.5vw,1.7rem);
+  font-weight: 300;
+  color: var(--clay);
+  line-height: 1.65;
+  max-width: 60ch;
+}
+
+/* CTA */
+.cta-section {
+  background: var(--white);
+  padding: 7rem 0;
+  text-align: center;
+}
+.cta-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem,5vw,3.5rem);
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+.cta-text { font-size: 1rem; color: var(--clay); max-width: 42ch; margin: 0 auto 2.5rem; line-height: 1.75; }
+.btn-lotus {
+  display: inline-block;
+  background: var(--clay);
+  color: var(--white);
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  padding: 1.1rem 3rem;
+  border: none;
+  cursor: pointer;
+  transition: background .25s;
+}
+.btn-lotus:hover { background: var(--bark); }
+.cta-by {
+  margin-top: 2.5rem;
+  font-size: .85rem;
+  color: var(--mist);
+  letter-spacing: .08em;
+}
+
+/* Reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.on { opacity: 1; transform: none; }
+.reveal.d1 { transition-delay: .1s; }
+.reveal.d2 { transition-delay: .2s; }
+.reveal.d3 { transition-delay: .3s; }
+.reveal.d4 { transition-delay: .4s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-img { height: 50vw; }
+  .identity-grid, .portrait-grid, .sym-grid, .app-cards,
+  .quotes-row, .quotes-row-2, .spiral-grid, .cp-row,
+  .rhythm-grid { grid-template-columns: 1fr; }
+  .id-card-wide { grid-column: 1; }
+  .journey-flow { flex-direction: column; }
+  .j-stage + .j-stage { border-left: 1px solid var(--mist); border-top: none; }
+  .j-arrow { display: none; }
+  .months-timeline::before { left: 1.5rem; }
+  .month-block { grid-template-columns: 3.5rem 1fr; gap: 1rem; }
+  .principle-chain { flex-direction: column; align-items: stretch; }
+  .pc-arrow { transform: rotate(90deg); }
+}
+
+/* ── SITE NAV ── */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 2.5rem;
+  height: 60px;
+  background: rgba(242,236,228,.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(196,164,138,.25);
+}
+.nav-logo {
+  font-family: 'Jost', sans-serif;
+  font-size: .72rem; font-weight: 500;
+  letter-spacing: .28em; text-transform: uppercase;
+  color: var(--bark); text-decoration: none;
+}
+.nav-links {
+  display: flex; list-style: none; gap: 2rem;
+}
+.nav-links a {
+  font-family: 'Jost', sans-serif;
+  font-size: .72rem; font-weight: 400;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--clay); text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--bark); }
+.nav-lang {
+  font-family: 'Jost', sans-serif;
+  font-size: .7rem; font-weight: 500;
+  letter-spacing: .18em;
+  color: var(--bark);
+}
+.nav-burger {
+  display: none; flex-direction: column;
+  gap: 5px; background: none; border: none;
+  cursor: pointer; padding: .5rem;
+}
+.nav-burger span {
+  display: block; width: 22px; height: 1px;
+  background: var(--bark); transition: .25s;
+}
+.nav-drawer {
+  display: none; position: fixed;
+  top: 60px; left: 0; right: 0; bottom: 0;
+  background: var(--white); z-index: 99;
+  flex-direction: column; padding: 2rem;
+  gap: 1.5rem;
+}
+.nav-drawer a {
+  font-family: 'Jost', sans-serif;
+  font-size: 1rem; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--bark);
+  text-decoration: none;
+}
+.nav-overlay {
+  display: none; position: fixed;
+  inset: 0; z-index: 98;
+  background: rgba(0,0,0,.2);
+}
+.nav-drawer.open, .nav-overlay.open { display: flex; }
+body { padding-top: 60px; }
+.hero { min-height: calc(100svh - 60px); }
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-burger { display: flex; }
+}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav-ru">
+  <a href="individual.html" class="nav-logo">INNA IANKINA</a>
+  <ul class="nav-links">
+    <li><a href="kundalini-info.html">О Кундалини</a></li>
+    <li><a href="sessions.html">Сессии</a></li>
+    <li><a href="individual.html">Индивидуально</a></li>
+    <li><a href="lotus.html" class="active">Lotus</a></li>
+    <li><a href="about.html">Обо мне</a></li>
+    <li><a href="contact.html">Контакты</a></li>
+  </ul>
+  <div class="nav-lang"><span class="active">RU</span></div>
+  <button class="nav-burger" id="burger-ru" onclick="toggleBurger()"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="navDrawer-ru">
+  <a href="kundalini-info.html">О Кундалини</a><a href="sessions.html">Сессии</a>
+  <a href="individual.html">Индивидуально</a><a href="lotus.html">Lotus</a>
+  <a href="about.html">Обо мне</a><a href="contact.html">Контакты</a>
+</div>
+<div class="nav-overlay" id="navOverlay-ru" onclick="toggleBurger()"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1518710843675-2540dd79065c?w=900&q=80" alt="Лотос в тумане">
+  </div>
+  <div class="hero-text">
+    <span class="hero-label">Инна Янкина · Программа трансформации</span>
+    <h1 class="hero-title">LOTUS</h1>
+    <p class="hero-tagline">3-месячная программа возвращения женщины к себе</p>
+    <p class="hero-sub">Через тело, чувства, внутреннее преображение<br>и раскрытие истинной природы</p>
+    <span class="hero-duration">3 месяца · Групповой формат · Онлайн</span>
+  </div>
+</section>
+
+<!-- ДЛЯ КОГО -->
+<section class="for-whom">
+  <div class="col">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Для кого программа</span>
+    <h2 class="s-title reveal">Это программа не для всех</h2>
+    <p class="s-lead reveal">Она создана для конкретного типа женщин — тех, кто уже многого достиг, но чувствует, что что-то важное потеряно внутри.</p>
+
+    <blockquote class="fw-quote reveal">
+      LOTUS — это программа для женщин, которые <strong>устали жить через ум, контроль и внутреннее напряжение</strong> — и готовы восстановить контакт с собой, своим телом и своими чувствами.
+    </blockquote>
+
+    <div class="identity-grid">
+      <div class="id-card reveal d1">
+        <p class="id-title">Живёт от ума</p>
+        <p class="id-text">Мышление — главный инструмент. Логика, анализ, контроль.</p>
+      </div>
+      <div class="id-card reveal d2">
+        <p class="id-title">Умеет быть сильной</p>
+        <p class="id-text">Держит всё на себе. Справляется. Не показывает слабости.</p>
+      </div>
+      <div class="id-card id-card-wide reveal d3">
+        <p class="id-title">Умеет добиваться</p>
+        <p class="id-text">Знает, как ставить цели и достигать результата. Но что-то закрыто внутри.</p>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- ПОРТРЕТ ИЗНУТРИ -->
+<section class="portrait">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Портрет изнутри</span>
+    <h2 class="s-title reveal">Когда женщина приходит в программу</h2>
+    <p class="s-lead reveal d1">Она многое понимает на интеллектуальном уровне, пробовала многое и знает, как добиваться результатов. Но она:</p>
+
+    <div class="portrait-grid reveal d2">
+      <div class="p-outside">
+        <p class="p-col-title">Снаружи</p>
+        <div class="p-item"><span class="p-arrow">→</span>Синдром отличницы</div>
+        <div class="p-item"><span class="p-arrow">→</span>Высокая ответственность</div>
+        <div class="p-item"><span class="p-arrow">→</span>Много знает и пробовала</div>
+        <div class="p-item"><span class="p-arrow">→</span>Несёт на себе многое</div>
+      </div>
+      <div class="p-inside">
+        <p class="p-col-title" style="color:var(--clay)">Внутри</p>
+        <div class="p-item"><span class="p-arrow">→</span>Постоянное напряжение</div>
+        <div class="p-item"><span class="p-arrow">→</span>Зажатость и закрытость</div>
+        <div class="p-item"><span class="p-arrow">→</span>Глубокая усталость</div>
+        <div class="p-item"><span class="p-arrow">→</span>Не чувствует себя настоящей</div>
+        <div class="p-item"><span class="p-arrow">→</span>Не слышит свой внутренний голос</div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- ГОЛОС -->
+<section class="voice">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Она говорит об этом так</span>
+    <div class="quotes-row">
+      <div class="q-card reveal d1">
+        <span class="q-mark">"</span>
+        <p class="q-text">«Я чувствую, что во мне есть сила, но потеряла контакт с женственностью»</p>
+      </div>
+      <div class="q-card reveal d2">
+        <span class="q-mark">"</span>
+        <p class="q-text">«Мне ничего не хочется»</p>
+      </div>
+      <div class="q-card reveal d3">
+        <span class="q-mark">"</span>
+        <p class="q-text">«Я устала всё контролировать»</p>
+      </div>
+    </div>
+    <div class="quotes-row-2">
+      <div class="q-card reveal d1">
+        <span class="q-mark">"</span>
+        <p class="q-text">«Умом я умею получать результат, но чувствами — нет»</p>
+      </div>
+      <div class="q-card reveal d2">
+        <span class="q-mark">"</span>
+        <p class="q-text">«Я не чувствую вкус жизни»</p>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- СИМПТОМЫ -->
+<section class="symptoms">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Симптомы в теле и состоянии</span>
+    <h2 class="s-title reveal">Глубже — внутреннее истощение</h2>
+    <div class="sym-grid">
+      <div class="sym-card reveal d1">
+        <div class="sym-icon">⚡</div>
+        <p class="sym-title">Постоянное напряжение</p>
+        <p class="sym-text">Фоновая тревога, которая не отпускает даже в покое</p>
+      </div>
+      <div class="sym-card reveal d2">
+        <div class="sym-icon">🔒</div>
+        <p class="sym-title">Зажатость в теле</p>
+        <p class="sym-text">Тело как будто закрыто, скованно, не своё</p>
+      </div>
+      <div class="sym-card reveal d3">
+        <div class="sym-icon">⚡</div>
+        <p class="sym-title">Раздражение и усталость</p>
+        <p class="sym-text">Реакции острее обычного. Сил становится всё меньше</p>
+      </div>
+    </div>
+
+    <div class="portrait-grid reveal" style="margin-top:1.5rem;">
+      <div style="padding:2rem; border:1px solid var(--mist); border-radius:2px;">
+        <p class="id-title">Внутреннее истощение</p>
+        <p class="id-text">Когда ресурс на исходе, даже отдых не восстанавливает</p>
+      </div>
+      <div style="padding:2rem; border:1px solid var(--mist); border-radius:2px;">
+        <p class="id-title">Чувство вины и стыда</p>
+        <p class="id-text">«Я должна справляться» — но уже не справляется</p>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- ПОДХОД ПРОГРАММЫ -->
+<section class="approach">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Подход программы</span>
+    <h2 class="s-title reveal">Суть программы</h2>
+    <p class="s-lead reveal d1">Это не курс «о знаниях». Это программа о том, как изменить своё состояние, своё ощущение себя и качество своей жизни по всем сферам.</p>
+
+    <div class="app-cards">
+      <div class="app-card reveal d1">
+        <p class="app-card-title">Перестройка</p>
+        <p class="app-card-text">LOTUS — это не набор инструментов и не просто метод. Это <strong>мягкая, но глубокая перенастройка</strong> внутреннего мира женщины.</p>
+      </div>
+      <div class="app-card reveal d2">
+        <p class="app-card-title">Целостная трансформация</p>
+        <p class="app-card-text">Работа через тело, чувства и осознанность — не только через ум.</p>
+      </div>
+      <div class="app-card reveal d3">
+        <p class="app-card-title">Устойчивый внутренний сдвиг</p>
+        <p class="app-card-text">Цель — постоянное изменение того, как вы себя чувствуете, а не временный результат.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:3.5rem; padding:2.5rem; border:1px solid rgba(255,255,255,.1); border-radius:2px; max-width:62ch;" class="reveal">
+      <p style="font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-style:italic; color:var(--cream); line-height:1.8;">
+        Она всё понимает умом. Но не проживает себя глубоко.<br><br>
+        Знания есть. Осознанность есть. И всё равно — что-то остаётся закрытым.<br>
+        Эта программа — про то, чтобы наконец <strong>прожить</strong>, а не только понять.
+      </p>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- РЕЗУЛЬТАТ ПОДХОДА -->
+<section class="journey">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Результат подхода</span>
+    <h2 class="s-title reveal">От выживания — к внутренней зрелости</h2>
+    <p class="s-lead reveal d1">Женщина переходит от реакции и выживания — к чувствованию, присутствию и жизни из состояния внутренней глубины и зрелости.</p>
+
+    <div class="journey-flow reveal d2">
+      <div class="j-stage">
+        <div class="j-num">01</div>
+        <p class="j-title">Режим выживания</p>
+        <p class="j-text">Реакция на непосредственные угрозы. Автопилот.</p>
+        <span class="j-arrow">→</span>
+      </div>
+      <div class="j-stage">
+        <div class="j-num">02</div>
+        <p class="j-title">Режим чувствования</p>
+        <p class="j-text">Проживание и обработка эмоций. Контакт с собой.</p>
+        <span class="j-arrow">→</span>
+      </div>
+      <div class="j-stage">
+        <div class="j-num">03</div>
+        <p class="j-title">Присутствие</p>
+        <p class="j-text">Заземлённое осознание текущего момента.</p>
+        <span class="j-arrow">→</span>
+      </div>
+      <div class="j-stage">
+        <div class="j-num">04</div>
+        <p class="j-title">Внутренняя зрелость</p>
+        <p class="j-text">Жизнь из глубины и мудрости. Новое качество.</p>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- ТРИ МЕСЯЦА -->
+<section class="months">
+  <div class="col">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Архитектура программы</span>
+    <h2 class="s-title reveal">3-месячное путешествие</h2>
+    <p class="s-lead reveal d1">Один слой подготавливает другой. Одна практика создаёт условия для следующей. Каждый этап углубляет процессы, начатые ранее.</p>
+
+    <div class="months-timeline" style="margin-top:4rem;">
+
+      <div class="month-block">
+        <div class="month-num-wrap">
+          <div class="month-num reveal">I</div>
+        </div>
+        <div class="month-content">
+          <p class="month-eyebrow reveal">Первый месяц</p>
+          <h3 class="month-title reveal">ПОДГОТОВКА</h3>
+          <p class="month-sub reveal">Встреча с собой. Осознавание. Опора.</p>
+          <p class="month-body reveal d1">Прежде чем что-либо менять, необходимо увидеть: где я нахожусь сейчас? Как я чувствую себя? Как взаимодействую со своим телом? Куда направлено моё внимание?</p>
+          <p class="month-body reveal d2" style="margin-top:1rem;">Это период замедления и возвращения внимания к себе. Главная задача — не разрушать старое, а создать внутреннюю опору и способность наблюдать собственную систему.</p>
+          <div style="margin-top:1.25rem; display:flex; gap:.5rem; flex-wrap:wrap;">
+            <span style="background:var(--linen);padding:.4rem .9rem;font-size:.8rem;color:var(--clay)">Напряжение → Облегчение</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="month-block">
+        <div class="month-num-wrap">
+          <div class="month-num reveal">II</div>
+        </div>
+        <div class="month-content">
+          <p class="month-eyebrow reveal">Второй месяц</p>
+          <h3 class="month-title reveal">ПРЕОБРАЗОВАНИЕ</h3>
+          <p class="month-sub reveal">Погружение. Высвобождение. Перестройка.</p>
+          <p class="month-body reveal d1">Когда сформирована базовая способность замечать себя, начинается более глубокая работа. Женщина исследует автоматические реакции, укоренившиеся сценарии, привычные способы защиты, ограничивающие убеждения.</p>
+          <p class="month-body reveal d2" style="margin-top:1rem;">Задача — не бороться с собой, а распознать, прожить и постепенно освободить пространство для нового опыта.</p>
+          <div style="margin-top:1.25rem; display:flex; gap:.5rem; flex-wrap:wrap;">
+            <span style="background:var(--linen);padding:.4rem .9rem;font-size:.8rem;color:var(--clay)">Контроль → Доверие</span>
+            <span style="background:var(--linen);padding:.4rem .9rem;font-size:.8rem;color:var(--clay)">Отдаление → Контакт</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="integration-block reveal">
+        <p class="int-title">Интеграционное окно</p>
+        <p class="int-text">Между глубоким преобразованием и переходом к активному проявлению необходимо пространство. Это не пауза — это время, когда процессы, запущенные ранее, получают возможность уложиться внутри системы.</p>
+      </div>
+
+      <div class="month-block">
+        <div class="month-num-wrap">
+          <div class="month-num reveal">III</div>
+        </div>
+        <div class="month-content">
+          <p class="month-eyebrow reveal">Третий месяц</p>
+          <h3 class="month-title reveal">АКТИВАЦИЯ</h3>
+          <p class="month-sub reveal">Проявление. Новый выбор. Реализация потенциала.</p>
+          <p class="month-body reveal d1">Когда часть автоматических реакций перестаёт занимать всё внутреннее пространство, появляется больше свободы для выбора. Больше ресурса для творчества, чувствительности, проявленности, отношений, действия.</p>
+          <p class="month-body reveal d2" style="margin-top:1rem;">Это этап встречи с новым качеством себя. Не создание искусственного «идеального образа», а раскрытие тех качеств, которым раньше не хватало внутреннего пространства.</p>
+          <div style="margin-top:1.25rem; display:flex; gap:.5rem; flex-wrap:wrap;">
+            <span style="background:var(--linen);padding:.4rem .9rem;font-size:.8rem;color:var(--clay)">Истощение → Наполненность</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- ПРИНЦИП СПИРАЛИ -->
+<section class="spiral">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Принцип спирали</span>
+    <h2 class="s-title reveal">Не линия — спираль</h2>
+    <p class="s-lead reveal d1">Женщина встречается с одними и теми же фундаментальными уровнями себя несколько раз — но каждый раз с новой глубины.</p>
+
+    <div class="spiral-grid">
+      <div class="sp-col reveal d1">
+        <p class="sp-theme">Тело</p>
+        <div class="sp-row">
+          <p class="sp-month">I месяц</p>
+          <p class="sp-text">Услышать и начать замечать тело</p>
+        </div>
+        <div class="sp-row">
+          <p class="sp-month">II месяц</p>
+          <p class="sp-text">Распознавать через тело накопленные реакции и напряжения</p>
+        </div>
+        <div class="sp-row">
+          <p class="sp-month">III месяц</p>
+          <p class="sp-text">Использовать телесную чувствительность как опору для выбора и действия</p>
+        </div>
+      </div>
+      <div class="sp-col reveal d2">
+        <p class="sp-theme">Эмоции</p>
+        <div class="sp-row">
+          <p class="sp-month">I месяц</p>
+          <p class="sp-text">Научиться замечать и признавать</p>
+        </div>
+        <div class="sp-row">
+          <p class="sp-month">II месяц</p>
+          <p class="sp-text">Увидеть глубинные сценарии и автоматические реакции</p>
+        </div>
+        <div class="sp-row">
+          <p class="sp-month">III месяц</p>
+          <p class="sp-text">Расширить эмоциональный диапазон и способность выбирать новую реакцию</p>
+        </div>
+      </div>
+      <div class="sp-col reveal d3">
+        <p class="sp-theme">Внимание</p>
+        <div class="sp-row">
+          <p class="sp-month">I месяц</p>
+          <p class="sp-text">Вернуть внимание к себе</p>
+        </div>
+        <div class="sp-row">
+          <p class="sp-month">II месяц</p>
+          <p class="sp-text">Увидеть, куда оно автоматически уходит и чем управляется</p>
+        </div>
+        <div class="sp-row">
+          <p class="sp-month">III месяц</p>
+          <p class="sp-text">Научиться сознательно направлять внимание в то, что женщина хочет создавать</p>
+        </div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- КОНТРОЛЬНЫЕ ТОЧКИ -->
+<section class="checkpoints">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Контрольные точки</span>
+    <h2 class="s-title reveal">Видеть собственную динамику</h2>
+    <p class="s-lead reveal d1">Сравнение происходит не с другими женщинами и не с абстрактным идеалом. Только с собой: я в начале пути → я после трёх месяцев.</p>
+
+    <div class="cp-row">
+      <div class="cp-card reveal d1">
+        <div class="cp-dot"></div>
+        <p class="cp-label">Точка А</p>
+        <p class="cp-title">Начало</p>
+        <p class="cp-text">Фиксируется исходное состояние — уровень контакта с телом, эмоциональный фон, повторяющиеся реакции, отношения с собой. Честная карта того места, из которого начинается движение.</p>
+      </div>
+      <div class="cp-card reveal d2">
+        <div class="cp-dot"></div>
+        <p class="cp-label">Промежуточная точка</p>
+        <p class="cp-title">В середине пути</p>
+        <p class="cp-text">Что уже изменилось? Что стало заметнее? Какие реакции ослабли? Что изменилось в теле и в повседневных выборах? Позволяет скорректировать движение.</p>
+      </div>
+      <div class="cp-card reveal d3">
+        <div class="cp-dot"></div>
+        <p class="cp-label">Точка Б</p>
+        <p class="cp-title">Завершение</p>
+        <p class="cp-text">Женщина возвращается к тем же вопросам, с которыми входила в LOTUS. Трансформация видна не как красивая концепция, а как реально прожитая внутренняя динамика.</p>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- РИТМ -->
+<section class="rhythm">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Ритм программы</span>
+    <h2 class="s-title reveal">Как устроена программа</h2>
+    <p class="s-lead reveal d1">Между получением нового материала и следующим воздействием всегда остаётся пространство для проживания.</p>
+
+    <div class="rhythm-grid">
+      <div class="rh-card reveal d1">
+        <p class="rh-freq">2 × в неделю</p>
+        <p class="rh-title">Новый материал и практики</p>
+        <p class="rh-text">Понедельник и четверг — открывается новый смысловой блок, задание или практика. Такой ритм позволяет сохранять непрерывность процесса, не перегружая систему.</p>
+      </div>
+      <div class="rh-card reveal d2">
+        <p class="rh-freq">1 × в неделю</p>
+        <p class="rh-title">Групповая встреча · ~2,5 часа</p>
+        <p class="rh-text">Пространство для интеграции, вопросов и живого взаимодействия. Включает:</p>
+        <ul class="rh-list">
+          <li>Телесные и дыхательные практики</li>
+          <li>Энергетическую работу</li>
+          <li>Интеграцию прошедшей недели</li>
+          <li>Обратную связь и осознания</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem; padding:2.5rem; background:var(--white); border-radius:2px; max-width:62ch;" class="reveal">
+      <p style="font-family:'Cormorant Garamond',serif; font-size:1.05rem; color:var(--clay); line-height:1.8;">
+        Внутренняя логика LOTUS строится по циклу:<br><br>
+        <strong style="color:var(--ink)">получить → прожить → наблюдать → осознать → интегрировать → перейти глубже</strong>
+      </p>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- МАРШРУТ УЧАСТНИЦЫ -->
+<section class="route">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Маршрут участницы</span>
+    <h2 class="s-title reveal">Путь</h2>
+
+    <div class="route-path reveal">
+      <span class="route-step highlight">Точка А</span>
+      <span class="route-arrow">→</span>
+      <span class="route-step">Диагностика</span>
+      <span class="route-arrow">→</span>
+      <span class="route-step">Встреча с собой</span>
+      <span class="route-arrow">→</span>
+      <span class="route-step">Осознавание</span>
+      <span class="route-arrow">→</span>
+      <span class="route-step">Формирование опоры</span>
+      <span class="route-arrow">→</span>
+      <span class="route-step">Погружение</span>
+      <span class="route-arrow">→</span>
+      <span class="route-step">Высвобождение</span>
+      <span class="route-arrow">→</span>
+      <span class="route-step">Перестройка</span>
+      <span class="route-arrow">→</span>
+      <span class="route-step">Интеграция</span>
+      <span class="route-arrow">→</span>
+      <span class="route-step">Новый выбор</span>
+      <span class="route-arrow">→</span>
+      <span class="route-step">Активация потенциала</span>
+      <span class="route-arrow">→</span>
+      <span class="route-step">Проявление</span>
+      <span class="route-arrow">→</span>
+      <span class="route-step highlight">Точка Б</span>
+    </div>
+
+    <p class="route-note reveal d1">LOTUS — это спираль. Конечная точка программы одновременно становится началом следующего витка развития.</p>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- ГЛАВНЫЙ ПРИНЦИП -->
+<section class="principle">
+  <div class="col">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Главный принцип LOTUS</span>
+    <h2 class="s-title reveal">Не знания — изменения</h2>
+    <p class="s-lead reveal d1">Архитектура программы построена не вокруг количества информации, а вокруг последовательности изменений, которые человеческая система способна прожить и интегрировать.</p>
+
+    <div class="principle-chain reveal d2">
+      <div class="pc-step">знание</div>
+      <span class="pc-arrow">→</span>
+      <div class="pc-step">осознание</div>
+      <span class="pc-arrow">→</span>
+      <div class="pc-step">опыт</div>
+      <span class="pc-arrow">→</span>
+      <div class="pc-step">новый выбор</div>
+      <span class="pc-arrow">→</span>
+      <div class="pc-step">новое качество жизни</div>
+    </div>
+
+    <p class="principle-coda reveal d3">
+      Именно поэтому LOTUS — это не просто курс.<br>
+      Это спроектированное пространство последовательной внутренней трансформации.
+    </p>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="col">
+    <div class="spacer"></div>
+    <h2 class="cta-title reveal">Готовы вернуться к себе?</h2>
+    <p class="cta-text reveal d1">Узнайте подробности о программе и ближайшем наборе — напишите напрямую.</p>
+    <a href="https://wa.me/447759390423" class="btn-lotus reveal d2">Написать Инне</a>
+    <p class="cta-by reveal d3">Инна Янкина · Фасилитатор кундалини · Англия</p>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<script>
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+}, { threshold: 0.12 });
+
+function toggleBurger() {
+  document.getElementById('navDrawer-ru').classList.toggle('open');
+  document.getElementById('navOverlay-ru').classList.toggle('open');
+}
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
