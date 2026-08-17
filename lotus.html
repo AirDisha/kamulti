@@ -660,9 +660,27 @@ section { position: relative; }
 .reveal.d4 { transition-delay: .4s; }
 
 /* Responsive */
+/* ── IMAGE DIVIDERS ── */
+.img-divider {
+  margin: -4rem 0;
+  line-height: 0;
+}
+
 @media (max-width: 768px) {
-  .hero { grid-template-columns: 1fr; }
-  .lotus-hero-img { height: 50vw; }
+  .hero {
+    grid-template-columns: 1fr;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+  .lotus-hero-img { height: 56vw; }
+  .hero-text {
+    padding: 2.5rem 1.5rem;
+    overflow: visible;
+  }
+  .hero-title { margin-bottom: 1.5rem; }
+  .hero-tagline { margin-bottom: 1.5rem; }
+  .img-divider { margin: -2rem 0; }
   .identity-grid, .portrait-grid, .sym-grid, .app-cards,
   .quotes-row, .quotes-row-2, .spiral-grid, .cp-row,
   .rhythm-grid { grid-template-columns: 1fr; }
@@ -749,7 +767,7 @@ body { font-size: 21px; }
         <p class="id-text">Знает, как ставить цели и достигать результата. Но что-то закрыто внутри.</p>
       </div>
     </div>
-    <div class="spacer"></div>
+    <div class="spacer-sm"></div>
   </div>
 </section>
 
@@ -761,7 +779,7 @@ body { font-size: 21px; }
 <!-- ПОРТРЕТ ИЗНУТРИ -->
 <section class="portrait">
   <div class="col-wide">
-    <div class="spacer"></div>
+    <div class="spacer-sm"></div>
     <span class="s-label reveal">Портрет изнутри</span>
     <h2 class="s-title reveal">Когда женщина приходит в программу</h2>
     <p class="s-lead reveal d1">Она многое понимает на интеллектуальном уровне, пробовала многое и знает, как добиваться результатов. Но она:</p>
@@ -783,7 +801,7 @@ body { font-size: 21px; }
         <div class="p-item"><span class="p-arrow">→</span>Не слышит свой внутренний голос</div>
       </div>
     </div>
-    <div class="spacer"></div>
+    <div class="spacer-sm"></div>
   </div>
 </section>
 
@@ -795,7 +813,7 @@ body { font-size: 21px; }
 <!-- ГОЛОС -->
 <section class="voice">
   <div class="col-wide">
-    <div class="spacer"></div>
+    <div class="spacer-sm"></div>
     <span class="s-label reveal">Она говорит об этом так</span>
     <div class="quotes-row">
       <div class="q-card reveal d1">
@@ -859,7 +877,7 @@ body { font-size: 21px; }
         <p class="id-text">«Я должна справляться» — но уже не справляется</p>
       </div>
     </div>
-    <div class="spacer"></div>
+    <div class="spacer-sm"></div>
   </div>
 </section>
 
@@ -871,7 +889,7 @@ body { font-size: 21px; }
 <!-- ПОДХОД ПРОГРАММЫ -->
 <section class="approach">
   <div class="col-wide">
-    <div class="spacer"></div>
+    <div class="spacer-sm"></div>
     <span class="s-label reveal">Подход программы</span>
     <h2 class="s-title reveal">Суть программы</h2>
     <p class="s-lead reveal d1">Это не курс «о знаниях». Это программа о том, как изменить своё состояние, своё ощущение себя и качество своей жизни по всем сферам.</p>
@@ -935,7 +953,7 @@ body { font-size: 21px; }
         <p class="j-text">Жизнь из глубины и мудрости. Новое качество.</p>
       </div>
     </div>
-    <div class="spacer"></div>
+    <div class="spacer-sm"></div>
   </div>
 </section>
 
@@ -947,7 +965,7 @@ body { font-size: 21px; }
 <!-- ТРИ МЕСЯЦА -->
 <section class="months">
   <div class="col">
-    <div class="spacer"></div>
+    <div class="spacer-sm"></div>
     <span class="s-label reveal">Архитектура программы</span>
     <h2 class="s-title reveal">3-месячное путешествие</h2>
     <p class="s-lead reveal d1">Один слой подготавливает другой. Одна практика создаёт условия для следующей. Каждый этап углубляет процессы, начатые ранее.</p>
@@ -1068,7 +1086,7 @@ body { font-size: 21px; }
         </div>
       </div>
     </div>
-    <div class="spacer"></div>
+    <div class="spacer-sm"></div>
   </div>
 </section>
 
@@ -1080,7 +1098,7 @@ body { font-size: 21px; }
 <!-- КОНТРОЛЬНЫЕ ТОЧКИ -->
 <section class="checkpoints">
   <div class="col-wide">
-    <div class="spacer"></div>
+    <div class="spacer-sm"></div>
     <span class="s-label reveal">Контрольные точки</span>
     <h2 class="s-title reveal">Видеть собственную динамику</h2>
     <p class="s-lead reveal d1">Сравнение происходит не с другими женщинами и не с абстрактным идеалом. Только с собой: я в начале пути → я после трёх месяцев.</p>
@@ -1142,7 +1160,7 @@ body { font-size: 21px; }
         <strong style="color:var(--ink)">получить → прожить → наблюдать → осознать → интегрировать → перейти глубже</strong>
       </p>
     </div>
-    <div class="spacer"></div>
+    <div class="spacer-sm"></div>
   </div>
 </section>
 
@@ -1154,7 +1172,7 @@ body { font-size: 21px; }
 <!-- МАРШРУТ УЧАСТНИЦЫ -->
 <section class="route">
   <div class="col-wide">
-    <div class="spacer"></div>
+    <div class="spacer-sm"></div>
     <span class="s-label reveal">Маршрут участницы</span>
     <h2 class="s-title reveal">Путь</h2>
 
