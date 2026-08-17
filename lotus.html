@@ -119,8 +119,8 @@ section { position: relative; }
 .col { max-width: 820px; margin: 0 auto; padding: 0 2rem; }
 .col-wide { max-width: 1060px; margin: 0 auto; padding: 0 2rem; }
 
-.spacer { height: 5rem; }
-.spacer-sm { height: 2.5rem; }
+.spacer { height: 2.5rem; }
+.spacer-sm { height: 1rem; }
 .hero + section .spacer:first-child { height: 1rem; }
 .hr-line { border: none; border-top: 1px solid var(--mist); opacity: .5; }
 
@@ -157,7 +157,7 @@ section { position: relative; }
 /* ── FOR WHOM ── */
 .for-whom {
   background: var(--white);
-  padding: 6rem 0;
+  padding: 3.5rem 0;
 }
 .for-whom { padding-top: 1.5rem; }
 .fw-quote {
@@ -199,7 +199,7 @@ section { position: relative; }
 /* Портрет */
 .portrait {
   background: var(--cream);
-  padding: 6rem 0;
+  padding: 3.5rem 0;
 }
 .portrait-grid {
   display: grid;
@@ -237,7 +237,7 @@ section { position: relative; }
 /* Голос */
 .voice {
   background: var(--linen);
-  padding: 6rem 0;
+  padding: 3.5rem 0;
 }
 .quotes-row {
   display: grid;
@@ -279,7 +279,7 @@ section { position: relative; }
 /* Симптомы */
 .symptoms {
   background: var(--cream);
-  padding: 6rem 0;
+  padding: 3.5rem 0;
 }
 .sym-grid {
   display: grid;
@@ -307,7 +307,7 @@ section { position: relative; }
 .approach {
   background: var(--bark);
   color: var(--cream);
-  padding: 7rem 0;
+  padding: 4rem 0;
 }
 .approach .s-title { color: var(--cream); }
 .approach .s-label { color: var(--petal); }
@@ -335,7 +335,7 @@ section { position: relative; }
 /* Путь (результат) */
 .journey {
   background: var(--white);
-  padding: 6rem 0;
+  padding: 3.5rem 0;
 }
 .journey-flow {
   display: flex;
@@ -375,7 +375,7 @@ section { position: relative; }
 /* Три месяца */
 .months {
   background: var(--cream);
-  padding: 6rem 0;
+  padding: 3.5rem 0;
 }
 .months-timeline {
   margin-top: 4rem;
@@ -454,7 +454,7 @@ section { position: relative; }
 /* Спираль */
 .spiral {
   background: var(--white);
-  padding: 6rem 0;
+  padding: 3.5rem 0;
 }
 .spiral-grid {
   display: grid;
@@ -479,7 +479,7 @@ section { position: relative; }
 /* Контрольные точки */
 .checkpoints {
   background: var(--cream);
-  padding: 6rem 0;
+  padding: 3.5rem 0;
 }
 .cp-row {
   display: grid;
@@ -507,7 +507,7 @@ section { position: relative; }
 /* Ритм */
 .rhythm {
   background: var(--linen);
-  padding: 6rem 0;
+  padding: 3.5rem 0;
 }
 .rhythm-grid {
   display: grid;
@@ -535,7 +535,7 @@ section { position: relative; }
 /* Маршрут */
 .route {
   background: var(--bark);
-  padding: 7rem 0;
+  padding: 4rem 0;
 }
 .route .s-title { color:var(--cream); }
 .route .s-label { color:var(--petal); }
@@ -576,7 +576,7 @@ section { position: relative; }
 /* Принцип */
 .principle {
   background: var(--cream);
-  padding: 7rem 0;
+  padding: 4rem 0;
 }
 .principle-chain {
   display: flex;
@@ -612,7 +612,7 @@ section { position: relative; }
 /* CTA */
 .cta-section {
   background: var(--white);
-  padding: 7rem 0;
+  padding: 4rem 0;
   text-align: center;
 }
 .cta-title {
@@ -662,9 +662,12 @@ section { position: relative; }
 /* Responsive */
 /* ── IMAGE DIVIDERS ── */
 .img-divider {
-  margin: -4rem 0;
   line-height: 0;
+  display: block;
 }
+/* collapse section padding where it meets an image divider */
+section:has(+ .img-divider) { padding-bottom: 0 !important; }
+.img-divider + section { padding-top: 0 !important; }
 
 @media (max-width: 768px) {
   .hero {
@@ -680,7 +683,6 @@ section { position: relative; }
   }
   .hero-title { margin-bottom: 1.5rem; }
   .hero-tagline { margin-bottom: 1.5rem; }
-  .img-divider { margin: -2rem 0; }
   .identity-grid, .portrait-grid, .sym-grid, .app-cards,
   .quotes-row, .quotes-row-2, .spiral-grid, .cp-row,
   .rhythm-grid { grid-template-columns: 1fr; }
