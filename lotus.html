@@ -745,7 +745,7 @@ body { font-size: 21px; }
 }
 .sym-2col-right img {
   width: 100%; height: 100%; object-fit: cover;
-  object-position: center 20%; filter: brightness(0.88) sepia(0.08); display: block;
+  object-position: center center; filter: brightness(0.88) sepia(0.08); display: block;
 }
 @media (max-width: 768px) {
   .sym-2col { flex-direction: column; }
@@ -765,13 +765,13 @@ body { font-size: 21px; }
     object-fit: cover; object-position: center top;
     filter: brightness(0.88) sepia(0.08); display: block;
   }
-  .route-2col-content { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  .route-2col-content { flex: 1; display: flex; flex-direction: column; justify-content: center; overflow: hidden; max-height: 80vh; }
   .route-2col .route-path {
-    flex-direction: column; align-items: flex-start; margin-top: 1rem; gap: .4rem;
+    flex-direction: column; align-items: flex-start; margin-top: 0; gap: .1rem;
   }
-  .route-2col .route-path .route-step { font-size: .75rem; padding: .45rem .9rem; }
-  .route-2col .route-arrow { transform: rotate(90deg); display: inline-block; font-size: .85rem; }
-  .route-2col .route-note { margin-top: 1.5rem; font-size: 1.05rem; }
+  .route-2col .route-path .route-step { font-size: .7rem; padding: .22rem .85rem; }
+  .route-2col .route-arrow { transform: rotate(90deg); display: inline-block; font-size: .65rem; line-height: 1; }
+  .route-2col .route-note { margin-top: .7rem; font-size: .97rem; }
 }
 @media (max-width: 768px) {
   .route-2col-img { width: 100%; overflow: hidden; border-radius: 2px; margin-bottom: 1.5rem; }
@@ -847,7 +847,7 @@ body { font-size: 21px; }
       </div>
     </div>
     <div class="spacer-sm"></div>
-<div style="width:100%;overflow:hidden;border-radius:2px;line-height:0;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238112/photo-1499117901949-e34ef1b2444a_o1pesi.jpg" alt="Женщина" loading="lazy" style="width:100%;height:280px;object-fit:cover;object-position:center 48%;filter:brightness(0.88) sepia(0.08);"></div>
+<div style="width:100%;overflow:hidden;border-radius:2px;line-height:0;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238112/photo-1499117901949-e34ef1b2444a_o1pesi.jpg" alt="Женщина" loading="lazy" style="width:100%;height:280px;object-fit:cover;object-position:center center;filter:brightness(0.88) sepia(0.08);"></div>
     <div class="spacer"></div>
   </div>
 </section>
@@ -1210,7 +1210,7 @@ body { font-size: 21px; }
   </div>
 </section>
 
-<div style="width:100%;overflow:hidden;border-radius:2px;line-height:0;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333317/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._19_13_04_qugvod.jpg" alt="Практика" loading="lazy" style="width:100%;height:clamp(340px,42vw,420px);object-fit:cover;object-position:center 34%;filter:brightness(0.88) sepia(0.08);"></div>
+<div style="width:100%;overflow:hidden;border-radius:2px;line-height:0;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333317/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._19_13_04_qugvod.jpg" alt="Практика" loading="lazy" style="width:100%;height:clamp(340px,42vw,420px);object-fit:cover;object-position:center 15%;filter:brightness(0.88) sepia(0.08);"></div>
 
 <!-- РИТМ -->
 <section class="rhythm">
