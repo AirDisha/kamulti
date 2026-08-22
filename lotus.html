@@ -765,13 +765,13 @@ body { font-size: 21px; }
     object-fit: cover; object-position: center top;
     filter: brightness(0.88) sepia(0.08); display: block;
   }
-  .route-2col-content { flex: 1; display: flex; flex-direction: column; justify-content: center; overflow: hidden; max-height: 80vh; }
+  .route-2col-content { flex: 1; display: flex; flex-direction: column; justify-content: center; }
   .route-2col .route-path {
-    flex-direction: column; align-items: flex-start; margin-top: 0; gap: .1rem;
+    flex-direction: row; flex-wrap: wrap; align-items: center; margin-top: 0; gap: .4rem;
   }
-  .route-2col .route-path .route-step { font-size: .7rem; padding: .22rem .85rem; }
-  .route-2col .route-arrow { transform: rotate(90deg); display: inline-block; font-size: .65rem; line-height: 1; }
-  .route-2col .route-note { margin-top: .7rem; font-size: .97rem; }
+  .route-2col .route-path .route-step { font-size: .88rem; padding: .5rem 1.2rem; }
+  .route-2col .route-arrow { transform: none; display: inline-block; font-size: .8rem; line-height: 1; color: var(--clay); }
+  .route-2col .route-note { margin-top: 1.2rem; font-size: 1rem; }
 }
 @media (max-width: 768px) {
   .route-2col-img { width: 100%; overflow: hidden; border-radius: 2px; margin-bottom: 1.5rem; }
@@ -847,7 +847,7 @@ body { font-size: 21px; }
       </div>
     </div>
     <div class="spacer-sm"></div>
-<div style="width:100%;overflow:hidden;border-radius:2px;line-height:0;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238112/photo-1499117901949-e34ef1b2444a_o1pesi.jpg" alt="Женщина" loading="lazy" style="width:100%;height:280px;object-fit:cover;object-position:center center;filter:brightness(0.88) sepia(0.08);"></div>
+<div style="width:100%;overflow:hidden;border-radius:2px;line-height:0;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238112/photo-1499117901949-e34ef1b2444a_o1pesi.jpg" alt="Женщина" loading="lazy" style="width:100%;height:280px;object-fit:cover;object-position:center 38%;filter:brightness(0.88) sepia(0.08);"></div>
     <div class="spacer"></div>
   </div>
 </section>
@@ -1210,7 +1210,7 @@ body { font-size: 21px; }
   </div>
 </section>
 
-<div style="width:100%;overflow:hidden;border-radius:2px;line-height:0;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333317/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._19_13_04_qugvod.jpg" alt="Практика" loading="lazy" style="width:100%;height:clamp(340px,42vw,420px);object-fit:cover;object-position:center 15%;filter:brightness(0.88) sepia(0.08);"></div>
+<div style="width:100%;overflow:hidden;border-radius:2px;line-height:0;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333317/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._19_13_04_qugvod.jpg" alt="Практика" loading="lazy" style="width:100%;height:clamp(340px,42vw,420px);object-fit:cover;object-position:center 22%;filter:brightness(0.88) sepia(0.08);"></div>
 
 <!-- РИТМ -->
 <section class="rhythm">
@@ -1239,10 +1239,10 @@ body { font-size: 21px; }
       </div>
     </div>
 
-    <div style="margin-top:2.5rem; padding:2.5rem; background:var(--white); border-radius:2px; max-width:62ch;" class="reveal">
-      <p style="font-family:'Cormorant Garamond',serif; font-size:1.05rem; color:var(--clay); line-height:1.8;">
+    <div style="margin-top:2.5rem; padding:2.5rem; background:var(--white); border-radius:2px;" class="reveal">
+      <p style="font-family:'Cormorant Garamond',serif; font-size:1.25rem; color:var(--clay); line-height:1.8;">
         Внутренняя логика LOTUS строится по циклу:<br><br>
-        <strong style="color:var(--ink)">получить → прожить → наблюдать → осознать → интегрировать → перейти глубже</strong>
+        <strong style="color:var(--ink); font-size:1.35rem;">получить → прожить → наблюдать → осознать → интегрировать → перейти глубже</strong>
       </p>
     </div>
     <div class="spacer"></div>
