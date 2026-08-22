@@ -767,11 +767,11 @@ body { font-size: 21px; }
   }
   .route-2col-content { flex: 1; display: flex; flex-direction: column; justify-content: center; }
   .route-2col .route-path {
-    display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; margin-top: 0;
+    display: flex; flex-direction: column; gap: .3rem; margin-top: 0;
   }
+  .route-2col .route-path .route-row { display: flex; align-items: center; gap: .45rem; }
   .route-2col .route-path .route-step { font-size: .88rem; padding: .55rem 1.2rem; }
-  .route-2col .route-path .route-step-solo { grid-column: 1 / -1; }
-  .route-2col .route-arrow { display: none; }
+  .route-2col .route-arrow { display: inline-block; font-size: .8rem; line-height: 1; color: var(--clay); transform: none; }
   .route-2col .route-note { margin-top: 1.2rem; font-size: 1.25rem; }
 }
 @media (max-width: 768px) {
@@ -1262,31 +1262,39 @@ body { font-size: 21px; }
       </div>
       <div class="route-2col-content">
         <div class="route-path reveal">
-          <span class="route-step highlight route-step-solo">Точка А</span>
-          <span class="route-arrow">→</span>
-          <span class="route-step route-step-solo">Диагностика</span>
-          <span class="route-arrow">→</span>
-          <span class="route-step">Встреча с собой</span>
-          <span class="route-arrow">→</span>
-          <span class="route-step">Осознавание</span>
-          <span class="route-arrow">→</span>
-          <span class="route-step">Формирование опоры</span>
-          <span class="route-arrow">→</span>
-          <span class="route-step">Погружение</span>
-          <span class="route-arrow">→</span>
-          <span class="route-step">Высвобождение</span>
-          <span class="route-arrow">→</span>
-          <span class="route-step">Перестройка</span>
-          <span class="route-arrow">→</span>
-          <span class="route-step">Интеграция</span>
-          <span class="route-arrow">→</span>
-          <span class="route-step">Новый выбор</span>
-          <span class="route-arrow">→</span>
-          <span class="route-step route-step-solo">Активация потенциала</span>
-          <span class="route-arrow">→</span>
-          <span class="route-step route-step-solo">Проявление</span>
-          <span class="route-arrow">→</span>
-          <span class="route-step highlight route-step-solo">Точка Б</span>
+          <div class="route-row"><span class="route-step highlight">Точка А</span></div>
+          <div class="route-row"><span class="route-arrow">→</span></div>
+          <div class="route-row"><span class="route-step">Диагностика</span></div>
+          <div class="route-row">
+            <span class="route-arrow">→</span>
+            <span class="route-step">Встреча с собой</span>
+            <span class="route-arrow">→</span>
+            <span class="route-step">Осознавание</span>
+          </div>
+          <div class="route-row">
+            <span class="route-arrow">→</span>
+            <span class="route-step">Формирование опоры</span>
+            <span class="route-arrow">→</span>
+            <span class="route-step">Погружение</span>
+          </div>
+          <div class="route-row">
+            <span class="route-arrow">→</span>
+            <span class="route-step">Высвобождение</span>
+            <span class="route-arrow">→</span>
+            <span class="route-step">Перестройка</span>
+          </div>
+          <div class="route-row">
+            <span class="route-arrow">→</span>
+            <span class="route-step">Интеграция</span>
+            <span class="route-arrow">→</span>
+            <span class="route-step">Новый выбор</span>
+          </div>
+          <div class="route-row"><span class="route-arrow">→</span></div>
+          <div class="route-row"><span class="route-step">Активация потенциала</span></div>
+          <div class="route-row"><span class="route-arrow">→</span></div>
+          <div class="route-row"><span class="route-step">Проявление</span></div>
+          <div class="route-row"><span class="route-arrow">→</span></div>
+          <div class="route-row"><span class="route-step highlight">Точка Б</span></div>
         </div>
         <p class="route-note reveal d1">LOTUS — это спираль. Конечная точка программы одновременно становится началом следующего витка развития.</p>
       </div>
