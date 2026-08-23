@@ -557,6 +557,7 @@ section { position: relative; }
   border-color: var(--clay);
   font-weight: 500;
 }
+.route-row { display: flex; align-items: center; gap: .5rem; }
 .route-arrow { color: var(--petal); font-size: 1rem; flex-shrink: 0; }
 .route-note {
   margin-top: 3rem;
@@ -637,6 +638,25 @@ section { position: relative; }
   transition: background .25s;
 }
 .btn-lotus:hover { background: var(--bark); }
+.btn-signup {
+  display: inline-block;
+  background: transparent;
+  color: var(--clay);
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  padding: .85rem 2.4rem;
+  border: 1.5px solid var(--clay);
+  cursor: pointer;
+  transition: background .25s, color .25s;
+}
+.btn-signup:hover { background: var(--clay); color: var(--white); }
+.btn-signup-wrap { text-align: center; margin: 2.5rem 0 0; }
+.btn-signup-light { color: var(--petal); border-color: var(--petal); }
+.btn-signup-light:hover { background: var(--petal); color: var(--ink); }
 .cta-by {
   margin-top: 2.5rem;
   font-size: .85rem;
@@ -813,6 +833,7 @@ body { font-size: 21px; }
     <p class="hero-sub" style="margin-bottom:2rem;">3-месячная программа для женщин</p>
     <p class="hero-sub">Через тело, чувства, внутреннее преображение<br>и раскрытие истинной природы</p>
     <span class="hero-duration">3 месяца · Групповой формат · Онлайн</span>
+    <div style="margin-top:2.2rem;"><a href="#cta" class="btn-signup">Записаться</a></div>
     <div class="hero-mobile-photo"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333318/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._19_56_46_qvmwdv.jpg" alt="Медитация" loading="lazy"></div>
   </div>
 </section>
@@ -849,6 +870,7 @@ body { font-size: 21px; }
     </div>
     <div class="spacer-sm"></div>
 <div style="width:100%;overflow:hidden;border-radius:2px;line-height:0;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238112/photo-1499117901949-e34ef1b2444a_o1pesi.jpg" alt="Женщина" loading="lazy" style="width:100%;height:280px;object-fit:cover;object-position:center 55%;filter:brightness(0.88) sepia(0.08);"></div>
+    <div class="btn-signup-wrap reveal"><a href="#cta" class="btn-signup">Записаться</a></div>
     <div class="spacer"></div>
   </div>
 </section>
@@ -1299,6 +1321,7 @@ body { font-size: 21px; }
           <div class="route-row"><span class="route-step highlight">Точка Б</span></div>
         </div>
         <p class="route-note reveal d1">LOTUS — это спираль. Конечная точка программы одновременно становится началом следующего витка развития.</p>
+        <div class="btn-signup-wrap reveal d2"><a href="#cta" class="btn-signup btn-signup-light">Записаться</a></div>
       </div>
     </div>
     <div class="spacer"></div>
@@ -1337,7 +1360,7 @@ body { font-size: 21px; }
 
 
 <!-- CTA -->
-<section class="cta-section">
+<section class="cta-section" id="cta">
   <div class="col">
     <div class="spacer"></div>
     <h2 class="cta-title reveal">Готовы вернуться к себе?</h2>
