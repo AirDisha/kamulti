@@ -794,24 +794,10 @@ section { position: relative; }
   .hero-sub { margin-bottom: 0.75rem !important; }
   .hero-duration { margin-top: 0.25rem; }
 
-  /* Картинка закат — во всю ширину, секция заканчивается на ней */
-  .hero-mobile-photo {
-    display: block;
-    margin-left: -1.75rem;
-    margin-right: -1.75rem;
-    width: calc(100% + 3.5rem);
-    margin-top: 2rem;
-    border-radius: 0;
-    overflow: hidden;
-  }
-  .hero-mobile-photo img {
-    width: 100%;
-    height: auto;
-    display: block;
-    filter: brightness(.9) sepia(.1);
-  }
+  /* Картинка закат — вне hero, поэтому просто 100% ширины без хаков */
+  .hero-mobile-photo { display: block; margin: 0; border-radius: 0; overflow: hidden; }
 
-  /* Убрать тёмную линию: убрать padding у hero снизу, убрать у for-whom сверху */
+  /* Убрать тёмную полосу: убрать padding у hero снизу, убрать у for-whom сверху */
   .hero { padding-bottom: 0 !important; }
   .for-whom { padding-top: 0 !important; }
 }
@@ -831,10 +817,10 @@ body { font-size: 21px; }
 .hero-mobile-photo {
   display: none;
   width: 100%;
-  margin-top: 2rem;
-  border-radius: 2px;
+  margin: 0;
+  border-radius: 0;
   overflow: hidden;
-  flex-shrink: 0;
+  line-height: 0;
 }
 .hero-mobile-photo img {
   width: 100%;
@@ -946,9 +932,9 @@ body { font-size: 21px; }
     <p class="hero-sub">Через тело, чувства, внутреннее преображение<br>и раскрытие истинной природы</p>
     <span class="hero-duration">3 месяца · Групповой формат · Онлайн</span>
     <div style="margin-top:2.2rem;"><a href="#cta" class="btn-signup">Записаться</a></div>
-    <div class="hero-mobile-photo"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333318/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._19_56_46_qvmwdv.jpg" alt="Медитация" loading="lazy"></div>
   </div>
 </section>
+<div class="hero-mobile-photo"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333318/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._19_56_46_qvmwdv.jpg" alt="Медитация" loading="lazy"></div>
 
 <!-- ДЛЯ КОГО -->
 <section class="for-whom">
