@@ -797,10 +797,9 @@ section { position: relative; }
   /* Картинка закат — во всю ширину, секция заканчивается на ней */
   .hero-mobile-photo {
     display: block;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
+    margin-left: -1.75rem;
+    margin-right: -1.75rem;
+    width: calc(100% + 3.5rem);
     margin-top: 2rem;
     border-radius: 0;
     overflow: hidden;
@@ -808,12 +807,12 @@ section { position: relative; }
   .hero-mobile-photo img {
     width: 100%;
     height: auto;
-    object-fit: unset;
     display: block;
+    filter: brightness(.9) sepia(.1);
   }
 
-  /* Убрать тёмную линию между hero и следующей секцией */
-  .hero { overflow: visible; }
+  /* Убрать тёмную линию: убрать padding у hero снизу, убрать у for-whom сверху */
+  .hero { padding-bottom: 0 !important; }
   .for-whom { padding-top: 0 !important; }
 }
 
