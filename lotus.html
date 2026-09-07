@@ -787,12 +787,34 @@ section { position: relative; }
   .for-whom { padding-bottom: 0 !important; }
 
   /* Уменьшить отступы в hero на мобильном */
-  .hero-text { padding: 2rem 1.75rem; }
+  .hero-text { padding: 2rem 1.75rem 0; }
   .hero-label { margin-bottom: 0.75rem; }
   .hero-title { margin-bottom: 1rem; }
   .hero-tagline { margin-bottom: 1.25rem; }
   .hero-sub { margin-bottom: 0.75rem !important; }
   .hero-duration { margin-top: 0.25rem; }
+
+  /* Картинка закат — во всю ширину, секция заканчивается на ней */
+  .hero-mobile-photo {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    margin-top: 2rem;
+    border-radius: 0;
+    overflow: hidden;
+  }
+  .hero-mobile-photo img {
+    width: 100%;
+    height: auto;
+    object-fit: unset;
+    display: block;
+  }
+
+  /* Убрать тёмную линию между hero и следующей секцией */
+  .hero { overflow: visible; }
+  .for-whom { padding-top: 0 !important; }
 }
 
 
@@ -973,7 +995,7 @@ body { font-size: 21px; }
       </div>
     </div>
   </div>
-<div style="width:100%;line-height:0;overflow:hidden;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238112/photo-1499117901949-e34ef1b2444a_o1pesi.jpg" alt="Женщина" loading="lazy" style="width:100%;height:auto;display:block;filter:brightness(0.88) sepia(0.08);"></div>
+<div style="position:relative;left:50%;transform:translateX(-50%);width:100vw;line-height:0;overflow:hidden;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238112/photo-1499117901949-e34ef1b2444a_o1pesi.jpg" alt="Женщина" loading="lazy" style="width:100%;height:auto;display:block;filter:brightness(0.88) sepia(0.08);"></div>
 </section>
 
 <!-- ПОРТРЕТ ИЗНУТРИ -->
