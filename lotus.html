@@ -105,7 +105,7 @@ body {
   font-size: .72rem;
   letter-spacing: .22em;
   text-transform: uppercase;
-  color: var(--mist);
+  color: var(--clay);
   font-weight: 400;
 }
 
@@ -148,6 +148,7 @@ section { position: relative; }
   max-width: 60ch;
 }
 .s-body { line-height: 1.85; color: var(--bark); max-width: 62ch; }
+.for-whom .s-lead, .portrait .s-lead { font-size: clamp(1.3rem,2.5vw,1.65rem); }
 
 /* ── FOR WHOM ── */
 .for-whom {
@@ -189,7 +190,9 @@ section { position: relative; }
   font-weight: 600;
 }
 .fw-signal {
-  font-size: clamp(.95rem,1.6vw,1.1rem);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.15rem,2vw,1.35rem);
+  font-weight: 300;
   font-style: italic;
   color: var(--clay);
   margin: 1.2rem 0 0;
@@ -242,9 +245,9 @@ section { position: relative; }
 .p-outside .p-item { color: rgba(255,255,255,.9); }
 .p-inside { padding: 2rem 0; }
 .p-col-title {
-  font-size: .72rem;
-  font-weight: 500;
-  letter-spacing: .22em;
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--clay);
   margin-bottom: 1.25rem;
@@ -853,7 +856,10 @@ body { font-size: 21px; }
   flex: 1; display: flex; flex-direction: column; gap: 1rem;
 }
 .sym-card-block {
-  padding: 1.2rem 1.5rem; border: 1px solid var(--mist); border-radius: 2px; flex: 1;
+  background: var(--linen);
+  border-radius: 2px;
+  padding: 2rem;
+  flex: 1;
 }
 .sym-2col-right {
   flex: 0 0 auto; width: 340px; aspect-ratio: 1/1; overflow: hidden; border-radius: 2px; line-height: 0;
@@ -979,7 +985,7 @@ body { font-size: 21px; }
       </div>
     </div>
   </div>
-<div style="position:relative;left:50%;transform:translateX(-50%);width:100vw;line-height:0;overflow:hidden;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238112/photo-1499117901949-e34ef1b2444a_o1pesi.jpg" alt="Женщина" loading="lazy" style="width:100%;height:auto;display:block;filter:brightness(0.88) sepia(0.08);"></div>
+<div style="position:relative;left:50%;transform:translateX(-50%);width:100vw;margin-top:2.5rem;line-height:0;overflow:hidden;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238112/photo-1499117901949-e34ef1b2444a_o1pesi.jpg" alt="Женщина" loading="lazy" style="width:100%;height:380px;object-fit:cover;object-position:center;display:block;filter:brightness(0.88) sepia(0.08);"></div>
 </section>
 
 <!-- ПОРТРЕТ ИЗНУТРИ -->
@@ -1078,12 +1084,14 @@ body { font-size: 21px; }
     <div class="sym-2col reveal">
       <div class="sym-2col-left">
         <div class="sym-card-block">
-          <p class="id-title">Внутреннее истощение</p>
-          <p class="id-text">Когда ресурс на исходе, даже отдых не восстанавливает</p>
+          <div class="sym-icon">🌑</div>
+          <p class="sym-title">Внутреннее истощение</p>
+          <p class="sym-text">Когда ресурс на исходе, даже отдых не восстанавливает</p>
         </div>
         <div class="sym-card-block">
-          <p class="id-title">Чувство вины и стыда</p>
-          <p class="id-text">«Я должна справляться» — но уже не справляется</p>
+          <div class="sym-icon">🌊</div>
+          <p class="sym-title">Чувство вины и стыда</p>
+          <p class="sym-text">«Я должна справляться» — но уже не справляется</p>
         </div>
       </div>
       <div class="sym-2col-right">
