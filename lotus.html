@@ -795,7 +795,7 @@ section { position: relative; }
   .hero-duration { margin-top: 0.25rem; }
 
   /* Картинка закат — вне hero, поэтому просто 100% ширины без хаков */
-  .hero-mobile-photo { display: block; margin: 2rem 0 0; border-radius: 0; overflow: hidden; }
+  .hero-mobile-photo { border-radius: 0; overflow: hidden; }
 
   /* Убрать тёмную полосу: убрать padding у hero снизу, убрать у for-whom сверху */
   .hero { padding-bottom: 0 !important; }
@@ -828,7 +828,9 @@ body { font-size: 21px; }
   display: block;
   filter: brightness(.9) sepia(.1);
 }
-/* hero-mobile-photo display handled in main mobile media query above */
+@media (max-width: 768px) {
+  .hero-mobile-photo { display: block; margin: 2rem 0 0; }
+}
 
 /* === Back to top button === */
 #back-to-top {
