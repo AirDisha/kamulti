@@ -6,7 +6,7 @@
 <title>LOTUS — программа трансформации · Инна Янкина</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap">
 <link rel="stylesheet" href="shared.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
 <style>
@@ -105,7 +105,7 @@ body {
   font-size: .72rem;
   letter-spacing: .22em;
   text-transform: uppercase;
-  color: var(--mist);
+  color: var(--clay);
   font-weight: 400;
 }
 
@@ -148,11 +148,13 @@ section { position: relative; }
   max-width: 60ch;
 }
 .s-body { line-height: 1.85; color: var(--bark); max-width: 62ch; }
+.for-whom .s-lead, .portrait .s-lead { font-size: clamp(1.3rem,2.5vw,1.65rem); }
 
 /* ── FOR WHOM ── */
 .for-whom {
   background: var(--white);
-  padding: 3.5rem 0;
+  padding: 3.5rem 0 0;
+  border-bottom: none !important;
 }
 .fw-quote {
   font-family: 'Cormorant Garamond', serif;
@@ -165,6 +167,37 @@ section { position: relative; }
   margin: 3rem 0;
 }
 .fw-quote strong { font-weight: 600; }
+.fw-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+}
+.fw-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: .7rem;
+  font-size: clamp(.95rem,1.6vw,1.1rem);
+  line-height: 1.5;
+  color: var(--ink);
+}
+.fw-list li::before {
+  content: '—';
+  color: var(--petal);
+  flex-shrink: 0;
+  font-weight: 600;
+}
+.fw-signal {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.3rem,2.5vw,1.65rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--clay);
+  line-height: 1.65;
+  margin: 1.2rem 0 0;
+}
 
 /* Кто она */
 .identity-grid {
@@ -194,6 +227,8 @@ section { position: relative; }
 .portrait {
   background: var(--cream);
   padding: 3.5rem 0;
+  border-top: none !important;
+  margin-top: 0 !important;
 }
 .portrait-grid {
   display: grid;
@@ -211,9 +246,9 @@ section { position: relative; }
 .p-outside .p-item { color: rgba(255,255,255,.9); }
 .p-inside { padding: 2rem 0; }
 .p-col-title {
-  font-size: .72rem;
-  font-weight: 500;
-  letter-spacing: .22em;
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--clay);
   margin-bottom: 1.25rem;
@@ -327,6 +362,63 @@ section { position: relative; }
 }
 .app-card-text { font-size: .9rem; color: var(--mist); line-height: 1.65; }
 
+/* Глубинный уровень */
+.deep-mech {
+  background: var(--linen);
+  padding: 4rem 0;
+}
+.deep-mech .s-title { color: var(--ink); }
+.deep-mech .s-label { color: var(--clay); }
+.deep-mech .s-lead { color: var(--bark); max-width: 60ch; }
+.dm-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 3.5rem;
+}
+.dm-card {
+  background: var(--white);
+  border-radius: 2px;
+  padding: 1.75rem 1.5rem 1.5rem;
+  position: relative;
+  border-top: 2px solid var(--petal);
+}
+.dm-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--petal);
+  opacity: .45;
+  line-height: 1;
+  margin-bottom: .6rem;
+}
+.dm-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: .5rem;
+  line-height: 1.3;
+}
+.dm-text { font-size: 1rem; color: var(--clay); line-height: 1.6; }
+.dm-note {
+  margin-top: 3rem;
+  padding: 2rem 2.5rem;
+  background: var(--cream);
+  border-left: 3px solid var(--petal);
+  border-radius: 0 2px 2px 0;
+  max-width: 72ch;
+}
+.dm-note p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem,2vw,1.45rem);
+  font-style: italic;
+  color: var(--bark);
+  line-height: 1.75;
+}
+@media (max-width: 1100px) { .dm-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .dm-grid { grid-template-columns: 1fr; } }
+
 /* Путь (результат) */
 .journey {
   background: var(--white);
@@ -412,9 +504,9 @@ section { position: relative; }
 }
 .month-content { padding-top: .25rem; }
 .month-eyebrow {
-  font-size: .68rem;
+  font-size: .88rem;
   font-weight: 500;
-  letter-spacing: .28em;
+  letter-spacing: .22em;
   text-transform: uppercase;
   color: var(--petal);
   margin-bottom: .5rem;
@@ -696,14 +788,24 @@ section { position: relative; }
   .spacer { height: 1.5rem; }
   .spacer-sm { height: 0.75rem; }
   section { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  .for-whom { padding-bottom: 0 !important; }
 
   /* Уменьшить отступы в hero на мобильном */
-  .hero-text { padding: 2rem 1.75rem; }
+  .hero-text { padding: 2rem 1.75rem 2rem; }
   .hero-label { margin-bottom: 0.75rem; }
   .hero-title { margin-bottom: 1rem; }
   .hero-tagline { margin-bottom: 1.25rem; }
   .hero-sub { margin-bottom: 0.75rem !important; }
   .hero-duration { margin-top: 0.25rem; }
+
+  /* Картинка закат — вне hero, поэтому просто 100% ширины без хаков */
+  .hero-mobile-photo { border-radius: 0; overflow: hidden; }
+
+  /* Убрать тёмную полосу: убрать padding у hero снизу, убрать у for-whom сверху */
+  .hero { padding-bottom: 0 !important; }
+  .for-whom { padding-top: 0 !important; }
+  .voice { padding-top: 0 !important; }
+  .journey { padding-top: 0 !important; }
 }
 
 
@@ -721,20 +823,19 @@ body { font-size: 21px; }
 .hero-mobile-photo {
   display: none;
   width: 100%;
-  margin-top: 2rem;
-  border-radius: 2px;
+  margin: 0;
+  border-radius: 0;
   overflow: hidden;
-  flex-shrink: 0;
+  line-height: 0;
 }
 .hero-mobile-photo img {
   width: 100%;
-  height: 320px;
-  object-fit: cover;
-  object-position: center 20%;
+  height: auto;
+  display: block;
   filter: brightness(.9) sepia(.1);
 }
 @media (max-width: 768px) {
-  .hero-mobile-photo { display: block; }
+  .hero-mobile-photo { display: block; margin: 0; }
 }
 
 /* === Back to top button === */
@@ -758,7 +859,10 @@ body { font-size: 21px; }
   flex: 1; display: flex; flex-direction: column; gap: 1rem;
 }
 .sym-card-block {
-  padding: 1.2rem 1.5rem; border: 1px solid var(--mist); border-radius: 2px; flex: 1;
+  background: var(--linen);
+  border-radius: 2px;
+  padding: 2rem;
+  flex: 1;
 }
 .sym-2col-right {
   flex: 0 0 auto; width: 340px; aspect-ratio: 1/1; overflow: hidden; border-radius: 2px; line-height: 0;
@@ -834,24 +938,38 @@ body { font-size: 21px; }
     <h1 class="hero-title">LOTUS</h1>
     <p class="hero-tagline">возвращение к себе</p>
     <p class="hero-sub" style="margin-bottom:2rem;">3-месячная программа для женщин</p>
-    <p class="hero-sub">Через тело, чувства, внутреннее преображение<br>и раскрытие истинной природы</p>
+    <p class="hero-sub">Через тело, чувства, внутреннее преображение и раскрытие истинной природы</p>
     <span class="hero-duration">3 месяца · Групповой формат · Онлайн</span>
     <div style="margin-top:2.2rem;"><a href="#cta" class="btn-signup">Записаться</a></div>
-    <div class="hero-mobile-photo"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333318/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._19_56_46_qvmwdv.jpg" alt="Медитация" loading="lazy"></div>
   </div>
 </section>
+<div class="hero-mobile-photo"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333318/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._19_56_46_qvmwdv.jpg" alt="Медитация" loading="lazy"></div>
 
 <!-- ДЛЯ КОГО -->
 <section class="for-whom">
   <div class="col">
     <div class="spacer"></div>
     <span class="s-label reveal">Для кого программа</span>
-    <h2 class="s-title reveal">Это программа не для всех</h2>
-    <p class="s-lead reveal">Она создана для конкретного типа женщин — тех, кто уже многого достиг, но чувствует, что что-то важное потеряно внутри.</p>
+    <h2 class="s-title reveal">Ты пришла сюда не случайно</h2>
+    <p class="s-lead reveal">Программа Lotus создана для исцеления твоего внутреннего состояния.</p>
+
+    <ul class="fw-list reveal">
+      <li>Ты много знаешь, пробовала разные подходы — но что-то внутри по-прежнему не даёт покоя</li>
+      <li>Сложно расслабиться и просто быть — голова всегда занята</li>
+      <li>Тело зажато, есть ощущение хронического напряжения или усталости</li>
+      <li>Ты несёшь на себе много — и не знаешь, как иначе</li>
+      <li>Эмоции либо подавлены, либо выходят не так, как хотелось бы</li>
+      <li>Сложно чувствовать радость, лёгкость, контакт с собой</li>
+      <li>Ты устала от повторяющихся жизненных сценариев</li>
+      <li>Есть ощущение, что живёшь не совсем свою жизнь — или не в полную силу</li>
+    </ul>
+    <p class="fw-signal reveal">Всё это — сигнал, что твоя система ищет опору и возврат к себе.</p>
 
     <blockquote class="fw-quote reveal">
       LOTUS — это программа для женщин, которые <strong>устали жить через ум, контроль и внутреннее напряжение</strong> — и готовы восстановить контакт с собой, своим телом и своими чувствами.
     </blockquote>
+
+    <p class="reveal" style="font-family:'Great Vibes',cursive; font-size:clamp(2rem,4vw,3rem); color:var(--clay); margin:2rem 0 1rem; line-height:1.4;">Женщина, которая:</p>
 
     <div class="identity-grid">
       <div class="id-card reveal d1">
@@ -871,10 +989,8 @@ body { font-size: 21px; }
         <p class="id-text">Одни и те же ситуации повторяются — в отношениях, в работе, в реакциях. Как будто что-то тянет обратно, несмотря на все попытки изменить.</p>
       </div>
     </div>
-    <div class="spacer-sm"></div>
-<div style="width:100%;overflow:hidden;border-radius:2px;line-height:0;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238112/photo-1499117901949-e34ef1b2444a_o1pesi.jpg" alt="Женщина" loading="lazy" style="width:100%;height:280px;object-fit:cover;object-position:center 55%;filter:brightness(0.88) sepia(0.08);"></div>
-    <div class="spacer"></div>
   </div>
+<div style="position:relative;left:50%;transform:translateX(-50%);width:100vw;margin-top:2.5rem;line-height:0;overflow:hidden;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238112/photo-1499117901949-e34ef1b2444a_o1pesi.jpg" alt="Женщина" loading="lazy" style="width:100%;height:266px;object-fit:cover;object-position:center;display:block;filter:brightness(0.88) sepia(0.08);"></div>
 </section>
 
 <!-- ПОРТРЕТ ИЗНУТРИ -->
@@ -908,11 +1024,11 @@ body { font-size: 21px; }
 </section>
 
 <!-- ГОЛОС -->
-<section class="voice">
+<section class="voice" style="padding-top:0;">
+<div style="line-height:0;overflow:hidden;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333318/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._20_22_41_kfpo19.jpg" alt="Лотос" loading="lazy" style="width:100%;height:220px;object-fit:cover;object-position:center 42%;display:block;filter:brightness(0.88) sepia(0.08);"></div>
   <div class="col-wide">
-    <div class="spacer"></div>
-    <span class="s-label reveal">Она говорит об этом так</span>
-<div style="width:100%;margin-top:1.5rem;margin-bottom:1.5rem;overflow:hidden;border-radius:2px;line-height:0;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333318/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._20_22_41_kfpo19.jpg" alt="Лотос" loading="lazy" style="width:100%;height:220px;object-fit:cover;object-position:center 42%;filter:brightness(0.88) sepia(0.08);"></div>
+    <div style="height:1.2rem;"></div>
+    <span class="s-label reveal" style="display:block; margin-bottom:2rem;">Она говорит об этом так</span>
     <div class="quotes-row">
       <div class="q-card reveal d1">
         <span class="q-mark">"</span>
@@ -951,7 +1067,7 @@ body { font-size: 21px; }
   <div class="col-wide">
     <div class="spacer"></div>
     <span class="s-label reveal">Симптомы в теле и состоянии</span>
-    <h2 class="s-title reveal">Глубже — внутреннее истощение</h2>
+    <h2 class="s-title reveal">Внутри — глубокое истощение</h2>
     <div class="sym-grid">
       <div class="sym-card reveal d1">
         <div class="sym-icon">⚡</div>
@@ -973,12 +1089,14 @@ body { font-size: 21px; }
     <div class="sym-2col reveal">
       <div class="sym-2col-left">
         <div class="sym-card-block">
-          <p class="id-title">Внутреннее истощение</p>
-          <p class="id-text">Когда ресурс на исходе, даже отдых не восстанавливает</p>
+          <div class="sym-icon">🌑</div>
+          <p class="sym-title">Внутреннее истощение</p>
+          <p class="sym-text">Когда ресурс на исходе, даже отдых не восстанавливает</p>
         </div>
         <div class="sym-card-block">
-          <p class="id-title">Чувство вины и стыда</p>
-          <p class="id-text">«Я должна справляться» — но уже не справляется</p>
+          <div class="sym-icon">🌊</div>
+          <p class="sym-title">Чувство вины и стыда</p>
+          <p class="sym-text">«Я должна справляться» — но уже не справляется</p>
         </div>
       </div>
       <div class="sym-2col-right">
@@ -994,8 +1112,7 @@ body { font-size: 21px; }
   <div class="col-wide">
     <div class="spacer"></div>
     <span class="s-label reveal">Подход программы</span>
-    <h2 class="s-title reveal">Суть программы</h2>
-    <p class="s-lead reveal d1">Это не курс «о знаниях». Это программа о том, как изменить своё состояние, своё ощущение себя и качество своей жизни по всем сферам.</p>
+    <p class="s-lead reveal d1" style="color:var(--cream);font-size:clamp(1.4rem,2.8vw,1.85rem);">Lotus — о том, как изменить своё состояние, своё ощущение себя и качество своей жизни во всех сферах.</p>
 
     <div class="app-cards">
       <div class="app-card reveal d1">
@@ -1012,22 +1129,81 @@ body { font-size: 21px; }
       </div>
     </div>
 
-    <div style="margin-top:3.5rem; padding:2.5rem; border:1px solid rgba(255,255,255,.1); border-radius:2px; max-width:62ch;" class="reveal">
-      <p style="font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-style:italic; color:var(--cream); line-height:1.8;">
-        Она всё понимает умом. Но не проживает себя глубоко.<br><br>
-        Знания есть. Осознанность есть. И всё равно — что-то остаётся закрытым.<br>
-        Эта программа — про то, чтобы наконец <strong>прожить</strong>, а не только понять.
+    <div style="margin-top:3.5rem; max-width:62ch;" class="reveal">
+      <p style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.2rem,2.2vw,1.5rem); font-style:italic; color:var(--cream); line-height:1.8;">
+        Она всё понимает умом, но не чувствует себя глубоко.<br><br>
+        Знания есть. Осознанность есть. Но всё равно, что-то остаётся заблокированным.<br><br>
+        Эта программа про то, чтобы наконец <strong>прожить</strong>, а не только понять.
       </p>
     </div>
     <div class="spacer"></div>
   </div>
 </section>
 
-<!-- РЕЗУЛЬТАТ ПОДХОДА -->
-<section class="journey">
+<!-- ЧТО ПРОИСХОДИТ НА ГЛУБИННОМ УРОВНЕ -->
+<section class="deep-mech">
   <div class="col-wide">
     <div class="spacer"></div>
-<div style="width:100%;margin-top:0;margin-bottom:1.5rem;overflow:hidden;border-radius:2px;line-height:0;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238112/photo-1721893820266-8f026d60a180_ymnbon.jpg" alt="Лотос на воде" loading="lazy" style="width:100%;height:280px;object-fit:cover;object-position:center 35%;filter:brightness(0.88) sepia(0.08);"></div>
+    <span class="s-label reveal">Психофизиология трансформации</span>
+    <h2 class="s-title reveal">Что происходит на глубинном уровне</h2>
+    <p class="s-lead reveal d1">LOTUS работает не с симптомами и не с поведением. Программа активирует глубинные механизмы саморегуляции — те, что стоят за устойчивым изменением состояния.</p>
+
+    <div class="dm-grid">
+      <div class="dm-card reveal d1">
+        <div class="dm-num">01</div>
+        <p class="dm-title">Нейропластичность</p>
+        <p class="dm-text">Регулярные практики буквально формируют новые нейронные связи — мозг перестраивается, создавая другой способ реагировать на жизнь.</p>
+      </div>
+      <div class="dm-card reveal d2">
+        <div class="dm-num">02</div>
+        <p class="dm-title">Интероцепция</p>
+        <p class="dm-text">Восстанавливается способность чувствовать сигналы собственного тела — тихие, глубинные, те, что обычно заглушены умом и темпом жизни.</p>
+      </div>
+      <div class="dm-card reveal d3">
+        <div class="dm-num">03</div>
+        <p class="dm-title">Регуляция нервной системы</p>
+        <p class="dm-text">Нервная система обретает баланс между активацией и расслаблением. Тело перестаёт жить в режиме постоянной готовности к угрозе.</p>
+      </div>
+      <div class="dm-card reveal d4">
+        <div class="dm-num">04</div>
+        <p class="dm-title">Эмоциональная регуляция</p>
+        <p class="dm-text">Эмоции перестают накапливаться — они переживаются и перерабатываются. Вместо подавления — полноценный контакт с собственным внутренним миром.</p>
+      </div>
+      <div class="dm-card reveal d1">
+        <div class="dm-num">05</div>
+        <p class="dm-title">Межполушарная интеграция</p>
+        <p class="dm-text">Разум и тело начинают работать согласованно. Исчезает раскол между «понимаю» и «чувствую» — появляется единое, целостное знание изнутри.</p>
+      </div>
+      <div class="dm-card reveal d2">
+        <div class="dm-num">06</div>
+        <p class="dm-title">Энергетическая интеграция</p>
+        <p class="dm-text">Восстанавливается естественная циркуляция энергии в теле. Хроническое истощение уходит — ресурс начинает обновляться, а не расходоваться в пустоту.</p>
+      </div>
+      <div class="dm-card reveal d3">
+        <div class="dm-num">07</div>
+        <p class="dm-title">Реконсолидация опыта</p>
+        <p class="dm-text">Старые паттерны и реакции — те, что были записаны в теле годами — освобождаются. Опыт переосмысляется не умом, а на уровне ощущений.</p>
+      </div>
+      <div class="dm-card reveal d4">
+        <div class="dm-num">08</div>
+        <p class="dm-title">Модуляция сознания</p>
+        <p class="dm-text">Восприятие расширяется. Открывается доступ к более тонким слоям себя — туда, куда раньше не было пути через мысли и усилие воли.</p>
+      </div>
+    </div>
+
+    <div class="dm-note reveal">
+      <p>Именно поэтому изменения после LOTUS — не временный подъём и не очередное «осознание». Это структурный сдвиг в том, как работает ваша нервная система, тело и восприятие себя.</p>
+    </div>
+
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- РЕЗУЛЬТАТ ПОДХОДА -->
+<section class="journey" style="padding-top:0;">
+<div style="line-height:0;overflow:hidden;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238112/photo-1721893820266-8f026d60a180_ymnbon.jpg" alt="Лотос на воде" loading="lazy" style="width:100%;height:280px;object-fit:cover;object-position:center 35%;display:block;filter:brightness(0.88) sepia(0.08);"></div>
+  <div class="col-wide">
+    <div class="spacer"></div>
     <span class="s-label reveal">Результат подхода</span>
     <h2 class="s-title reveal">От выживания — к внутренней зрелости</h2>
     <p class="s-lead reveal d1">Женщина переходит от реакции и выживания — к чувствованию, присутствию и жизни из состояния внутренней глубины и зрелости.</p>
@@ -1126,6 +1302,11 @@ body { font-size: 21px; }
       </div>
 
     </div>
+
+    <div style="text-align:center;margin-top:3.5rem;line-height:0;background:var(--cream);">
+      <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1788120357/74f815f7-f7f6-4567-867b-e76b2b1ce33d_blicxb.png" alt="" aria-hidden="true" loading="lazy" style="max-width:420px;width:100%;height:auto;display:block;margin:0 auto;">
+    </div>
+
     <div class="spacer"></div>
   </div>
 </section>
@@ -1136,10 +1317,16 @@ body { font-size: 21px; }
     <div class="spacer-sm"></div>
     <span class="s-label reveal">Почему так происходит</span>
     <h2 class="s-title reveal">Почему повторяются сценарии?</h2>
-    <p class="s-body reveal" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2vw,1.3rem);font-style:italic;color:var(--clay);line-height:1.75;max-width:62ch;">Не потому что не хватает знаний или силы воли. А потому что сценарии живут не в голове — они живут в теле, в автоматических реакциях, в том, как нервная система привыкла отвечать на жизнь.</p>
-    <p class="s-body reveal" style="margin-top:1.5rem;color:var(--bark);line-height:1.85;max-width:62ch;">LOTUS работает именно на этом уровне — не через анализ и понимание, а через прямой контакт с телом и чувствами. Именно здесь сценарии меняются по-настоящему.</p>
+<div style="display:flex;gap:3rem;align-items:flex-start;margin:1.5rem 0 2rem;flex-wrap:wrap;">
+      <div style="flex:0 0 auto;width:320px;max-width:100%;height:320px;overflow:hidden;border-radius:2px;line-height:0;">
+        <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787859802/a4502c35-718a-4aa2-b869-a44b7b056ee9_wvnyim.png" alt="Почему так происходит" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:brightness(0.88) sepia(0.08);">
+      </div>
+      <div style="flex:1;min-width:240px;display:flex;flex-direction:column;justify-content:center;gap:1.5rem;">
+        <p class="s-body reveal" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2vw,1.3rem);font-style:italic;color:var(--clay);line-height:1.75;">Не потому что не хватает знаний или силы воли. А потому что сценарии живут не в голове — они живут в теле, в автоматических реакциях, в том, как нервная система привыкла отвечать на жизнь.</p>
+        <p class="s-body reveal" style="color:var(--bark);line-height:1.85;">LOTUS работает именно на этом уровне — не через анализ и понимание, а через прямой контакт с телом и чувствами. Именно здесь сценарии меняются по-настоящему.</p>
+      </div>
+    </div>
     <div class="spacer-sm"></div>
-<div style="width:100%;margin-top:2rem;overflow:hidden;border-radius:2px;line-height:0;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333318/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._20_27_49_qhjrnf.jpg" alt="Тело и чувства" loading="lazy" style="width:100%;height:360px;object-fit:cover;object-position:center 30%;filter:brightness(0.88) sepia(0.08);"></div>
   </div>
 </section>
 
@@ -1149,7 +1336,10 @@ body { font-size: 21px; }
     <div class="spacer"></div>
     <span class="s-label reveal">Принцип спирали</span>
     <h2 class="s-title reveal">Не линия — спираль</h2>
-    <p class="s-lead reveal d1">Женщина встречается с одними и теми же фундаментальными уровнями себя несколько раз — но каждый раз с новой глубины.</p>
+<div style="background:var(--white);text-align:center;line-height:0;margin:1.5rem 0 2rem;">
+  <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1788121177/56179d07-49fb-4d71-86dc-a56701ded225_men321.png" alt="Принцип спирали" loading="lazy" style="max-width:480px;width:100%;height:auto;display:block;margin:0 auto;">
+</div>
+    <p class="s-lead reveal d1">Женщина встречается с одними и теми же фундаментальными уровнями себя несколько раз — но каждый раз на новой глубине.</p>
 
     <div class="spiral-grid">
       <div class="sp-col reveal d1">
@@ -1198,13 +1388,13 @@ body { font-size: 21px; }
         </div>
       </div>
     </div>
-    <div class="spacer-sm"></div>
-<div style="width:100%;overflow:hidden;border-radius:2px;line-height:0;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238112/photo-1721893820266-8f026d60a180_ymnbon.jpg" alt="Лотос на воде" loading="lazy" style="width:100%;height:280px;object-fit:cover;object-position:center 35%;filter:brightness(0.88) sepia(0.08);"></div>
+
     <div class="spacer"></div>
   </div>
 </section>
 
 <!-- КОНТРОЛЬНЫЕ ТОЧКИ -->
+<div style="max-width:900px;margin:0 auto;overflow:hidden;line-height:0;border-radius:2px;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787590873/ChatGPT_Image_24_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._19_53_32_keamnz.png" alt="Контрольные точки" loading="lazy" style="width:100%;height:360px;object-fit:cover;object-position:center;display:block;filter:brightness(0.88) sepia(0.08);"></div>
 <section class="checkpoints">
   <div class="col-wide">
     <div class="spacer"></div>
@@ -1229,14 +1419,16 @@ body { font-size: 21px; }
         <div class="cp-dot"></div>
         <p class="cp-label">Точка Б</p>
         <p class="cp-title">Завершение</p>
-        <p class="cp-text">Женщина возвращается к тем же вопросам, с которыми входила в LOTUS. Трансформация видна не как красивая концепция, а как реально прожитая внутренняя динамика.</p>
+        <p class="cp-text">Женщина возвращается к тем же вопросам, с которыми входила в LOTUS, — но приходит к ним уже другой. То, что раньше было точкой А — местом растерянности или незнания, — теперь становится опорой: с неё она строит свою новую реальность.</p>
       </div>
     </div>
     <div class="spacer"></div>
   </div>
 </section>
 
-<div style="width:100%;overflow:hidden;border-radius:2px;line-height:0;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333317/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._19_13_04_qugvod.jpg" alt="Практика" loading="lazy" style="width:100%;height:clamp(340px,42vw,420px);object-fit:cover;object-position:center 19%;filter:brightness(0.88) sepia(0.08);"></div>
+<div style="background:var(--cream);text-align:center;line-height:0;padding:0 0 2.5rem 0;">
+  <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1788012335/1fef8719-f86d-4a57-ac1c-bbbbfc00182c_bk657g.png" alt="" aria-hidden="true" loading="lazy" style="max-width:420px;width:100%;height:auto;display:block;margin:0 auto;">
+</div>
 
 <!-- РИТМ -->
 <section class="rhythm">
