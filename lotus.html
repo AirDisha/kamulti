@@ -919,7 +919,7 @@ body { font-size: 21px; }
     <li><a href="about.html">Обо мне</a></li>
     <li><a href="contact.html">Контакты</a></li>
   </ul>
-  <div class="nav-lang"><span class="active">RU</span><a href="#" onclick="setLang('en');return false;">EN</a></div>
+  <div class="nav-lang"><span class="active">RU</span><a href="#" onclick="setLang('en');return false;">EN</a><a href="#" onclick="setLang('ua');return false;">UA</a></div>
   <button class="nav-burger" id="burger-ru"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-drawer" id="navDrawer-ru">
@@ -939,7 +939,7 @@ body { font-size: 21px; }
     <li><a href="about-en.html">About</a></li>
     <li><a href="contact-en.html">Contact</a></li>
   </ul>
-  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span></div>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><span class="active">EN</span><a href="#" onclick="setLang('ua');return false;">UA</a></div>
   <button class="nav-burger" id="burger-en"><span></span><span></span><span></span></button>
 </nav>
 <div class="nav-drawer" id="navDrawer-en" style="display:none;">
@@ -948,6 +948,26 @@ body { font-size: 21px; }
   <a href="about-en.html">About</a><a href="contact-en.html">Contact</a>
 </div>
 <div class="nav-overlay" id="navOverlay-en" style="display:none;"></div>
+
+<nav class="nav" id="nav-ua" style="display:none;">
+  <a href="individual-ua.html" class="nav-logo">Інна Янкіна</a>
+  <ul class="nav-links">
+    <li><a href="kundalini-info-ua.html">Про Кундаліні</a></li>
+    <li><a href="sessions-ua.html">Сесії</a></li>
+    <li><a href="individual-ua.html">Індивідуально</a></li>
+    <li><a href="lotus.html" class="active">Lotus</a></li>
+    <li><a href="about-ua.html">Про мене</a></li>
+    <li><a href="contact-ua.html">Контакти</a></li>
+  </ul>
+  <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><a href="#" onclick="setLang('en');return false;">EN</a><span class="active">UA</span></div>
+  <button class="nav-burger" id="burger-ua"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="navDrawer-ua" style="display:none;">
+  <a href="kundalini-info-ua.html">Про Кундаліні</a><a href="sessions-ua.html">Сесії</a>
+  <a href="individual-ua.html">Індивідуально</a><a href="lotus.html">Lotus</a>
+  <a href="about-ua.html">Про мене</a><a href="contact-ua.html">Контакти</a>
+</div>
+<div class="nav-overlay" id="navOverlay-ua" style="display:none;"></div>
 
 <div class="t-ru">
 <!-- HERO -->
@@ -2269,12 +2289,670 @@ body { font-size: 21px; }
 </footer>
 </div>
 
+<div class="t-ua" style="display:none;">
+<!-- HERO -->
+<section class="hero">
+  <div class="lotus-hero-img">
+    <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333317/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._19_23_48_qmosrw.jpg" alt="Медитація лотос">
+  </div>
+  <div class="hero-text">
+    <span class="hero-label">Програма трансформації</span>
+    <h1 class="hero-title">LOTUS</h1>
+    <p class="hero-tagline">повернення до себе</p>
+    <p class="hero-sub" style="margin-bottom:2rem;">3-місячна програма для жінок</p>
+    <p class="hero-sub">Через тіло, почуття, внутрішнє перетворення та розкриття справжньої природи</p>
+    <span class="hero-duration">3 місяці · Груповий формат · Онлайн</span>
+    <div style="margin-top:2.2rem;"><a href="#cta" class="btn-signup">Записатись</a></div>
+  </div>
+</section>
+<div class="hero-mobile-photo"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333318/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._19_56_46_qvmwdv.jpg" alt="Медитація" loading="lazy"></div>
+
+<!-- ДЛЯ КОГО -->
+<section class="for-whom">
+  <div class="col">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Для кого програма</span>
+    <h2 class="s-title reveal">Ти прийшла сюди не випадково</h2>
+    <p class="s-lead reveal">Програма Lotus створена для зцілення твого внутрішнього стану.</p>
+
+    <ul class="fw-list reveal">
+      <li>Ти багато знаєш, пробувала різні підходи — але щось всередині досі не дає спокою</li>
+      <li>Важко розслабитися і просто бути — голова завжди зайнята</li>
+      <li>Тіло затиснуте, є відчуття хронічної напруги або втоми</li>
+      <li>Ти несеш на собі багато — і не знаєш, як інакше</li>
+      <li>Емоції або пригнічені, або виходять не так, як хотілося б</li>
+      <li>Важко відчувати радість, легкість, контакт із собою</li>
+      <li>Ти втомилася від повторюваних життєвих сценаріїв</li>
+      <li>Є відчуття, що живеш не зовсім своє життя — або не на повну силу</li>
+    </ul>
+    <p class="fw-signal reveal">Все це — сигнал, що твоя система шукає опору та повернення до себе.</p>
+
+    <blockquote class="fw-quote reveal">
+      LOTUS — це програма для жінок, які <strong>втомилися жити через розум, контроль і внутрішню напругу</strong> — і готові відновити контакт із собою, своїм тілом і своїми почуттями.
+    </blockquote>
+
+    <p class="reveal" style="font-family:'Great Vibes',cursive; font-size:clamp(2rem,4vw,3rem); color:var(--clay); margin:2rem 0 1rem; line-height:1.4;">Жінка, яка:</p>
+
+    <div class="identity-grid">
+      <div class="id-card reveal d1">
+        <p class="id-title">Живе від розуму</p>
+        <p class="id-text">Мислення — головний інструмент. Логіка, аналіз, контроль.</p>
+      </div>
+      <div class="id-card reveal d2">
+        <p class="id-title">Вміє бути сильною</p>
+        <p class="id-text">Тримає все на собі. Справляється. Не показує слабкості.</p>
+      </div>
+      <div class="id-card id-card-wide reveal d3">
+        <p class="id-title">Вміє досягати</p>
+        <p class="id-text">Знає, як ставити цілі та досягати результату. Але щось закрито всередині.</p>
+      </div>
+      <div class="id-card id-card-wide reveal d4">
+        <p class="id-title">Ходить по колу</p>
+        <p class="id-text">Одні й ті самі ситуації повторюються — у стосунках, на роботі, в реакціях. Наче щось тягне назад, попри всі спроби змінитися.</p>
+      </div>
+    </div>
+  </div>
+<div style="position:relative;left:50%;transform:translateX(-50%);width:100vw;margin-top:2.5rem;line-height:0;overflow:hidden;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238112/photo-1499117901949-e34ef1b2444a_o1pesi.jpg" alt="Жінка" loading="lazy" style="width:100%;height:266px;object-fit:cover;object-position:center;display:block;filter:brightness(0.88) sepia(0.08);"></div>
+</section>
+
+<!-- ПОРТРЕТ ЗСЕРЕДИНИ -->
+<section class="portrait">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Портрет зсередини</span>
+    <h2 class="s-title reveal">Коли жінка приходить у програму</h2>
+    <p class="s-lead reveal d1">Вона багато розуміє на інтелектуальному рівні, пробувала багато чого та знає, як досягати результатів. Але вона:</p>
+
+    <div class="portrait-grid reveal d2">
+      <div class="p-outside">
+        <p class="p-col-title">Зовні</p>
+        <div class="p-item"><span class="p-arrow">→</span>Синдром відмінниці</div>
+        <div class="p-item"><span class="p-arrow">→</span>Висока відповідальність</div>
+        <div class="p-item"><span class="p-arrow">→</span>Багато знає та пробувала</div>
+        <div class="p-item"><span class="p-arrow">→</span>Несе на собі багато</div>
+      </div>
+      <div class="p-inside">
+        <p class="p-col-title" style="color:var(--clay)">Всередині</p>
+        <div class="p-item"><span class="p-arrow">→</span>Постійна напруга</div>
+        <div class="p-item"><span class="p-arrow">→</span>Затиснутість і закритість</div>
+        <div class="p-item"><span class="p-arrow">→</span>Глибока втома</div>
+        <div class="p-item"><span class="p-arrow">→</span>Не відчуває себе справжньою</div>
+        <div class="p-item"><span class="p-arrow">→</span>Не чує свій внутрішній голос</div>
+        <div class="p-item"><span class="p-arrow">→</span>Бачить повторювані сценарії — але не може вийти з них</div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- ГОЛОС -->
+<section class="voice" style="padding-top:0;">
+<div style="line-height:0;overflow:hidden;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333318/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._20_22_41_kfpo19.jpg" alt="Лотос" loading="lazy" style="width:100%;height:220px;object-fit:cover;object-position:center 42%;display:block;filter:brightness(0.88) sepia(0.08);"></div>
+  <div class="col-wide">
+    <div style="height:1.2rem;"></div>
+    <span class="s-label reveal" style="display:block; margin-bottom:2rem;">Вона говорить про це так</span>
+    <div class="quotes-row">
+      <div class="q-card reveal d1">
+        <span class="q-mark">"</span>
+        <p class="q-text">«Я відчуваю, що в мені є сила, але втратила контакт із жіночністю»</p>
+      </div>
+      <div class="q-card reveal d2">
+        <span class="q-mark">"</span>
+        <p class="q-text">«Мені нічого не хочеться»</p>
+      </div>
+      <div class="q-card reveal d3">
+        <span class="q-mark">"</span>
+        <p class="q-text">«Я втомилася все контролювати»</p>
+      </div>
+    </div>
+    <div class="quotes-row-2">
+      <div class="q-card reveal d1">
+        <span class="q-mark">"</span>
+        <p class="q-text">«Розумом я вмію отримувати результат, але почуттями — ні»</p>
+      </div>
+      <div class="q-card reveal d2">
+        <span class="q-mark">"</span>
+        <p class="q-text">«Я не відчуваю смак життя»</p>
+      </div>
+      <div class="q-card reveal d3">
+        <span class="q-mark">"</span>
+        <p class="q-text">«Я знову опинилась у тій самій ситуації. Я все розумію, але нічого не змінюється»</p>
+      </div>
+    </div>
+    <div class="btn-signup-wrap reveal"><a href="#cta" class="btn-signup">Записатись</a></div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- СИМПТОМИ -->
+<section class="symptoms">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Симптоми в тілі й стані</span>
+    <h2 class="s-title reveal">Всередині — глибоке виснаження</h2>
+    <div class="sym-grid">
+      <div class="sym-card reveal d1">
+        <div class="sym-icon">⚡</div>
+        <p class="sym-title">Постійна напруга</p>
+        <p class="sym-text">Фонова тривога, яка не відпускає навіть у спокої</p>
+      </div>
+      <div class="sym-card reveal d2">
+        <div class="sym-icon">🔒</div>
+        <p class="sym-title">Затиснутість у тілі</p>
+        <p class="sym-text">Тіло наче закрите, скуте, не своє</p>
+      </div>
+      <div class="sym-card reveal d3">
+        <div class="sym-icon">⚡</div>
+        <p class="sym-title">Роздратування і втома</p>
+        <p class="sym-text">Реакції гостріші за звичайне. Сил стає дедалі менше</p>
+      </div>
+    </div>
+
+    <div class="sym-2col reveal">
+      <div class="sym-2col-left">
+        <div class="sym-card-block">
+          <div class="sym-icon">🌑</div>
+          <p class="sym-title">Внутрішнє виснаження</p>
+          <p class="sym-text">Коли ресурс на межі, навіть відпочинок не відновлює</p>
+        </div>
+        <div class="sym-card-block">
+          <div class="sym-icon">🌊</div>
+          <p class="sym-title">Почуття провини і сорому</p>
+          <p class="sym-text">«Я маю справлятися» — але вже не справляється</p>
+        </div>
+      </div>
+      <div class="sym-2col-right">
+        <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238113/image_2026-08-20_17-40-19_k6pmu8.jpg" alt="Симптоми" loading="lazy">
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- ПІДХІД ПРОГРАМИ -->
+<section class="approach">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Підхід програми</span>
+    <p class="s-lead reveal d1" style="color:var(--cream);font-size:clamp(1.4rem,2.8vw,1.85rem);">Lotus — про те, як змінити свій стан, своє відчуття себе та якість свого життя у всіх сферах.</p>
+
+    <div class="app-cards">
+      <div class="app-card reveal d1">
+        <p class="app-card-title">Перебудова</p>
+        <p class="app-card-text">LOTUS — це не набір інструментів і не просто метод. Це <strong>м'яке, але глибоке переналаштування</strong> внутрішнього світу жінки.</p>
+      </div>
+      <div class="app-card reveal d2">
+        <p class="app-card-title">Цілісна трансформація</p>
+        <p class="app-card-text">Робота через тіло, почуття та усвідомленість — не лише через розум.</p>
+      </div>
+      <div class="app-card reveal d3">
+        <p class="app-card-title">Стійкий внутрішній зсув</p>
+        <p class="app-card-text">Мета — постійна зміна того, як ви себе почуваєте, а не тимчасовий результат.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:3.5rem; max-width:62ch;" class="reveal">
+      <p style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.2rem,2.2vw,1.5rem); font-style:italic; color:var(--cream); line-height:1.8;">
+        Вона все розуміє розумом, але не відчуває себе глибоко.<br><br>
+        Знання є. Усвідомленість є. Але все одно щось залишається заблокованим.<br><br>
+        Ця програма про те, щоб нарешті <strong>прожити</strong>, а не лише зрозуміти.
+      </p>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- ЩО ВІДБУВАЄТЬСЯ НА ГЛИБИННОМУ РІВНІ -->
+<section class="deep-mech">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Психофізіологія трансформації</span>
+    <h2 class="s-title reveal">Що відбувається на глибинному рівні</h2>
+    <p class="s-lead reveal d1">LOTUS працює не з симптомами і не з поведінкою. Програма активує глибинні механізми саморегуляції — ті, що стоять за стійкою зміною стану.</p>
+
+    <div class="dm-grid">
+      <div class="dm-card reveal d1">
+        <div class="dm-num">01</div>
+        <p class="dm-title">Нейропластичність</p>
+        <p class="dm-text">Регулярні практики буквально формують нові нейронні зв'язки — мозок перебудовується, створюючи інший спосіб реагувати на життя.</p>
+      </div>
+      <div class="dm-card reveal d2">
+        <div class="dm-num">02</div>
+        <p class="dm-title">Інтероцепція</p>
+        <p class="dm-text">Відновлюється здатність відчувати сигнали власного тіла — тихі, глибинні, ті, що зазвичай заглушені розумом і темпом життя.</p>
+      </div>
+      <div class="dm-card reveal d3">
+        <div class="dm-num">03</div>
+        <p class="dm-title">Регуляція нервової системи</p>
+        <p class="dm-text">Нервова система знаходить баланс між активацією та розслабленням. Тіло перестає жити в режимі постійної готовності до загрози.</p>
+      </div>
+      <div class="dm-card reveal d4">
+        <div class="dm-num">04</div>
+        <p class="dm-title">Емоційна регуляція</p>
+        <p class="dm-text">Емоції перестають накопичуватися — вони переживаються та переробляються. Замість пригнічення — повноцінний контакт із власним внутрішнім світом.</p>
+      </div>
+      <div class="dm-card reveal d1">
+        <div class="dm-num">05</div>
+        <p class="dm-title">Міжпівкульна інтеграція</p>
+        <p class="dm-text">Розум і тіло починають працювати злагоджено. Зникає розкол між «розумію» і «відчуваю» — з'являється єдине, цілісне знання зсередини.</p>
+      </div>
+      <div class="dm-card reveal d2">
+        <div class="dm-num">06</div>
+        <p class="dm-title">Енергетична інтеграція</p>
+        <p class="dm-text">Відновлюється природна циркуляція енергії в тілі. Хронічне виснаження відступає — ресурс починає оновлюватися, а не витрачатися в порожнечу.</p>
+      </div>
+      <div class="dm-card reveal d3">
+        <div class="dm-num">07</div>
+        <p class="dm-title">Реконсолідація досвіду</p>
+        <p class="dm-text">Старі патерни та реакції — ті, що були записані в тілі роками — звільняються. Досвід переосмислюється не розумом, а на рівні відчуттів.</p>
+      </div>
+      <div class="dm-card reveal d4">
+        <div class="dm-num">08</div>
+        <p class="dm-title">Модуляція свідомості</p>
+        <p class="dm-text">Сприйняття розширюється. Відкривається доступ до тонших шарів себе — туди, куди раніше не було шляху через думки та зусилля волі.</p>
+      </div>
+    </div>
+
+    <div class="dm-note reveal">
+      <p>Саме тому зміни після LOTUS — це не тимчасовий підйом і не чергове «усвідомлення». Це структурний зсув у тому, як працює ваша нервова система, тіло та сприйняття себе.</p>
+    </div>
+
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- РЕЗУЛЬТАТ ПІДХОДУ -->
+<section class="journey" style="padding-top:0;">
+<div style="line-height:0;overflow:hidden;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787238112/photo-1721893820266-8f026d60a180_ymnbon.jpg" alt="Лотос на воді" loading="lazy" style="width:100%;height:280px;object-fit:cover;object-position:center 35%;display:block;filter:brightness(0.88) sepia(0.08);"></div>
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Результат підходу</span>
+    <h2 class="s-title reveal">Від виживання — до внутрішньої зрілості</h2>
+    <p class="s-lead reveal d1">Жінка переходить від реакції та виживання — до відчуття, присутності та життя зі стану внутрішньої глибини та зрілості.</p>
+
+    <div class="journey-flow reveal d2">
+      <div class="j-stage">
+        <div class="j-num">01</div>
+        <p class="j-title">Режим виживання</p>
+        <p class="j-text">Реакція на безпосередні загрози. Автопілот.</p>
+        <span class="j-arrow">→</span>
+      </div>
+      <div class="j-stage">
+        <div class="j-num">02</div>
+        <p class="j-title">Режим відчуття</p>
+        <p class="j-text">Проживання та обробка емоцій. Контакт із собою.</p>
+        <span class="j-arrow">→</span>
+      </div>
+      <div class="j-stage">
+        <div class="j-num">03</div>
+        <p class="j-title">Присутність</p>
+        <p class="j-text">Заземлене усвідомлення поточного моменту.</p>
+        <span class="j-arrow">→</span>
+      </div>
+      <div class="j-stage">
+        <div class="j-num">04</div>
+        <p class="j-title">Внутрішня зрілість</p>
+        <p class="j-text">Життя з глибини та мудрості. Нова якість.</p>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- ТРИ МІСЯЦІ -->
+<section class="months">
+  <div class="col">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Архітектура програми</span>
+    <h2 class="s-title reveal">3-місячна подорож</h2>
+    <p class="s-lead reveal d1">Один шар підготовлює інший. Одна практика створює умови для наступної. Кожен етап поглиблює процеси, розпочаті раніше.</p>
+
+    <div class="months-timeline" style="margin-top:4rem;">
+
+      <div class="month-block">
+        <div class="month-num-wrap">
+          <div class="month-num reveal">I</div>
+        </div>
+        <div class="month-content">
+          <p class="month-eyebrow reveal">Перший місяць</p>
+          <h3 class="month-title reveal">ПІДГОТОВКА</h3>
+          <p class="month-sub reveal">Зустріч із собою. Усвідомлення. Опора.</p>
+          <p class="month-body reveal d1">Перш ніж щось змінювати, необхідно побачити: де я зараз? Як я себе почуваю? Як взаємодію зі своїм тілом? Куди спрямована моя увага?</p>
+          <p class="month-body reveal d2" style="margin-top:1rem;">Це період уповільнення та повернення уваги до себе. Головне завдання — не руйнувати старе, а створити внутрішню опору та здатність спостерігати власну систему.</p>
+          <div style="margin-top:1.25rem; display:flex; gap:.5rem; flex-wrap:wrap;">
+            <span style="background:var(--linen);padding:.4rem .9rem;font-size:.8rem;color:var(--clay)">Напруга → Полегшення</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="month-block">
+        <div class="month-num-wrap">
+          <div class="month-num reveal">II</div>
+        </div>
+        <div class="month-content">
+          <p class="month-eyebrow reveal">Другий місяць</p>
+          <h3 class="month-title reveal">ПЕРЕТВОРЕННЯ</h3>
+          <p class="month-sub reveal">Занурення. Вивільнення. Перебудова.</p>
+          <p class="month-body reveal d1">Коли сформовано базову здатність помічати себе, починається глибша робота. Жінка досліджує автоматичні реакції, укорінені сценарії, звичні способи захисту, обмежуючі переконання.</p>
+          <p class="month-body reveal d2" style="margin-top:1rem;">Завдання — не боротися з собою, а розпізнати, прожити та поступово звільнити простір для нового досвіду.</p>
+          <div style="margin-top:1.25rem; display:flex; gap:.5rem; flex-wrap:wrap;">
+            <span style="background:var(--linen);padding:.4rem .9rem;font-size:.8rem;color:var(--clay)">Контроль → Довіра</span>
+            <span style="background:var(--linen);padding:.4rem .9rem;font-size:.8rem;color:var(--clay)">Відчуження → Контакт</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="integration-block reveal">
+        <p class="int-title">Інтеграційне вікно</p>
+        <p class="int-text">Між глибоким перетворенням і переходом до активного прояву необхідний простір. Це не пауза — це час, коли процеси, запущені раніше, отримують можливість осісти всередині системи.</p>
+      </div>
+
+      <div class="month-block">
+        <div class="month-num-wrap">
+          <div class="month-num reveal">III</div>
+        </div>
+        <div class="month-content">
+          <p class="month-eyebrow reveal">Третій місяць</p>
+          <h3 class="month-title reveal">АКТИВАЦІЯ</h3>
+          <p class="month-sub reveal">Прояв. Новий вибір. Реалізація потенціалу.</p>
+          <p class="month-body reveal d1">Коли частина автоматичних реакцій перестає займати весь внутрішній простір, з'являється більше свободи для вибору. Більше ресурсу для творчості, чутливості, проявленості, стосунків, дії.</p>
+          <p class="month-body reveal d2" style="margin-top:1rem;">Це етап зустрічі з новою якістю себе. Не створення штучного «ідеального образу», а розкриття тих якостей, яким раніше бракувало внутрішнього простору.</p>
+          <div style="margin-top:1.25rem; display:flex; gap:.5rem; flex-wrap:wrap;">
+            <span style="background:var(--linen);padding:.4rem .9rem;font-size:.8rem;color:var(--clay)">Виснаження → Наповненість</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:3.5rem;line-height:0;background:var(--cream);">
+      <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1788120357/74f815f7-f7f6-4567-867b-e76b2b1ce33d_blicxb.png" alt="" aria-hidden="true" loading="lazy" style="max-width:260px;width:100%;height:auto;display:block;margin:0 auto;">
+    </div>
+
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- ЧОМУ ПОВТОРЮЮТЬСЯ СЦЕНАРІЇ -->
+<section style="background:var(--linen);padding:3.5rem 0;">
+  <div class="col">
+    <div class="spacer-sm"></div>
+    <span class="s-label reveal">Чому так відбувається</span>
+    <h2 class="s-title reveal">Чому повторюються сценарії?</h2>
+<div style="display:flex;gap:3rem;align-items:flex-start;margin:1.5rem 0 2rem;flex-wrap:wrap;">
+      <div style="flex:0 0 auto;width:320px;max-width:100%;height:320px;overflow:hidden;border-radius:2px;line-height:0;">
+        <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787859802/a4502c35-718a-4aa2-b869-a44b7b056ee9_wvnyim.png" alt="Чому так відбувається" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:brightness(0.88) sepia(0.08);">
+      </div>
+      <div style="flex:1;min-width:240px;display:flex;flex-direction:column;justify-content:center;gap:1.5rem;">
+        <p class="s-body reveal" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2vw,1.3rem);font-style:italic;color:var(--clay);line-height:1.75;">Не тому, що бракує знань або сили волі. А тому що сценарії живуть не в голові — вони живуть у тілі, в автоматичних реакціях, у тому, як нервова система звикла відповідати на життя.</p>
+        <p class="s-body reveal" style="color:var(--bark);line-height:1.85;">LOTUS працює саме на цьому рівні — не через аналіз і розуміння, а через прямий контакт із тілом і почуттями. Саме тут сценарії змінюються по-справжньому.</p>
+      </div>
+    </div>
+    <div class="spacer-sm"></div>
+  </div>
+</section>
+
+<!-- ПРИНЦИП СПІРАЛІ -->
+<section class="spiral">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Принцип спіралі</span>
+    <h2 class="s-title reveal">Не лінія — спіраль</h2>
+<div style="display:flex;gap:3rem;align-items:center;margin:1.5rem 0 2rem;flex-wrap:wrap;">
+  <div style="flex:1;min-width:220px;">
+    <p class="s-lead reveal d1">Жінка зустрічається з одними й тими самими фундаментальними рівнями себе кілька разів — але щоразу на новій глибині.</p>
+  </div>
+  <div style="flex:0 0 auto;text-align:center;line-height:0;">
+    <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1788121177/56179d07-49fb-4d71-86dc-a56701ded225_men321.png" alt="Принцип спіралі" loading="lazy" style="max-width:340px;width:100%;height:auto;display:block;">
+  </div>
+</div>
+
+    <div class="spiral-grid">
+      <div class="sp-col reveal d1">
+        <p class="sp-theme">Тіло</p>
+        <div class="sp-row">
+          <p class="sp-month">I місяць</p>
+          <p class="sp-text">Почути й почати помічати тіло</p>
+        </div>
+        <div class="sp-row">
+          <p class="sp-month">II місяць</p>
+          <p class="sp-text">Розпізнавати через тіло накопичені реакції та напруги</p>
+        </div>
+        <div class="sp-row">
+          <p class="sp-month">III місяць</p>
+          <p class="sp-text">Використовувати тілесну чутливість як опору для вибору та дії</p>
+        </div>
+      </div>
+      <div class="sp-col reveal d2">
+        <p class="sp-theme">Емоції</p>
+        <div class="sp-row">
+          <p class="sp-month">I місяць</p>
+          <p class="sp-text">Навчитися помічати та визнавати</p>
+        </div>
+        <div class="sp-row">
+          <p class="sp-month">II місяць</p>
+          <p class="sp-text">Побачити глибинні сценарії та автоматичні реакції</p>
+        </div>
+        <div class="sp-row">
+          <p class="sp-month">III місяць</p>
+          <p class="sp-text">Розширити емоційний діапазон та здатність обирати нову реакцію</p>
+        </div>
+      </div>
+      <div class="sp-col reveal d3">
+        <p class="sp-theme">Увага</p>
+        <div class="sp-row">
+          <p class="sp-month">I місяць</p>
+          <p class="sp-text">Повернути увагу до себе</p>
+        </div>
+        <div class="sp-row">
+          <p class="sp-month">II місяць</p>
+          <p class="sp-text">Побачити, куди вона автоматично йде та чим керується</p>
+        </div>
+        <div class="sp-row">
+          <p class="sp-month">III місяць</p>
+          <p class="sp-text">Навчитися свідомо спрямовувати увагу на те, що жінка хоче створювати</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- КОНТРОЛЬНІ ТОЧКИ -->
+<div style="max-width:900px;margin:0 auto;overflow:hidden;line-height:0;border-radius:2px;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787590873/ChatGPT_Image_24_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._19_53_32_keamnz.png" alt="Контрольні точки" loading="lazy" style="width:100%;height:360px;object-fit:cover;object-position:center;display:block;filter:brightness(0.88) sepia(0.08);"></div>
+<section class="checkpoints">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Контрольні точки</span>
+    <h2 class="s-title reveal">Бачити власну динаміку</h2>
+    <p class="s-lead reveal d1">Порівняння відбувається не з іншими жінками і не з абстрактним ідеалом. Лише з собою: я на початку шляху → я після трьох місяців.</p>
+
+    <div class="cp-row">
+      <div class="cp-card reveal d1">
+        <div class="cp-dot"></div>
+        <p class="cp-label">Точка А</p>
+        <p class="cp-title">Початок</p>
+        <p class="cp-text">Фіксується вихідний стан — рівень контакту з тілом, емоційний фон, повторювані реакції, стосунки з собою. Чесна карта того місця, з якого починається рух.</p>
+      </div>
+      <div class="cp-card reveal d2">
+        <div class="cp-dot"></div>
+        <p class="cp-label">Проміжна точка</p>
+        <p class="cp-title">На середині шляху</p>
+        <p class="cp-text">Що вже змінилося? Що стало помітнішим? Які реакції послабшали? Що змінилося в тілі та в щоденних виборах? Дозволяє скоригувати рух.</p>
+      </div>
+      <div class="cp-card reveal d3">
+        <div class="cp-dot"></div>
+        <p class="cp-label">Точка Б</p>
+        <p class="cp-title">Завершення</p>
+        <p class="cp-text">Жінка повертається до тих самих питань, з якими входила в LOTUS — але приходить до них вже іншою. Те, що раніше було точкою А — місцем розгубленості або незнання, — тепер стає опорою: з неї вона будує свою нову реальність.</p>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<div style="background:var(--cream);text-align:center;line-height:0;padding:0 0 2.5rem 0;">
+  <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1788012335/1fef8719-f86d-4a57-ac1c-bbbbfc00182c_bk657g.png" alt="" aria-hidden="true" loading="lazy" style="max-width:420px;width:100%;height:auto;display:block;margin:0 auto;">
+</div>
+
+<!-- РИТМ -->
+<section class="rhythm">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Ритм програми</span>
+    <h2 class="s-title reveal">Як влаштована програма</h2>
+    <p class="s-lead reveal d1">Між отриманням нового матеріалу та наступним впливом завжди залишається простір для проживання.</p>
+
+    <div class="rhythm-grid">
+      <div class="rh-card reveal d1">
+        <p class="rh-freq">2 × на тиждень</p>
+        <p class="rh-title">Новий матеріал і практики</p>
+        <p class="rh-text">Понеділок і четвер — відкривається новий смисловий блок, завдання або практика. Такий ритм дозволяє зберігати неперервність процесу, не перевантажуючи систему.</p>
+      </div>
+      <div class="rh-card reveal d2">
+        <p class="rh-freq">1 × на тиждень</p>
+        <p class="rh-title">Групова зустріч · ~2,5 години</p>
+        <p class="rh-text">Простір для інтеграції, запитань та живої взаємодії. Включає:</p>
+        <ul class="rh-list">
+          <li>Тілесні та дихальні практики</li>
+          <li>Енергетичну роботу</li>
+          <li>Інтеграцію минулого тижня</li>
+          <li>Зворотній зв'язок та усвідомлення</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="margin-top:2.5rem; padding:2.5rem; background:var(--white); border-radius:2px;" class="reveal">
+      <p style="font-family:'Cormorant Garamond',serif; font-size:1.25rem; color:var(--clay); line-height:1.8;">
+        Внутрішня логіка LOTUS будується за циклом:<br><br>
+        <strong style="color:var(--ink); font-size:1.35rem;">отримати → прожити → спостерігати → усвідомити → інтегрувати → перейти глибше</strong>
+      </p>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- МАРШРУТ УЧАСНИЦІ -->
+<section class="route">
+  <div class="col-wide">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Маршрут учасниці</span>
+    <h2 class="s-title reveal">Шлях</h2>
+    <div class="route-2col">
+      <div class="route-2col-img">
+        <img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333317/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._19_08_56_yaxgmo.jpg" alt="Маршрут" loading="lazy">
+      </div>
+      <div class="route-2col-content">
+        <div class="route-path reveal">
+          <div class="route-row">
+            <span class="route-step highlight">Точка А</span>
+            <span class="route-arrow">→</span>
+            <span class="route-step">Діагностика</span>
+            <span class="route-arrow">→</span>
+          </div>
+          <div class="route-row">
+            <span class="route-step">Зустріч із собою</span>
+            <span class="route-arrow">→</span>
+            <span class="route-step">Усвідомлення</span>
+            <span class="route-arrow">→</span>
+          </div>
+          <div class="route-row">
+            <span class="route-step">Формування опори</span>
+            <span class="route-arrow">→</span>
+            <span class="route-step">Занурення</span>
+            <span class="route-arrow">→</span>
+          </div>
+          <div class="route-row">
+            <span class="route-step">Вивільнення</span>
+            <span class="route-arrow">→</span>
+            <span class="route-step">Перебудова</span>
+            <span class="route-arrow">→</span>
+          </div>
+          <div class="route-row">
+            <span class="route-step">Інтеграція</span>
+            <span class="route-arrow">→</span>
+            <span class="route-step">Новий вибір</span>
+            <span class="route-arrow">→</span>
+          </div>
+          <div class="route-row">
+            <span class="route-step">Активація потенціалу</span>
+            <span class="route-arrow">→</span>
+            <span class="route-step">Прояв</span>
+            <span class="route-arrow">→</span>
+          </div>
+          <div class="route-row">
+            <span class="route-step highlight">Точка Б</span>
+          </div>
+        </div>
+        <p class="route-note reveal d1">LOTUS — це спіраль. Кінцева точка програми одночасно стає початком наступного витка розвитку.</p>
+        <div class="btn-signup-wrap reveal d2"><a href="#cta" class="btn-signup btn-signup-light">Записатись</a></div>
+      </div>
+    </div>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- ГОЛОВНИЙ ПРИНЦИП -->
+<section class="principle">
+  <div class="col">
+    <div class="spacer"></div>
+    <span class="s-label reveal">Головний принцип LOTUS</span>
+    <h2 class="s-title reveal">Не знання, а зміни</h2>
+    <p class="s-lead reveal d1">Архітектура програми побудована не навколо кількості інформації, а навколо послідовності змін, які людська система здатна прожити та інтегрувати.</p>
+
+    <div class="principle-chain reveal d2">
+      <div class="pc-step">знання</div>
+      <span class="pc-arrow">→</span>
+      <div class="pc-step">усвідомлення</div>
+      <span class="pc-arrow">→</span>
+      <div class="pc-step">досвід</div>
+      <span class="pc-arrow">→</span>
+      <div class="pc-step">новий вибір</div>
+      <span class="pc-arrow">→</span>
+      <div class="pc-step">нова якість життя</div>
+    </div>
+
+<div style="width:100%;margin-top:2.5rem;overflow:hidden;border-radius:2px;line-height:0;"><img src="https://res.cloudinary.com/dzu9phbzr/image/upload/v1787333317/ChatGPT_Image_21_%D0%B0%D0%B2%D0%B3._2026_%D0%B3._19_38_02_hizzep.jpg" alt="Шлях до себе" loading="lazy" style="width:100%;height:310px;object-fit:cover;object-position:center 52%;filter:brightness(0.88) sepia(0.08);"></div>
+    <p class="principle-coda reveal d3">
+      Саме тому LOTUS — це не просто курс.<br>
+      Це спроектований простір послідовної внутрішньої трансформації.
+    </p>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="cta">
+  <div class="col">
+    <div class="spacer"></div>
+    <h2 class="cta-title reveal">Готові повернутися до себе?</h2>
+    <p class="cta-text reveal d1">Дізнайтеся деталі про програму та найближчий набір:</p>
+    <a href="https://wa.me/447759390423" class="btn-lotus reveal d2">Написати мені</a>
+    <p class="cta-by reveal d3" style="font-size:.95rem;white-space:nowrap;">Інна Янкіна · Фасилітатор кундаліні</p>
+    <div class="spacer"></div>
+  </div>
+</section>
+
+<footer class="footer" id="footer-ua">
+  <div class="footer-inner">
+    <div><p class="footer-logo">Інна Янкіна</p><p class="footer-sub">Фасилітатор кундаліні · Англія</p></div>
+    <div><p class="footer-col-title">Сторінки</p><nav class="footer-nav"><a href="individual-ua.html">Індивідуально</a><a href="lotus.html">Lotus</a><a href="sessions-ua.html">Сесії</a><a href="kundalini-info-ua.html">Про Кундаліні</a><a href="about-ua.html">Про мене</a><a href="contact-ua.html">Контакти</a></nav></div>
+    <div><p class="footer-col-title">Зв'язатися</p><nav class="footer-nav"><a href="https://wa.me/447759390423">Вотсап</a><a href="https://instagram.com/inna.uk.iankin/">Інстаграм</a><a href="https://t.me/innaiankina">Телеграм</a><a href="mailto:inna.win.iankina@gmail.com">Ел. пошта</a></nav></div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2025 Інна Янкіна · <a href="#">Політика конфіденційності</a></p>
+    <div class="nav-lang"><a href="#" onclick="setLang('ru');return false;">RU</a><a href="#" onclick="setLang('en');return false;">EN</a><span class="active">UA</span></div>
+  </div>
+</footer>
+</div>
+
 <button id="back-to-top" aria-label="Back to top">↑</button>
 
 <script src="shared.js"></script>
 <script>
 function setLang(lang) {
-  ['ru','en'].forEach(function(l) {
+  ['ru','en','ua'].forEach(function(l) {
     var show = l === lang;
     var nav = document.getElementById('nav-' + l);
     var drawer = document.getElementById('navDrawer-' + l);
@@ -2292,7 +2970,7 @@ function setLang(lang) {
   window.scrollTo(0, 0);
 }
 function initBurgers() {
-  ['ru','en'].forEach(function(l) {
+  ['ru','en','ua'].forEach(function(l) {
     var burger = document.getElementById('burger-' + l);
     var drawer = document.getElementById('navDrawer-' + l);
     var overlay = document.getElementById('navOverlay-' + l);
@@ -2318,7 +2996,7 @@ function initReveal() {
 }
 initBurgers();
 initReveal();
-try { var saved = localStorage.getItem('lotus-lang'); if(saved === 'en') setLang('en'); } catch(e) {}
+try { var saved = localStorage.getItem('lotus-lang'); if(saved === 'en') setLang('en'); else if(saved === 'ua') setLang('ua'); } catch(e) {}
 (function(){
   var btn = document.getElementById('back-to-top');
   window.addEventListener('scroll', function(){ btn.classList.toggle('visible', window.scrollY > 400); }, {passive:true});
